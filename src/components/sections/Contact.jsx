@@ -1,0 +1,73 @@
+"use client"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MapPin, Phone, Mail } from 'lucide-react';
+
+const Contact = () => {
+  return (
+    <section className="py-20 px-4 bg-gradient-to-r from-orange-500 to-red-500 text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div 
+            className="space-y-8"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div>
+              <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">Get In Touch</h2>
+              <p className="text-xl opacity-90">
+                Ready to begin your Bharatnatyam journey? Contact us for more information about our upcoming classes.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <MapPin className="w-6 h-6 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold mb-1">Our Location</h3>
+                  <p className="opacity-90">
+                    C-1, Pocket 2, Kendriya Vihar II,<br />
+                    Sector 82, Noida, Uttar Pradesh 201304
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <Phone className="w-6 h-6 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold mb-1">Phone Number</h3>
+                  <p className="opacity-90">078389 89781</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <Mail className="w-6 h-6 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold mb-1">Email Us</h3>
+                  <p className="opacity-90">info@nrityagurukul.in</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img 
+              className="w-full h-[400px] object-cover rounded-2xl shadow-2xl" 
+              alt="Bharatnatyam dance academy location"
+             src="image/git.jpg" />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
