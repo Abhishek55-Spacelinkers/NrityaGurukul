@@ -60,9 +60,9 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <img 
-              className="w-full h-[400px] object-cover rounded-2xl shadow-2xl" 
+              className="w-full h-[400px] object-cover rounded-2xl shadow-2xl transform scale-x-[-1]" 
               alt="Bharatnatyam dance academy location"
-             src="image/git.jpg" />
+             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586894/git_zskcze.jpg" />
           </motion.div>
         </div>
       </div>

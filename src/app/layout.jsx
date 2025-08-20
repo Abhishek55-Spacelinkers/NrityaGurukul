@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Poppins, Cinzel } from "next/font/google";
+import { Toast } from "@/components/ui/toast";
 
 import {
   jsonLd,
@@ -10,7 +11,6 @@ import {
   breadcrumbSchema,
   serviceSchema,
 } from "@/lib/schema";
-import { Toast } from "@/components/ui/toast";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],

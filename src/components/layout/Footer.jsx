@@ -46,6 +46,11 @@ export default function Footer() {
               Preserving the ancient art of Bharatnatyam through dedicated
               teaching and passionate learning.
             </p>
+            <div className="flex gap-5 text-gray-200">
+              <Link className="text-sm underline" href="/terms">Terms</Link>
+              <Link className="text-sm underline" href="/privacy">Privacy</Link>
+              <Link className="text-sm underline" href="/contact">Contact</Link>
+            </div>
           </div>
 
           {/* Quick Links */}

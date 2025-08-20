@@ -3,14 +3,23 @@
 import { motion } from 'framer-motion';
 
 const photoGalleryImages = [
-  { alt: "Group of students posing after a successful performance", src: "https://images.unsplash.com/photo-1635402689379-545b134e58ed" },
-  { alt: "A young student practicing a basic Bharatnatyam stance", src: "https://images.unsplash.com/photo-1528415784548-1850e0fc8c57" },
-  { alt: "Close-up of ornate traditional jewelry worn by a dancer", src: "https://images.unsplash.com/photo-1601121141461-920cb1993441" },
-  { alt: "Dancers in vibrant silk sarees during a cultural event", src: "https://images.unsplash.com/photo-1699097726583-bf156db74c06" },
-  { alt: "An instructor demonstrating a complex footwork pattern", src: "https://images.unsplash.com/photo-1549349824-ed81166c3138" },
-  { alt: "A candid moment of laughter between students during a break", src: "https://images.unsplash.com/photo-1605407896441-ad4ad4be994d" },
-  { alt: "A powerful, expressive pose by an advanced student", src: "https://images.unsplash.com/photo-1690267647311-eeeac21df6c4" },
-  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://images.unsplash.com/photo-1600899588538-c124364dbf43" },
+  { alt: "Group of students posing after a successful performance", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586892/ab2_gkljyb.jpg" },
+  { alt: "A young student practicing a basic Bharatnatyam stance", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg" },
+  { alt: "Close-up of ornate traditional jewelry worn by a dancer", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586894/gallery1_zpvgdp.jpg" },
+  { alt: "Dancers in vibrant silk sarees during a cultural event", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666075/g7_tfxxgk.jpg" },
+  { alt: "An instructor demonstrating a complex footwork pattern", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666075/g9_ekmips.jpg" },
+  { alt: "A candid moment of laughter between students during a break", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666074/g6_dr9x41.jpg" },
+  { alt: "A powerful, expressive pose by an advanced student", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666074/g14_bfngtw.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666073/g13_lytwkm.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666073/g15_mfvcug.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666073/g3_ec8lfq.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g11_kagpoi.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g2_cw2bvs.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g10_kjhk0b.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g12_y4wppi.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666071/g1_ubzkv5.jpg" },
+  { alt: "The entire Nritya Gurukul family together for a celebration", src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666071/g16_odcdet.jpg" },
+  // { alt: "The entire Nritya Gurukul family together for a celebration", src: "" },
 ];
 
 const PhotoGallery = () => {

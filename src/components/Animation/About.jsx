@@ -2,6 +2,52 @@
 
 import { motion } from "framer-motion";
 
+// -----------------------------
+// DATA
+// -----------------------------
+const expertise = [
+  {
+    title: "Nattuvangam Training",
+    description:
+      "Learned under Guru Mohana Iyer and has been actively practicing for 4–5 years, incorporating it into her performances and training.",
+  },
+  {
+    title: "Dance Productions",
+    description:
+      "Conceptualized and choreographed three major productions – Narayan Narayan, Prem Vinod, and The Nine Nights.",
+  },
+  {
+    title: "Research & Scholarship",
+    description:
+      "Thesis on Guru Shishya Parampara received appreciation for depth and insight.",
+  },
+];
+
+const achievements = [
+  {
+    title: "Honors & Awards",
+    list: ["Guru Samman", "Nrityangana Award", "Spoorti Vahini", "Nritya Shiromani"],
+  },
+  {
+    title: "Performance Highlights",
+    description:
+      "Performed before legends like Padma Vibhushan Late Pt. Birju Maharaj and Padma Bhushan Dr. Saroja Vaidyanathan.",
+  },
+  {
+    title: "Special Recognitions",
+    description:
+      "Part of a Guinness World Record for a non-stop Bharatanatyam performance organized by Ganesh Natyalaya.",
+  },
+  {
+    title: "Judging & Examination Panels",
+    description:
+      "Invited as a judge for various competitions and as an external examiner for university-level dance examinations.",
+  },
+];
+
+// -----------------------------
+// COMPONENTS
+// -----------------------------
 export function Headabout() {
   return (
     <motion.div
@@ -16,7 +62,7 @@ export function Headabout() {
       </h1>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
         Nritya Gurukul was founded with a singular vision: to create a sanctuary
-        for the timeless art of Bharatnatyam, where tradition meets passion and
+        for the timeless art of Bharatanatyam, where tradition meets passion and
         dedication.
       </p>
     </motion.div>
@@ -26,44 +72,149 @@ export function Headabout() {
 export function Front() {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+      {/* Heart of Gurukul */}
+      <section className="grid md:grid-cols-2 gap-12 items-start">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src="/image/ab1.JPG"
+            alt="Founder of Nritya Gurukul in a graceful pose"
+            className="rounded-2xl shadow-2xl h-[600px] w-full object-cover"
+          />
+        </motion.div>
+
+        <motion.div
+          className="space-y-2"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-md bg-amber-600/30 font-semibold w-fit px-2 py-1 rounded-lg">
+            The Heart of the Gurukul
+          </h2>
+
+          <div>
+            <h2 className="text-3xl font-bold font-['Cinzel'] w-fit -mb-2">
+              Akshatha Pai
+            </h2>
+            <span className="text-[15px] text-amber-700 font-medium">
+              M.A Bharatanatyam, Nritya Visharad
+            </span>
+          </div>
+
+          <p className="text-gray-700 leading-relaxed mt-5">
+            Akshatha Pai is a distinguished Bharatanatyam artist, teacher, and
+            choreographer with over 13 years of experience in professional dance
+            training. She began her Bharatanatyam journey at the age of six
+            under the tutelage of esteemed gurus such as Guru Mani Kannan,
+            Sheela Shridhar, Dr. Chethana Radhakrishna, Dwaipayan Das, Rashmi
+            Raut Jaiswal, and Sachidanand Narayakar.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            In 2013, Akshatha founded Nritya Gurukul in Noida, an institution
+            dedicated to preserving and promoting Bharatanatyam. Established on
+            November 7, 2013, Nritya Gurukul is affiliated with Akhil Bharatiya
+            Gandharva Mahavidyalaya, Mumbai, offering structured dance education
+            through Certification, Diploma, Graduation, and Master's level
+            courses. The school has trained and certified over 150 students,
+            many of whom have pursued Bharatanatyam professionally.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Akshatha completed her Arangetram in 2017 under the guidance of Guru
+            Smt. Rashmi Raut Jaiswal in New Delhi. Since then, she has performed
+            across India at prestigious dance festivals and concerts.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Specializations & Expertise */}
+      <motion.section
+        className="mt-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="mx-auto"
       >
-        <img
-          src="/image/ab1.JPG"
-          alt="Founder of Nritya Gurukul in a graceful pose"
-          className="  rounded-2xl shadow-2xl h-[550px]"
-        />
-      </motion.div>
-      <motion.div
-        className="space-y-6"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-3xl font-bold font-['Cinzel']">
-          The Heart of the Gurukul
+        <h2 className="text-3xl font-bold font-['Cinzel'] mb-8 text-center">
+          Specializations & Expertise
         </h2>
-        <p className="text-gray-700 leading-relaxed">
-          Our founder, a disciple of legendary gurus, brings over 15 years of
-          performance and teaching experience. Her journey is fueled by a
-          deep-rooted love for Bharatnatyam and a desire to impart its spiritual
-          and artistic depth to the next generation. At Nritya Gurukul, we
-          believe dance is not just a skill but a form of devotion and
-          self-expression.
-        </p>
-        <p className="text-gray-700 leading-relaxed">
-          We are committed to providing authentic training that honors the rich
-          lineage of this classical dance form while nurturing the individual
-          creativity of each student.
-        </p>
-      </motion.div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {expertise.map((item, i) => (
+            <div
+              key={i}
+              className="bg-white p-6 shadow-md transition rounded-2xl border border-orange-200  hover:scale-105 duration-300"
+            >
+              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Achievements & Recognitions */}
+      <motion.section
+        className="mt-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold font-['Cinzel'] mb-8 text-center">
+          Achievements & Recognitions
+        </h2>
+        <div className="grid md:grid-cols-4 gap-4">
+          {achievements.map((ach, i) => (
+            <div
+              key={i}
+              className="bg-white p-5 shadow-md rounded-2xl border border-orange-200  hover:scale-105 duration-300 transition"
+            >
+              <h3 className="font-semibold text-lg mb-3">{ach.title}</h3>
+              {ach.list ? (
+                <ul className="list-disc ml-5 space-y-1 text-gray-700 text-sm">
+                  {ach.list.map((l, idx) => (
+                    <li key={idx}>{l}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {ach.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </motion.section>
+            {/* Closing Bio & Vision */}
+      <motion.section
+        className="mt-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="bg-amber-50 rounded-2xl shadow-md p-8 text-center max-w-4xl mx-auto">
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Apart from her contributions to the field of Bharatanatyam, Akshatha
+            holds a <strong>B.Com degree from Mysore University</strong>. She is
+            also a homemaker and lives in Noida with her husband and daughter{" "}
+            <strong>Anushka</strong>, who follows in her footsteps as a
+            Bharatanatyam dancer.
+          </p>
+          <p className="text-lg font-medium text-amber-800 italic">
+            Her vision is to continue propagating Bharatanatyam through
+            innovative productions, dedicated training, and cultural exchange,
+            keeping the Guru-Shishya Parampara alive for future generations.
+          </p>
+        </div>
+      </motion.section>
+
     </>
   );
 }
-

@@ -10,10 +10,12 @@ import {
 import { Star, Calendar } from "lucide-react";
 
 const dancerImages = [
-  "/image/1a.jpg",
-  "/image/a2.JPG",
-  "/image/a3.jpg",
-  "/image/a4.jpg",
+  "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666074/g5_kkoxvd.jpg",
+  "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666073/g4_e84hcb.jpg",
+  "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586892/1a_fgek0z.jpg",
+  "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586894/a2_lap8ar.jpg",
+  "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586892/a3_wqnlek.jpg",
+  "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/a4_ufyomg.jpg",
 ];
 
 export default function HeroCarousel() {

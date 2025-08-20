@@ -31,9 +31,8 @@ export default function About() {
         <Headabout />
 
         {/* Founder Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <Front />
-        </div>
+        <Front />
+        
 
         {/* Carousel */}
         <div className="mb-20">

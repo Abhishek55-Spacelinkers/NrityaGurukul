@@ -12,15 +12,15 @@ import {
 
 const images = [
   {
-    src: "/image/b1.JPG",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586895/b1_ypxdyo.jpg",
     alt: "Students learning basic steps in a bright studio",
   },
   {
-    src: "/image/b2.jpg",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg",
     alt: "A close-up shot of a dancer's intricate hand gestures (Hastas)",
   },
   {
-    src: "/image/b3.jpg",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b3_nwp4fz.jpg",
     alt: "A group of dancers performing in colorful costumes on stage",
   },
   // {
