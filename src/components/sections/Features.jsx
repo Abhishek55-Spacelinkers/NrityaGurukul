@@ -37,7 +37,7 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <section className="py-20 px-4 bg-white/30 backdrop-blur-sm">
+    <section className="py-16 px-4 ">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"
@@ -58,7 +58,7 @@ const Features = () => {
           {featuresData.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-orange-200 hover:shadow-xl transition-all duration-300"
+              className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-orange-200 hover:shadow-xl hover:bg-orange-500/40 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}

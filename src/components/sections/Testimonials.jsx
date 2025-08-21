@@ -1,8 +1,9 @@
 "use client"
-import React from 'react';
+import React,{useRef} from 'react';
 import { motion } from 'framer-motion';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Star, Quote } from 'lucide-react';
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -32,8 +33,11 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+   const autoplay = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false }) // 3s delay, keeps scrolling even if clicked
+  );
   return (
-    <section className="py-20 px-20 bg-orange-50/50">
+    <section className="py-16 px-20">
       <div className="max-w-5xl mx-auto">
         <motion.div 
           className="text-center mb-12"
@@ -50,12 +54,12 @@ const Testimonials = () => {
           </p>
         </motion.div>
 
-        <Carousel className="w-full" opts={{ loop: true }}>
+        <Carousel className="w-full" opts={{ loop: true }} plugins={[autoplay.current]} >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="basic-full  lg:basis-1/2 tab:basis-1/3">
+              <CarouselItem key={index} className="basic-full  lg:basis-1/2 tab:basis-1/3 " >
                 <div className="p-4 h-full">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col justify-between shadow-lg border border-orange-100">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col justify-between shadow-lg border border-orange-200">
                     <div>
                       <Quote className="w-10 h-10 text-orange-200 mb-4" />
                       <p className="text-gray-600 italic mb-6">"{testimonial.text}"</p>

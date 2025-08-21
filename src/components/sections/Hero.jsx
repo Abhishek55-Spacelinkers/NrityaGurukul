@@ -36,7 +36,7 @@ export default function Hero() {
                 <span className="text-gray-800">Dance Classes</span>
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+              <p className="text-xl text-gray-600 leading-7 max-w-lg">
                 Discover the divine art of Bharatnatyam - where every movement
                 tells a story, every gesture speaks the language of gods, and
                 every step connects you to ancient traditions.
@@ -45,20 +45,20 @@ export default function Hero() {
 
             <div className="grid grid-cols-2 gap-6">
               <motion.div
-                className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-orange-200"
+                className="text-center p-4 backdrop-blur-sm rounded-xl border bg-orange-400/30 border-orange-200"
                 whileHover={{ scale: 1.05 }}
               >
                 <Users className="w-8 h-8 text-orange-500 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gray-800">50+</div>
+                <div className="text-2xl font-bold text-gray-800">100+</div>
                 <div className="text-sm text-gray-600">Students Enrolled</div>
               </motion.div>
 
               <motion.div
-                className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-orange-200"
+                className="text-center p-4 backdrop-blur-sm rounded-xl border bg-orange-400/30 border-orange-200"
                 whileHover={{ scale: 1.05 }}
               >
                 <Award className="w-8 h-8 text-orange-500 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gray-800">15+</div>
+                <div className="text-2xl font-bold text-gray-800">13+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </motion.div>
             </div>
@@ -79,7 +79,7 @@ export default function Hero() {
                 </Button>
               </Link>
 
-              <Link href="/gallery">
+              <Link href="/gallery#Our_Performances">
                 <Button
                   variant="outline"
                   size="lg"

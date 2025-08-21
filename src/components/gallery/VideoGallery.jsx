@@ -16,7 +16,7 @@ const videos = [
 
 const VideoGallery = () => {
   return (
-    <section className="py-20 px-4 bg-white/30 backdrop-blur-sm">
+    <section className="py-20 px-4 bg-white/30 backdrop-blur-sm scroll-mt-20" id="Our_Performances">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"

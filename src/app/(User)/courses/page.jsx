@@ -1,6 +1,3 @@
-// app/courses/page.tsx (or use as a standalone component)
-// TailwindCSS + shadcn/ui + Framer Motion + lucide-react
-
 "use client";
 
 import React from "react";
@@ -17,194 +14,172 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-const LEVELS = [
-  {
-    id: "prarambhik",
-    order: 1,
-    title: "Prarambhik",
-    subtitle: "Foundation Level",
-    duration: "1 Year",
-    eligibility: "Minimum 7 years of age",
-    focus: [
-      "Posture & araimandi basics",
-      "Rhythm awareness",
-      "Foundational Adavus",
-    ],
-    certificate: "ABGMVM Prarambhik Certificate",
-    ctaHref: "/enroll?level=prarambhik",
-  },
-  {
-    id: "praveshika-pratham",
-    order: 2,
-    title: "Praveshika Pratham",
-    subtitle: "Preliminary – Part 1",
-    duration: "1 Year",
-    focus: ["Advanced Adavus", "Footwork & stamina", "Rhythm precision"],
-    certificate: "ABGMVM Praveshika Pratham Certificate",
-    ctaHref: "/enroll?level=praveshika-pratham",
-  },
-  {
-    id: "praveshika-purna",
-    order: 3,
-    title: "Praveshika Purna",
-    subtitle: "Preliminary – Part 2",
-    duration: "1 Year",
-    focus: ["Alarippu", "Pushpanjali", "Stage skills & confidence"],
-    certificate: "ABGMVM Praveshika Purna Certificate",
-    ctaHref: "/enroll?level=praveshika-purna",
-  },
-  {
-    id: "madhyama-pratham",
-    order: 4,
-    title: "Madhyama Pratham",
-    subtitle: "Intermediate – Part 1",
-    duration: "1 Year",
-    focus: ["Shabdam", "Jatiswaram", "Alarippu in varied jatis"],
-    certificate: "ABGMVM Madhyama Pratham Certificate",
-    ctaHref: "/enroll?level=madhyama-pratham",
-  },
-  {
-    id: "madhyama-purna",
-    order: 5,
-    title: "Madhyama Purna",
-    subtitle: "Intermediate – Part 2",
-    duration: "1 Year",
-    focus: ["Tillana", "Advanced rhythm", "Stage command & grace"],
-    certificate: "ABGMVM Madhyama Purna Certificate",
-    ctaHref: "/enroll?level=madhyama-purna",
-  },
-  {
-    id: "visharad-pratham",
-    order: 6,
-    title: "Visharad Pratham",
-    subtitle: "Graduate – Part 1",
-    duration: "1 Year",
-    focus: [
-      "Varnam (central item)",
-      "Expressive storytelling (Abhinaya)",
-      "Stamina & technique",
-    ],
-    certificate: "ABGMVM Visharad Pratham Certificate",
-    ctaHref: "/enroll?level=visharad-pratham",
-  },
-  {
-    id: "visharad-purna",
-    order: 7,
-    title: "Visharad Purna",
-    subtitle: "Graduate – Part 2",
-    duration: "1 Year",
-    focus: [
-      "Full Margam repertoire",
-      "Choreography & Nattuvangam",
-      "Arangetram preparation",
-    ],
-    certificate:
-      "ABGMVM Visharad Purna Certificate (Graduate Diploma in Bharatanatyam)",
-    ctaHref: "/enroll?level=visharad-purna",
-  },
-];
-
-const highlights = [
-  "7-year structured course with ABGMVM certification",
-  "Separate batches for each exam level (Prarambhik to Visharad Purna)",
-  "Nationally recognized certification at every stage",
-  "2–3 stage performances annually for all students",
-  "Training offered in both Online & Offline modes",
-  "Google Classrooms for notes, references & video access",
-  "Personalized attention in limited batch sizes",
-  "Guidance for Arangetram & advanced stage presentations",
-];
-
-const theoryProgression = [
-  {
-    year: "Year 1",
-    details:
-      "Intro to Asamyukta Hastas, Pāda Bhedas, leg postures, head movements, basic theory.",
-  },
-  {
-    year: "Year 2",
-    details: "Samyukta Hastas, eye & neck movements, expanded theory.",
-  },
-  {
-    year: "Year 3",
-    details:
-      "Apply hand gestures in Shlokas; intro to written theory (fill blanks, MCQ, match, short notes).",
-  },
-  {
-    year: "Year 4 onwards",
-    details:
-      "Formal written exams; long & medium questions; deeper study (Natya Shastra, Abhinaya Darpanam).",
-  },
-];
-
-const classFormat = [
-  { title: "Exercises & warm-up", minutes: 15 },
-  {
-    title: "Practical dance",
-    minutes: 30,
-    note: "Adavus, items, choreography",
-  },
-  { title: "Theory", minutes: 15, note: "Oral + written knowledge" },
-];
-
-const arangetramPoints = {
-  eligibility:
-    "Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness.",
-  rubric: [
-    "Technique: clarity of adavus, araimandi, balance",
-    "Rhythm & memory: jatis, korvais, teermanams",
-    "Abhinaya: expressive depth, lyric understanding",
-    "Stamina & stage presence: 45–90 min solo",
-    "Rehearsal discipline & professionalism",
-  ],
-  repertoire: [
-    "Pushpanjali / Alarippu",
-    "Jatiswaram",
-    "Shabdam / Padam / Javali / Keerthanam",
-    "Varnam (core)",
-    "Tillana & Mangalam",
-  ],
-  pathway: [
-    "Curation & planning (items, theme, costumes)",
-    "Technique polishing with weekly/fortnightly reviews",
-    "Mock arangetrams (1–2 run-throughs)",
-    "Stagecraft workshops: entries, cues, audience connect",
-    "Orchestra rehearsals / track production",
-  ],
-};
-
-const container = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-export const faqs = [
-  {
-    question: "Online or Offline—what should I choose?",
-    answer:
-      "Both modes follow the same syllabus and assessments. Choose based on commute, schedule, and comfort. Stage opportunities are provided to all students.",
-  },
-  {
-    question: "Can I switch batches or levels mid-year?",
-    answer:
-      "Batch changes are subject to availability. Level promotion is based on Guru’s assessment and ABGMVM exam clearance.",
-  },
-  {
-    question: "Do you provide notes and recordings?",
-    answer:
-      "Yes—Google Classroom access includes theory notes, sahitya meanings, and practice videos for every step taught.",
-  },
-  {
-    question: "What is the exam structure?",
-    answer:
-      "From Year 4 onwards, written exams include one long question (20 marks) and 5 medium questions, alongside practical assessments per level.",
-  },
-];
+import { Faqs } from "@/lib/data";
 
 export default function NrityaGurukulCoursesPage() {
+  const Specifications = [
+    "7-year structured course following ABGMVM certification",
+    "Separate batches for each exam level (Prarambhik to Visharad Purna)",
+    "Preparation for Nationally recognized certification at every stage",
+    "Opportuinity for 2–3 stage performances annually for all students",
+    "Training offered in both Online & Offline modes",
+    "Google Classrooms for notes, references & video access",
+    "Personalized attention in limited batch sizes",
+    "Guidance for Arangetram & advanced stage presentations",
+  ];
+
+  const Levels = [
+    {
+      id: "prarambhik",
+      order: 1,
+      title: "Prarambhik",
+      subtitle: "Foundation Level",
+      duration: "1 Year",
+      eligibility: "Minimum 7 years of age",
+      focus: [
+        "Posture & araimandi basics",
+        "Rhythm awareness",
+        "Foundational Adavus",
+      ],
+      certificate: "ABGMVM Prarambhik Certificate",
+      ctaHref: "/enroll?level=prarambhik",
+    },
+    {
+      id: "praveshika-pratham",
+      order: 2,
+      title: "Praveshika Pratham",
+      subtitle: "Preliminary – Part 1",
+      duration: "1 Year",
+      focus: ["Advanced Adavus", "Footwork & stamina", "Rhythm precision"],
+      certificate: "ABGMVM Praveshika Pratham Certificate",
+      ctaHref: "/enroll?level=praveshika-pratham",
+    },
+    {
+      id: "praveshika-purna",
+      order: 3,
+      title: "Praveshika Purna",
+      subtitle: "Preliminary – Part 2",
+      duration: "1 Year",
+      focus: ["Alarippu", "Pushpanjali", "Stage skills & confidence"],
+      certificate: "ABGMVM Praveshika Purna Certificate",
+      ctaHref: "/enroll?level=praveshika-purna",
+    },
+    {
+      id: "madhyama-pratham",
+      order: 4,
+      title: "Madhyama Pratham",
+      subtitle: "Intermediate – Part 1",
+      duration: "1 Year",
+      focus: ["Shabdam", "Jatiswaram", "Alarippu in varied jatis"],
+      certificate: "ABGMVM Madhyama Pratham Certificate",
+      ctaHref: "/enroll?level=madhyama-pratham",
+    },
+    {
+      id: "madhyama-purna",
+      order: 5,
+      title: "Madhyama Purna",
+      subtitle: "Intermediate – Part 2",
+      duration: "1 Year",
+      focus: ["Tillana", "Advanced rhythm", "Stage command & grace"],
+      certificate: "ABGMVM Madhyama Purna Certificate",
+      ctaHref: "/enroll?level=madhyama-purna",
+    },
+    {
+      id: "visharad-pratham",
+      order: 6,
+      title: "Visharad Pratham",
+      subtitle: "Graduate – Part 1",
+      duration: "1 Year",
+      focus: [
+        "Varnam (central item)",
+        "Expressive storytelling (Abhinaya)",
+        "Stamina & technique",
+      ],
+      certificate: "ABGMVM Visharad Pratham Certificate",
+      ctaHref: "/enroll?level=visharad-pratham",
+    },
+    {
+      id: "visharad-purna",
+      order: 7,
+      title: "Visharad Purna",
+      subtitle: "Graduate – Part 2",
+      duration: "1 Year",
+      focus: [
+        "Full Margam repertoire",
+        "Choreography & Nattuvangam",
+        "Arangetram preparation",
+      ],
+      certificate:
+        "ABGMVM Visharad Purna Certificate (Graduate Diploma in Bharatanatyam)",
+      ctaHref: "/enroll?level=visharad-purna",
+    },
+  ];
+
+  const theoryProgression = [
+    {
+      year: "Year 1",
+      details:
+        "Intro to Asamyukta Hastas, Pāda Bhedas, leg postures, head movements, basic theory.",
+    },
+    {
+      year: "Year 2",
+      details: "Samyukta Hastas, eye & neck movements, expanded theory.",
+    },
+    {
+      year: "Year 3",
+      details:
+        "Apply hand gestures in Shlokas; intro to written theory (fill blanks, MCQ, match, short notes).",
+    },
+    {
+      year: "Year 4 onwards",
+      details:
+        "Formal written exams; long & medium questions; deeper study (Natya Shastra, Abhinaya Darpanam).",
+    },
+  ];
+
+  const classFormat = [
+    { title: "Exercises & warm-up", minutes: 15 },
+    {
+      title: "Practical dance",
+      minutes: 30,
+      note: "Adavus, items, choreography",
+    },
+    { title: "Theory", minutes: 15, note: "Oral + written knowledge" },
+  ];
+
+  const arangetramPoints = {
+    eligibility:
+      "Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness.",
+    rubric: [
+      "Technique: clarity of adavus, araimandi, balance",
+      "Rhythm & memory: jatis, korvais, teermanams",
+      "Abhinaya: expressive depth, lyric understanding",
+      "Stamina & stage presence: 45–90 min solo",
+      "Rehearsal discipline & professionalism",
+    ],
+    repertoire: [
+      "Pushpanjali / Alarippu",
+      "Jatiswaram",
+      "Shabdam / Padam / Javali / Keerthanam",
+      "Varnam (core)",
+      "Tillana & Mangalam",
+    ],
+    pathway: [
+      "Curation & planning (items, theme, costumes)",
+      "Technique polishing with weekly/fortnightly reviews",
+      "Mock arangetrams (1–2 run-throughs)",
+      "Stagecraft workshops: entries, cues, audience connect",
+      "Orchestra rehearsals / track production",
+    ],
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 16 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+  
+  const container = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";
+
   return (
     <main className="min-h-screen ">
       {/* HERO */}
@@ -328,7 +303,7 @@ export default function NrityaGurukulCoursesPage() {
         </motion.div>
         <div className={container}>
           <div className="grid md:grid-cols-2 gap-8">
-            {highlights.map((h, i) => {
+            {Specifications.map((h, i) => {
               const pairIndex = Math.floor(i / 2);
               const colors = ["bg-orange-400/20", "bg-amber-300/60"];
 
@@ -361,7 +336,7 @@ export default function NrityaGurukulCoursesPage() {
       </section>
 
       {/* CLASS FORMAT */}
-      <section className="py-10 md:py-16" id="format">
+      <section className="py-10 md:py-16 pt-24 scroll-mt-20" id="format">
         <div className={container}>
           <div className="grid md:grid-cols-[28%_70%] gap-10 items-center">
             <img
@@ -377,11 +352,16 @@ export default function NrityaGurukulCoursesPage() {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 mx-1">
                   {theoryProgression.map((t, i) => (
-                    <div key={i} className="rounded-xl border p-4 border-orange-200  hover:bg-orange-400/70 group duration-300 ">
+                    <div
+                      key={i}
+                      className="rounded-xl border p-4 border-orange-200  hover:bg-orange-400/70 group duration-300 "
+                    >
                       <div className="text-sm font-semibold text-amber-700 group-hover:text-white">
                         {t.year}
                       </div>
-                      <p className="group-hover:text-white text-slate-600 mt-1 text-sm">{t.details}</p>
+                      <p className="group-hover:text-white text-slate-600 mt-1 text-sm">
+                        {t.details}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -417,7 +397,7 @@ export default function NrityaGurukulCoursesPage() {
       </section>
 
       {/* LEVELS GRID */}
-      <section className="py-12 md:py-20" id="levels">
+      <section className="py-12 md:py-20 scroll-mt-20" id="levels">
         <div className={container}>
           <div className="flex items-center flex-col md:flex-row justify-center md:justify-between mb-6">
             <motion.div
@@ -441,7 +421,7 @@ export default function NrityaGurukulCoursesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {LEVELS.map((lvl) => (
+            {Levels.map((lvl) => (
               <motion.div
                 key={lvl.id}
                 initial={{ opacity: 0, y: 16 }}
@@ -509,19 +489,17 @@ export default function NrityaGurukulCoursesPage() {
       {/* COMPARISON TABLE */}
       <section className="py-12 md:py-16 ">
         <div className={container}>
-          
           <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold font-['Cinzel'] ">
-            <span className="dance-ornament">  Quick Comparison
-          </span>
-          </h2>
-        </motion.div>
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold font-['Cinzel'] ">
+              <span className="dance-ornament"> Quick Comparison</span>
+            </h2>
+          </motion.div>
           <div className="mt-6 overflow-x-auto bg-white px-1 rounded-xl">
             <table className="min-w-full text-sm border-collapse ">
               <thead>
@@ -534,7 +512,7 @@ export default function NrityaGurukulCoursesPage() {
                 </tr>
               </thead>
               <tbody>
-                {LEVELS.map((lvl, i) => (
+                {Levels.map((lvl, i) => (
                   <tr
                     key={lvl.id}
                     className={`${
@@ -575,7 +553,7 @@ export default function NrityaGurukulCoursesPage() {
       </section>
 
       {/* ARANGETRAM */}
-      <section className="py-12 md:py-16" id="arangetram">
+      <section className="py-12 md:py-16 scroll-mt-20" id="arangetram">
         <div className={container}>
           <div className="grid lg:grid-cols-3 gap-6 text-gray-600">
             <div className="rounded-2xl lg:col-span-2 px-3 bg-white border border-orange-200 py-5">
@@ -706,60 +684,23 @@ export default function NrityaGurukulCoursesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 scroll-mt-20" id="faqs">
         <div className={container}>
           <h3 className="text-xl md:text-2xl font-semibold">FAQs</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <CardTitle>Online or Offline—what should I choose?</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-700 text-sm">
-                Both modes follow the same syllabus and assessments. Choose
-                based on commute, schedule, and comfort. Stage opportunities are
-                provided to all students.
-              </CardContent>
-            </Card>
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <CardTitle>Can I switch batches or levels mid-year?</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-700 text-sm">
-                Batch changes are subject to availability. Level promotion is
-                based on Guru’s assessment and ABGMVM exam clearance.
-              </CardContent>
-            </Card>
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <CardTitle>Do you provide notes and recordings?</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-700 text-sm">
-                Yes—Google Classroom access includes theory notes, sahitya
-                meanings, and practice videos for every step taught.
-              </CardContent>
-            </Card>
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <CardTitle>What is the exam structure?</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-700 text-sm">
-                From Year 4 onwards, written exams include one long question (20
-                marks) and 5 medium questions, alongside practical assessments
-                per level.
-              </CardContent>
-            </Card>
+            {Faqs.map((faq, id) => (
+              <Card className="rounded-2xl" key={id + "faq"}>
+                <CardHeader>
+                  <CardTitle>{faq.question}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-slate-700 text-sm">
+                  {faq.answer}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
     </main>
   );
 }
-
-// -----------------------------
-// OPTIONAL: SEO (use in app/courses/metadata.ts or page.tsx in Next 13+)
-// -----------------------------
-// export const metadata = {
-//   title: 'Courses at Nritya Gurukul | ABGMVM Certified Bharatanatyam Levels',
-//   description:
-//     'Explore Prarambhik to Visharad Purna: a 7-year, ABGMVM-certified Bharatanatyam journey with stage exposure, Google Classroom support, and Arangetram guidance.'
-// }

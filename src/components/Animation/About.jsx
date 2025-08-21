@@ -26,7 +26,12 @@ const expertise = [
 const achievements = [
   {
     title: "Honors & Awards",
-    list: ["Guru Samman", "Nrityangana Award", "Spoorti Vahini", "Nritya Shiromani"],
+    list: [
+      "Guru Samman",
+      "Nrityangana Award",
+      "Spoorti Vahini",
+      "Nritya Shiromani",
+    ],
   },
   {
     title: "Performance Highlights",
@@ -96,9 +101,12 @@ export function Front() {
           viewport={{ once: true }}
         >
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-1 text-amber-700 ring-1 ring-amber-200">
-              <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-semibold"> The Heart of the Gurukul</span>
-            </div>
+            <Sparkles className="h-4 w-4" />
+            <span className="text-sm font-semibold">
+              {" "}
+              The Heart of the Gurukul
+            </span>
+          </div>
 
           <div>
             <h2 className="text-3xl font-bold font-['Cinzel'] w-fit -mb-2">
@@ -142,16 +150,24 @@ export function Front() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold font-['Cinzel'] mb-8 text-center">
-          Specializations & Expertise
-        </h2>
+        <motion.div
+          className="text-center mb-7"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold font-['Cinzel']">
+            <span className="dance-ornament"> Specializations</span> & Expertise
+          </h2>
+        </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
           {expertise.map((item, i) => (
             <div
               key={i}
               className="bg-white p-6 shadow-md transition rounded-2xl border border-orange-200  hover:scale-105 duration-300"
             >
-              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+              <h3 className="font-bold font-['Cinzel'] text-lg mb-2">{item.title}</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
                 {item.description}
               </p>
@@ -168,16 +184,24 @@ export function Front() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold font-['Cinzel'] mb-8 text-center">
-          Achievements & Recognitions
-        </h2>
+        <motion.div
+          className="text-center mb-7"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold font-['Cinzel']">
+            <span className="dance-ornament">Achievements</span> & Recognitions
+          </h2>
+        </motion.div>
         <div className="grid md:grid-cols-4 gap-4">
           {achievements.map((ach, i) => (
             <div
               key={i}
               className="bg-white p-5 shadow-md rounded-2xl border border-orange-200  hover:scale-105 duration-300 transition"
             >
-              <h3 className="font-semibold text-lg mb-3">{ach.title}</h3>
+              <h3 className="font-['Cinzel'] font-bold text-lg mb-3">{ach.title}</h3>
               {ach.list ? (
                 <ul className="list-disc ml-5 space-y-1 text-gray-700 text-sm">
                   {ach.list.map((l, idx) => (
@@ -193,7 +217,7 @@ export function Front() {
           ))}
         </div>
       </motion.section>
-            {/* Closing Bio & Vision */}
+      {/* Closing Bio & Vision */}
       <motion.section
         className="mt-20"
         initial={{ opacity: 0, y: 30 }}
@@ -216,7 +240,6 @@ export function Front() {
           </p>
         </div>
       </motion.section>
-
     </>
   );
 }

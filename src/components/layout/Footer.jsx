@@ -29,7 +29,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-[35%_15%_15%_35%] gap-8">
           {/* Logo & description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
@@ -46,7 +46,7 @@ export default function Footer() {
               Preserving the ancient art of Bharatnatyam through dedicated
               teaching and passionate learning.
             </p>
-            <div className="flex gap-5 text-gray-200">
+            <div className="flex gap-5 text-gray-400">
               <Link className="text-sm underline" href="/terms">Terms</Link>
               <Link className="text-sm underline" href="/privacy">Privacy</Link>
               <Link className="text-sm underline" href="/contact">Contact</Link>
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <span className="text-lg font-semibold">Quick Links</span>
+            <span className="text-lg font-semibold block">Quick Links</span>
             <div className="space-y-2">
               <Link
                 href="/"
@@ -80,6 +80,36 @@ export default function Footer() {
                 className="block text-gray-400 hover:text-white transition-colors"
               >
                 Contact Us
+              </Link>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <span className="text-lg font-semibold block">Courses</span>
+            <div className="space-y-2">
+              <Link
+                href="/courses#arangetram"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Arangetram
+              </Link>
+              <Link
+                href="/courses#levels"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Course Levels
+              </Link>
+              <Link
+                href="/courses#format"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Theory Progression
+              </Link>
+              <Link
+                href="/courses#faqs"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                FAQs
               </Link>
             </div>
           </div>

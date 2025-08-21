@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Details } from "@/lib/data";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "7838989781";
   const message =
     "Hello! I'm interested in the Bharatnatyam classes at Nritya Gurukul.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/${Details.wphone}?text=${encodeURIComponent(
     message
   )}`;
 

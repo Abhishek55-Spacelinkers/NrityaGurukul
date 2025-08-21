@@ -14,7 +14,7 @@ import Testimonials from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
-    <>
+    <> 
         <Hero />
         <ImageCarousel />
         <Features />

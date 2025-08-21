@@ -18,7 +18,7 @@ const InquiryForm = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">
-            <span className="dance-ornament">Join Our</span> Dance Family
+            <span className="dance-ornament">Join Nritya</span> Gurukul Family
           </h2>
           <p className="text-xl text-gray-600">
             Fill out the form below to reserve your spot in our upcoming Bharatnatyam classes
@@ -33,6 +33,34 @@ const InquiryForm = () => {
           viewport={{ once: true }}
         >
           <form action="https://formspree.io/f/xovlrzvq" method="POST" className="space-y-6">
+            
+            {/* Radio Group */}
+            <div className="space-y-2">
+              <Label className="text-gray-700 font-medium text-lg font-['Cinzel']">I'm a </Label>
+              <div className="flex gap-6">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="filler"
+                    value="Parent/Guardian"
+                    defaultChecked
+                    className="text-orange-500 focus:ring-orange-500"
+                  />
+                  <span>Parent/Guardian</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="filler"
+                    value="Student"
+                    required
+                    className="text-orange-500 focus:ring-orange-500"
+                  />
+                  <span>Student</span>
+                </label>
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-gray-700 font-medium">Full Name *</Label>
@@ -113,7 +141,7 @@ const InquiryForm = () => {
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-4 rounded-full text-lg font-semibold pulse-glow"
               >
-                🙏 Submit Inquiry
+                Submit Inquiry
               </Button>
             </motion.div>
           </form>

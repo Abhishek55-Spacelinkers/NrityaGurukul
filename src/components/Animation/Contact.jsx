@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Sparkles, Target, Users } from "lucide-react";
-
+import { Details } from "@/lib/data";
 export function WhyJoinUs() {
   const whyUsPoints = [
     {
@@ -50,18 +50,18 @@ export function WhyJoinUs() {
           {whyUsPoints.map((point, index) => (
             <motion.div
               key={index}
-              className="bg-white p-8 rounded-2xl text-center shadow-lg border border-orange-100"
+              className="bg-white p-8 rounded-2xl text-center shadow-lg border border-orange-100 hover:bg-orange-500/70 group hover:text-white duration-150"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.3, delay: index * 0.15 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
-              <div className="flex justify-center mb-4">{point.icon}</div>
+              <div className="flex justify-center mb-4 rounded-full w-fit p-2 group-hover:bg-white mx-auto">{point.icon}</div>
               <h3 className="text-2xl font-semibold font-['Cinzel'] mb-3">
                 {point.title}
               </h3>
-              <p className="text-gray-600">{point.description}</p>
+              <p className="text-gray-600 group-hover:text-white">{point.description}</p>
             </motion.div>
           ))}
         </div>
@@ -118,11 +118,7 @@ export function Front() {
               <MapPin className="w-8 h-8 text-orange-500 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-xl mb-1">Our Location</h3>
-                <p className="text-gray-700">
-                  C-1, Pocket 2, Kendriya Vihar II,
-                  <br />
-                  Sector 82, Noida, Uttar Pradesh 201304
-                </p>
+                <p className="text-gray-700 max-w-[290px]">{Details.address}</p>
               </div>
             </div>
 
@@ -130,7 +126,9 @@ export function Front() {
               <Phone className="w-8 h-8 text-orange-500 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-xl mb-1">Phone Number</h3>
-                <p className="text-gray-700">078389 89781</p>
+                <a href={`tel:${Details.cphone}`}>
+                    <p className="text-gray-700">{Details.phone}</p>
+                </a>
               </div>
             </div>
 
@@ -138,7 +136,9 @@ export function Front() {
               <Mail className="w-8 h-8 text-orange-500 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-xl mb-1">Email Us</h3>
-                <p className="text-gray-700">info@nrityagurukul.in</p>
+                <a href="mailto:info@spacelinkers.com">
+                    <p className="text-gray-700">{Details.email}</p>
+                </a>
               </div>
             </div>
           </div>
