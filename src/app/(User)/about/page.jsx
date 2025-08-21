@@ -35,7 +35,7 @@ export default function About() {
         
 
         {/* Carousel */}
-        <div className="mb-20">
+        <div className="mb-5">
           <ImageCarousel />
         </div>
 

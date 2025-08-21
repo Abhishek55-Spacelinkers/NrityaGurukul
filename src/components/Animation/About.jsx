@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { Sparkles } from "lucide-react";
 // -----------------------------
 // DATA
 // -----------------------------
@@ -60,7 +60,7 @@ export function Headabout() {
       <h1 className="text-5xl font-bold font-['Cinzel'] mb-4">
         <span className="dance-ornament">Our Story</span>
       </h1>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
         Nritya Gurukul was founded with a singular vision: to create a sanctuary
         for the timeless art of Bharatanatyam, where tradition meets passion and
         dedication.
@@ -73,30 +73,32 @@ export function Front() {
   return (
     <>
       {/* Heart of Gurukul */}
-      <section className="grid md:grid-cols-2 gap-12 items-start">
+      <section className="grid md:grid-cols-[35%_62%] gap-5 px-5 items-start">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          className="overflow-hidden rounded-2xl shadow-2xl flex items-center justify-center max-w-[250px] mx-auto md:max-w-[320px] bg-black my-auto"
         >
           <img
-            src="/image/ab1.JPG"
+            src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755688099/Aboutimg_d3z76e.png"
             alt="Founder of Nritya Gurukul in a graceful pose"
-            className="rounded-2xl shadow-2xl h-[600px] w-full object-cover"
+            className=" object-cover rounded-2xl"
           />
         </motion.div>
 
         <motion.div
-          className="space-y-2"
+          className="space-y-2 my-auto"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-md bg-amber-600/30 font-semibold w-fit px-2 py-1 rounded-lg">
-            The Heart of the Gurukul
-          </h2>
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1 text-amber-700 ring-1 ring-amber-200">
+              <Sparkles className="h-4 w-4" />
+              <span className="text-sm font-semibold"> The Heart of the Gurukul</span>
+            </div>
 
           <div>
             <h2 className="text-3xl font-bold font-['Cinzel'] w-fit -mb-2">
@@ -107,7 +109,7 @@ export function Front() {
             </span>
           </div>
 
-          <p className="text-gray-700 leading-relaxed mt-5">
+          <p className="text-gray-700 leading-relaxed mt-3 text-justify">
             Akshatha Pai is a distinguished Bharatanatyam artist, teacher, and
             choreographer with over 13 years of experience in professional dance
             training. She began her Bharatanatyam journey at the age of six
@@ -115,7 +117,7 @@ export function Front() {
             Sheela Shridhar, Dr. Chethana Radhakrishna, Dwaipayan Das, Rashmi
             Raut Jaiswal, and Sachidanand Narayakar.
           </p>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-justify">
             In 2013, Akshatha founded Nritya Gurukul in Noida, an institution
             dedicated to preserving and promoting Bharatanatyam. Established on
             November 7, 2013, Nritya Gurukul is affiliated with Akhil Bharatiya
@@ -124,7 +126,7 @@ export function Front() {
             courses. The school has trained and certified over 150 students,
             many of whom have pursued Bharatanatyam professionally.
           </p>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-justify">
             Akshatha completed her Arangetram in 2017 under the guidance of Guru
             Smt. Rashmi Raut Jaiswal in New Delhi. Since then, she has performed
             across India at prestigious dance festivals and concerts.

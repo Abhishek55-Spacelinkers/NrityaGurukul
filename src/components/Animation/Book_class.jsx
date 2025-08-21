@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { ChevronDown } from "lucide-react";
+
 import {
   Star,
   Zap,
@@ -91,6 +93,9 @@ export function BookingGuide() {
 export function Front() {
   const [selectedClass, setSelectedClass] = useState("");
   const router = useRouter();
+  const [openIndex, setOpenIndex] = useState(-1);
+  const itemRefs = useRef([]);
+  const contentRefs = useRef([]);
 
   const handleBookNow = () => {
     if (selectedClass) {
@@ -106,6 +111,7 @@ export function Front() {
         "Perfect for absolute beginners. Learn the fundamental Adavus (steps), Hastas (hand gestures), and basic theory.",
       level: "Beginner",
       icon: <Star className="w-6 h-6 text-yellow-500" />,
+      detail: "askl;",
     },
     {
       id: "intermediate-level",
@@ -114,6 +120,7 @@ export function Front() {
         "For students with basic knowledge. Focus on complex compositions, Abhinaya (expressions), and performance skills.",
       level: "Intermediate",
       icon: <Zap className="w-6 h-6 text-orange-500" />,
+      detail: "askl;",
     },
     {
       id: "advanced-masterclass",
@@ -122,9 +129,10 @@ export function Front() {
         "For experienced dancers. Delve into advanced choreography, Nattuvangam, and preparing for solo performances (Arangetram).",
       level: "Advanced",
       icon: <ChevronsRight className="w-6 h-6 text-red-500" />,
+      detail: "askl;",
     },
   ];
-  
+
   return (
     <>
       <motion.div
@@ -150,40 +158,94 @@ export function Front() {
         viewport={{ once: true }}
       >
         <RadioGroup onValueChange={setSelectedClass} className="space-y-6">
-          {classes.map((classItem, index) => (
-            <motion.div
-              key={classItem.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Label htmlFor={classItem.id} className="block cursor-pointer">
-                <div
-                  className={`flex items-center space-x-4 p-6 rounded-2xl border-2 transition-all ${
-                    selectedClass === classItem.id
-                      ? "bg-orange-50 border-orange-500 shadow-lg"
-                      : "bg-white/70 border-orange-200 hover:border-orange-400"
-                  }`}
-                >
-                  <RadioGroupItem value={classItem.id} id={classItem.id} />
-                  <div className="flex-grow">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-xl font-semibold font-cinzel flex items-center gap-2">
-                        {classItem.icon}
-                        {classItem.title}
-                      </h3>
-                      <span className="text-sm font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
-                        {classItem.level}
-                      </span>
+          {classes.map((classItem, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <motion.div
+                key={classItem.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Label htmlFor={classItem.id} className="block cursor-pointer">
+                  <div
+                    className={`rounded-2xl border-2 transition-all bg-black overflow-hidden ${
+                      selectedClass === classItem.id
+                        ? "bg-orange-50 border-orange-500 shadow-lg"
+                        : "bg-white/70 border-orange-200 hover:border-orange-400"
+                    }`}
+                  >
+                    <div className="flex items-center space-x-4 p-6 ">
+                      <RadioGroupItem value={classItem.id} id={classItem.id} />
+                      <div className="flex-grow">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-xl font-semibold font-cinzel flex items-center gap-2">
+                            {classItem.icon}
+                            {classItem.title}
+                          </h3>
+                          <div className="flex gap-5">
+                            <span className="text-sm font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
+                              {classItem.level}
+                            </span>
+                          </div>
+                        </div>
+                        <p className="text-gray-600 mt-2">
+                          {classItem.description}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-gray-600 mt-2">
-                      {classItem.description}
-                    </p>
+                    <button
+                      onClick={() => setOpenIndex(isOpen ? null : index)}
+                      className={`w-full flex justify-between items-center text-left p-3 font-semibold border-none bg-[#F58634]/30 text-gray-800`}
+                    >
+                      <div className="pl-14">Details</div>
+                      <ChevronDown
+                        className={`w-5 h-5 transition-transform duration-300 mr-6 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {/* <div className="">
+                      <button
+                        onClick={() => setOpenIndex(isOpen ? null : index)}
+                        className={`text-sm font-bold px-3 py-1 rounded-full ${
+                          isOpen
+                            ? "bg-orange-600 text-orange-100"
+                            : "text-orange-600 font-semibold bg-orange-100 "
+                        }`}
+                      >
+                        Dropdown
+                      </button>
+                    </div> */}
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{
+                            height:
+                              contentRefs.current[index]?.scrollHeight ||
+                              "auto",
+                            opacity: 1,
+                          }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className={`overflow-hidden bg-[#F58634]/30 text-black rounded-b-2xl `}
+                        >
+                          <div
+                            className="px-4 py-2"
+                            ref={(el) => (contentRefs.current[index] = el)}
+                          >
+                            {classItem.detail}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                </div>
-              </Label>
-            </motion.div>
-          ))}
+                </Label>
+              </motion.div>
+            );
+          })}
         </RadioGroup>
       </motion.div>
 
