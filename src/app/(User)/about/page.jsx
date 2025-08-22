@@ -1,4 +1,4 @@
-import { Front, Headabout, Mission } from "@/components/Animation/About";
+import { Front, Headabout } from "@/components/Animation/About";
 import { Award, BookOpen, Heart } from "lucide-react";
 import ImageCarousel from "@/components/sections/ImageCarousel";
 

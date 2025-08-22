@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Quote, Sparkles } from "lucide-react";
 // -----------------------------
 // DATA
 // -----------------------------
@@ -151,15 +151,19 @@ export function Front() {
         viewport={{ once: true }}
       >
         <motion.div
-          className="text-center mb-7"
+          className="text-center mb-7 grid md:grid-cols-[3%_30%_34%_30%_3%] mx-auto w-fit"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
+          >
+          <div></div>
+          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block"/>
           <h2 className="text-3xl font-bold font-['Cinzel']">
             <span className="dance-ornament"> Specializations</span> & Expertise
           </h2>
+          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block transform scale-x-[-1]"/>
+          <div></div>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
           {expertise.map((item, i) => (
@@ -176,6 +180,7 @@ export function Front() {
         </div>
       </motion.section>
 
+       
       {/* Achievements & Recognitions */}
       <motion.section
         className="mt-20"
@@ -185,15 +190,19 @@ export function Front() {
         viewport={{ once: true }}
       >
         <motion.div
-          className="text-center mb-7"
+          className="text-center mb-7 grid md:grid-cols-[3%_30%_34%_30%_3%] mx-auto w-fit"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
+          >
+          <div></div>
+          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block"/>
           <h2 className="text-3xl font-bold font-['Cinzel']">
             <span className="dance-ornament">Achievements</span> & Recognitions
           </h2>
+          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block transform scale-x-[-1]"/>
+          <div></div>
         </motion.div>
         <div className="grid md:grid-cols-4 gap-4">
           {achievements.map((ach, i) => (
@@ -217,7 +226,7 @@ export function Front() {
           ))}
         </div>
       </motion.section>
-      {/* Closing Bio & Vision */}
+
       <motion.section
         className="mt-20"
         initial={{ opacity: 0, y: 30 }}
@@ -225,8 +234,10 @@ export function Front() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="bg-amber-50 rounded-2xl shadow-md p-8 text-center max-w-4xl mx-auto">
+        <div className="bg-amber-50 rounded-2xl p-8 text-center max-w-4xl mx-auto shadow-[0_0_10px_0px_rgba(0,0,0,0.2)]">
+            <Quote className="mx-auto mb-3" size={65} strokeWidth={2}/>
           <p className="text-gray-700 leading-relaxed mb-6">
+
             Apart from her contributions to the field of Bharatanatyam, Akshatha
             holds a <strong>B.Com degree from Mysore University</strong>. She is
             also a homemaker and lives in Noida with her husband and daughter{" "}
