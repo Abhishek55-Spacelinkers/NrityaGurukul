@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -39,44 +40,55 @@ const images = [
 
 export default function ImageCarousel() {
   return (
-    <section className="py-20 max-[1000px]:px-4 px-20">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-20 px-4">
+      {/* <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755863490/1_r_khohba.svg" alt=""  className=""/> */}
+      <div className="max-w-8xl mx-auto grid grid-cols-[20%_60%_20%]">
+        <img
+          src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/left_wwmysk.png"
+          alt=""
+          className=""
+        />
         {/* Title Animation */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">
-            <span className="dance-ornament">Moments from</span> Our Gurukul
-          </h2>
-        </motion.div>
+        <div>
+          <motion.div
+            className="text-center mb-9"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold font-['Cinzel']">
+              <span className="dance-ornament">Moments from</span> Our Gurukul
+            </h2>
+          </motion.div>
 
-        {/* Carousel with Autoplay */}
-        <Carousel
-          className="w-full"
-          opts={{ loop: true }}
-        >
-          <CarouselContent>
-            {images.map((img, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <div className="aspect-video relative overflow-hidden rounded-2xl">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      className="w-full h-full object-cover"
-                    />
+          {/* Carousel with Autoplay */}
+          <Carousel className="w-full" opts={{ loop: true }} plugins={[Autoplay({ delay: 3000 })]}>
+            <CarouselContent>
+              {images.map((img, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <div className="aspect-video relative overflow-hidden rounded-2xl">
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="text-orange-500 border-orange-500 hover:bg-orange-100 left-10 " />
-          <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100 right-10" />
-        </Carousel>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="text-orange-500 border-orange-500 hover:bg-orange-100 left-10 " />
+            <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100 right-10" />
+          </Carousel>
+        </div>
+        <img
+          src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/right_llu4g0.png"
+          alt=""
+          className=""
+        />
+        <div></div>
       </div>
     </section>
   );

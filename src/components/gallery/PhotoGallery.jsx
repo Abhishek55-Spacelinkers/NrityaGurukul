@@ -1,6 +1,6 @@
 "use client";
-import React, {  useState } from "react";
-import { motion,AnimatePresence  } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const photoGalleryImages = [
@@ -83,11 +83,15 @@ const PhotoGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const handlePrev = () => {
-    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : photoGalleryImages.length - 1));
+    setSelectedIndex((prev) =>
+      prev > 0 ? prev - 1 : photoGalleryImages.length - 1
+    );
   };
 
   const handleNext = () => {
-    setSelectedIndex((prev) => (prev < photoGalleryImages.length - 1 ? prev + 1 : 0));
+    setSelectedIndex((prev) =>
+      prev < photoGalleryImages.length - 1 ? prev + 1 : 0
+    );
   };
 
   return (
@@ -139,7 +143,7 @@ const PhotoGallery = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.03}}
+            whileHover={{ scale: 1.03 }}
             onClick={handleClick}
           >
             <button className="rounded-2xl text-xl mt-6 px-8 py-2 cursor-pointer mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
@@ -157,7 +161,7 @@ const PhotoGallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            >
+          >
             <div
               className="fixed inset-0 w-full h-full bg-black opacity-90"
               onClick={() => setSelectedIndex(null)}
@@ -168,7 +172,7 @@ const PhotoGallery = () => {
                 className="absolute top-4 right-4 md:top-14 md:right-14 text-white"
                 onClick={() => setSelectedIndex(null)}
               >
-                <X  className="text-5xl" size={35}/>
+                <X className="text-5xl" size={35} />
               </button>
 
               {/* Prev Button */}
@@ -176,26 +180,29 @@ const PhotoGallery = () => {
                 className="absolute left-4 md:left-14 top-1/2 -translate-y-1/2 text-white text-4xl"
                 onClick={handlePrev}
               >
-                <ChevronLeft  size={50}/>
+                <ChevronLeft size={50} />
               </button>
 
               {/* Image */}
-              <motion.img
-                key={selectedIndex}
-                src={photoGalleryImages[selectedIndex].src}
-                alt={photoGalleryImages[selectedIndex].alt}
-                className="mx-auto max-h-[80vh] rounded-lg shadow-lg"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3 }}
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={selectedIndex}
+                  src={photoGalleryImages[selectedIndex].src}
+                  alt={photoGalleryImages[selectedIndex].alt}
+                  className="mx-auto max-h-[80vh] rounded-lg shadow-lg"
+                  initial={{ opacity: 0, scale: 0.95, x: 200 }}
+                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, x: -200 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </AnimatePresence>
 
               {/* Next Button */}
               <button
                 className="absolute right-4 md:right-14 top-1/2 -translate-y-1/2 text-white text-5xl"
                 onClick={handleNext}
               >
-                <ChevronRight  size={50}/>
+                <ChevronRight size={50} />
               </button>
             </div>
           </motion.div>

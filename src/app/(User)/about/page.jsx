@@ -26,7 +26,7 @@ export const metadata = {
 export default function About() {
   return (
     <div className="py-20 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <Headabout />
 
@@ -35,9 +35,8 @@ export default function About() {
         
 
         {/* Carousel */}
-        <div className="mb-5">
-          <ImageCarousel />
-        </div>
+        <ImageCarousel />
+        
 
         {/* Mission, Vision, Values */}
         <div className="grid md:grid-cols-3 gap-8 text-center">

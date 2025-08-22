@@ -12,6 +12,22 @@ const classes = [
   { id: "beginner-foundation", title: "Beginner Foundation Course" },
   { id: "intermediate-level", title: "Intermediate Level Program" },
   { id: "advanced-masterclass", title: "Advanced Masterclass" },
+  { id: "trial", title: "Trial class" },
+  { id: "trial-prarambhik", title: "Trial-Prarambhik class" },
+  { id: "trial-praveshika-pratham", title: "Trial-Praveshika Pratham class" },
+  { id: "trial-praveshika-purna", title: "Trial-Praveshika Purna class" },
+  { id: "trial-madhyama-pratham", title: "Trial-Madhyama Pratham class" },
+  { id: "trial-madhyama-purna", title: "Trial-Madhyama Purna class" },
+  { id: "trial-visharad-pratham", title: "Trial-Visharad Pratham class" },
+  { id: "trial-visharad-purna", title: "Trial-Visharad Purna class" },
+  { id: "prarambhik", title: "Prarambhik" },
+  { id: "praveshika-pratham", title: "Praveshika Pratham" },
+  { id: "praveshika-purna", title: "Praveshika Purna" },
+  { id: "madhyama-pratham", title: "Madhyama Pratham" },
+  { id: "madhyama-purna", title: "Madhyama Purna" },
+  { id: "visharad-pratham", title: "Visharad Pratham" },
+  { id: "visharad-purna", title: "Visharad Purna" },
+  { id: "arangetram", title: "Arangetram Training" },
 ];
 
 export default function BookingFormContent() {

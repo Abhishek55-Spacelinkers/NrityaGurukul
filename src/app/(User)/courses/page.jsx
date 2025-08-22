@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Faqs } from "@/lib/data";
+import BudgetRequestForm from "@/components/form/BudgetRequestForm ";
 
 export default function NrityaGurukulCoursesPage() {
   const Specifications = [
@@ -42,7 +43,7 @@ export default function NrityaGurukulCoursesPage() {
         "Foundational Adavus",
       ],
       certificate: "ABGMVM Prarambhik Certificate",
-      ctaHref: "/enroll?level=prarambhik",
+      ctaHref: "booking-form?class=prarambhik",
     },
     {
       id: "praveshika-pratham",
@@ -52,7 +53,7 @@ export default function NrityaGurukulCoursesPage() {
       duration: "1 Year",
       focus: ["Advanced Adavus", "Footwork & stamina", "Rhythm precision"],
       certificate: "ABGMVM Praveshika Pratham Certificate",
-      ctaHref: "/enroll?level=praveshika-pratham",
+      ctaHref: "booking-form?class=praveshika-pratham",
     },
     {
       id: "praveshika-purna",
@@ -62,7 +63,7 @@ export default function NrityaGurukulCoursesPage() {
       duration: "1 Year",
       focus: ["Alarippu", "Pushpanjali", "Stage skills & confidence"],
       certificate: "ABGMVM Praveshika Purna Certificate",
-      ctaHref: "/enroll?level=praveshika-purna",
+      ctaHref: "booking-form?class=praveshika-purna",
     },
     {
       id: "madhyama-pratham",
@@ -72,7 +73,7 @@ export default function NrityaGurukulCoursesPage() {
       duration: "1 Year",
       focus: ["Shabdam", "Jatiswaram", "Alarippu in varied jatis"],
       certificate: "ABGMVM Madhyama Pratham Certificate",
-      ctaHref: "/enroll?level=madhyama-pratham",
+      ctaHref: "booking-form?class=madhyama-pratham",
     },
     {
       id: "madhyama-purna",
@@ -82,7 +83,7 @@ export default function NrityaGurukulCoursesPage() {
       duration: "1 Year",
       focus: ["Tillana", "Advanced rhythm", "Stage command & grace"],
       certificate: "ABGMVM Madhyama Purna Certificate",
-      ctaHref: "/enroll?level=madhyama-purna",
+      ctaHref: "booking-form?class=madhyama-purna",
     },
     {
       id: "visharad-pratham",
@@ -96,7 +97,7 @@ export default function NrityaGurukulCoursesPage() {
         "Stamina & technique",
       ],
       certificate: "ABGMVM Visharad Pratham Certificate",
-      ctaHref: "/enroll?level=visharad-pratham",
+      ctaHref: "booking-form?class=visharad-pratham",
     },
     {
       id: "visharad-purna",
@@ -111,7 +112,7 @@ export default function NrityaGurukulCoursesPage() {
       ],
       certificate:
         "ABGMVM Visharad Purna Certificate (Graduate Diploma in Bharatanatyam)",
-      ctaHref: "/enroll?level=visharad-purna",
+      ctaHref: "booking-form?class=visharad-purna",
     },
   ];
 
@@ -223,7 +224,7 @@ export default function NrityaGurukulCoursesPage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                <Link href="/trial">
+                <Link href="booking-form?class=trial">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 rounded-full pulse-glow"
@@ -475,7 +476,7 @@ export default function NrityaGurukulCoursesPage() {
                         variant="outline"
                         className="rounded-xl border border-orange-200 duration-300"
                       >
-                        <Link href={`/trial?level=${lvl.id}`}>Book Trial</Link>
+                        <Link href={`booking-form?class=trial-${lvl.id}`}>Book Trial</Link>
                       </Button>
                     </div>
                   </CardContent>
@@ -487,7 +488,7 @@ export default function NrityaGurukulCoursesPage() {
       </section>
 
       {/* COMPARISON TABLE */}
-      <section className="py-12 md:py-16 ">
+      <section className="pb-12 md:pb-16 ">
         <div className={container}>
           <motion.div
             className="text-center mb-12"
@@ -537,7 +538,7 @@ export default function NrityaGurukulCoursesPage() {
                           Enroll
                         </Link>
                         <Link
-                          href={`/trial?level=${lvl.id}`}
+                          href={`booking-form?class=trial-${lvl.id}`}
                           className="px-3 py-1 rounded-md border"
                         >
                           Trial
@@ -610,12 +611,12 @@ export default function NrityaGurukulCoursesPage() {
                     asChild
                     className="rounded-xl bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
                   >
-                    <Link href="/apply/arangetram">
+                    <Link href="booking-form?class=arangetram">
                       Apply for Arangetram Training
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="rounded-xl">
-                    <Link href="/contact?topic=arangetram">
+                    <Link href="/contact#inquiry-form">
                       Request Budget & Inclusions
                     </Link>
                   </Button>
@@ -670,7 +671,7 @@ export default function NrityaGurukulCoursesPage() {
               variant="outline"
               className="rounded-2xl text-black hover:font-semibold duration-200"
             >
-              <Link href="/trial">Book a Free Trial</Link>
+              <Link href="/booking-form?class=trial">Book a Free Trial</Link>
             </Button>
             <Button
               asChild
@@ -701,6 +702,8 @@ export default function NrityaGurukulCoursesPage() {
           </div>
         </div>
       </section>
+
+      <BudgetRequestForm/>
     </main>
   );
 }

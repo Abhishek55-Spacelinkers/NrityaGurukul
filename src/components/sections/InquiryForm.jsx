@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 const InquiryForm = () => {
   return (
-    <section id="inquiry-form" className="py-20 px-4">
+    <section id="inquiry-form" className="py-20 px-4 scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <motion.div 
           className="text-center mb-12"
@@ -18,10 +18,10 @@ const InquiryForm = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">
-            <span className="dance-ornament">Join Nritya</span> Gurukul Family
+            <span className="dance-ornament">Have a Question</span> or Need Assistance?
           </h2>
           <p className="text-xl text-gray-600">
-            Fill out the form below to reserve your spot in our upcoming Bharatnatyam classes
+            Fill out this form if you’d like to inquire about classes, timings, or payment options. Our team will get back to you shortly.
           </p>
         </motion.div>
 

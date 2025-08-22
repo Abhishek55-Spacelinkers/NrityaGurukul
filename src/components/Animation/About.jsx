@@ -234,8 +234,8 @@ export function Front() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="bg-amber-50 rounded-2xl p-8 text-center max-w-4xl mx-auto shadow-[0_0_10px_0px_rgba(0,0,0,0.2)]">
-            <Quote className="mx-auto mb-3" size={65} strokeWidth={2}/>
+        <div className="bg-amber-50 rounded-2xl p-8 text-center max-w-5xl mx-auto shadow-[0_0_10px_0px_rgba(0,0,0,0.2)]">
+            <Quote className="mx-auto mb-6" size={65} strokeWidth={2} color="#8c6239"/>
           <p className="text-gray-700 leading-relaxed mb-6">
 
             Apart from her contributions to the field of Bharatanatyam, Akshatha
