@@ -66,9 +66,8 @@ export function Headabout() {
         <span className="dance-ornament">Our Story</span>
       </h1>
       <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-        Nritya Gurukul was founded with a singular vision: to create a sanctuary
-        for the timeless art of Bharatanatyam, where tradition meets passion and
-        dedication.
+        Nritya Gurukul was founded with a singular vision to create a sanctuary
+        for the timeless art of Bharatanatyam — a space where tradition meets creativity, dancers find their rhythm, and culture thrives for generations to come.
       </p>
     </motion.div>
   );

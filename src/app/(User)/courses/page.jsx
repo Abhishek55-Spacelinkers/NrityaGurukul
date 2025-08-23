@@ -15,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Faqs } from "@/lib/data";
-import BudgetRequestForm from "@/components/form/BudgetRequestForm ";
 
 export default function NrityaGurukulCoursesPage() {
   const Specifications = [
@@ -149,8 +148,8 @@ export default function NrityaGurukulCoursesPage() {
   ];
 
   const arangetramPoints = {
-    eligibility:
-      "Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness.",
+    eligibility:["Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness."],
+    Prerequisites:["Strong Adavu technique, consistent tālam control, performance experience, disciplined practice, and attendance."],
     rubric: [
       "Technique: clarity of adavus, araimandi, balance",
       "Rhythm & memory: jatis, korvais, teermanams",
@@ -299,14 +298,14 @@ export default function NrityaGurukulCoursesPage() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">
-            <span className="dance-ornament">Specifications</span>
+            <span className="dance-ornament">Key Highlights </span>at Nritya Gurukul
           </h2>
         </motion.div>
         <div className={container}>
           <div className="grid md:grid-cols-2 gap-8">
             {Specifications.map((h, i) => {
               const pairIndex = Math.floor(i / 2);
-              const colors = ["bg-orange-400/20", "bg-amber-300/60"];
+              const colors = ["bg-orange-400/20", "bg-amber-500/30"];
 
               return (
                 <motion.div
@@ -318,7 +317,7 @@ export default function NrityaGurukulCoursesPage() {
                   className="flex w-[90%]"
                 >
                   <div className="flex-shrink-0 my-auto pr-3 ">
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white font-bold text-lg shadow-md relative">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r to-[#ff6b35]  from-red-500  text-white font-bold text-lg shadow-md relative">
                       {i + 1}
                     </div>
                   </div>
@@ -572,8 +571,12 @@ export default function NrityaGurukulCoursesPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="rounded-xl border p-4">
                     <div className="font-medium">Eligibility</div>
-                    <p className="text-sm text-slate-600 mt-1">
+                    <p className="text-sm text-slate-600 mt-0.5">
                       {arangetramPoints.eligibility}
+                    </p>
+                    <div className="font-medium mt-2.5">Prerequisites</div>
+                    <p className="text-sm text-slate-600 mt-0.5">
+                      {arangetramPoints.Prerequisites}
                     </p>
                   </div>
                   <div className="rounded-xl border p-4">
@@ -678,7 +681,7 @@ export default function NrityaGurukulCoursesPage() {
               size="lg"
               className="rounded-2xl  hover:font-semibold duration-200"
             >
-              <Link href="/contact?topic=fees">Request Fees</Link>
+              <Link href="/requestfees">Request Fees</Link>
             </Button>
           </div>
         </div>
@@ -690,11 +693,11 @@ export default function NrityaGurukulCoursesPage() {
           <h3 className="text-xl md:text-2xl font-semibold">FAQs</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
             {Faqs.map((faq, id) => (
-              <Card className="rounded-2xl" key={id + "faq"}>
+              <Card className="rounded-2xl hover:scale-105 duration-300 hover:bg-gradient-to-r hover:from-orange-500/70 hover:to-orange-600/60 group hover:text-white" key={id + "faq"}>
                 <CardHeader>
                   <CardTitle>{faq.question}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-slate-700 text-sm">
+                <CardContent className="text-slate-700 group-hover:text-white text-sm duration-300">
                   {faq.answer}
                 </CardContent>
               </Card>
@@ -703,7 +706,7 @@ export default function NrityaGurukulCoursesPage() {
         </div>
       </section>
 
-      <BudgetRequestForm/>
+      
     </main>
   );
 }

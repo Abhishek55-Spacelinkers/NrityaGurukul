@@ -30,12 +30,6 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-3">
-          {/* <motion.div
-            className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center"
-            whileHover={{ scale: 1.1, rotate: 15 }}
-          >
-            <span className="text-white font-bold text-xl">🕉</span>
-          </motion.div> */}
           <img src="/assets/NG-Logo.svg" alt="" className="h-28" />
         </Link>
 

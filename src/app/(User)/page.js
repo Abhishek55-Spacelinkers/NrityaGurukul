@@ -11,11 +11,13 @@ import InquiryForm from "@/components/sections/InquiryForm";
 import Contact from "@/components/sections/Contact";
 import ImageCarousel from "@/components/sections/ImageCarousel";
 import Testimonials from "@/components/sections/Testimonials";
+import AboutAndWhy from "@/components/sections/AboutAndWhy";
 
 export default function Home() {
   return (
     <> 
         <Hero />
+        <AboutAndWhy/>
         <ImageCarousel />
         <Features />
         <Testimonials />

@@ -6,7 +6,7 @@ import { Details } from "@/lib/data";
 
 const Contact = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-r from-orange-500 to-orange-400 text-white">
+    <section className="py-20 px-4 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div 

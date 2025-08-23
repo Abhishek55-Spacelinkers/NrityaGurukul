@@ -16,6 +16,9 @@ import {
   QrCode,
   MessageSquare,
 } from "lucide-react";
+import Beginner from "../booking/Beginner";
+import Intermediate from "../booking/Intermediate";
+import Advanced from "../booking/Advanced";
 
 export function BookingGuide() {
   const steps = [
@@ -40,7 +43,7 @@ export function BookingGuide() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-orange-50/50">
+    <section className="py-20 px-4 scroll-mt-20" id="payfees">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -111,7 +114,7 @@ export function Front() {
         "Perfect for absolute beginners. Learn the fundamental Adavus (steps), Hastas (hand gestures), and basic theory.",
       level: "Beginner",
       icon: <Star className="w-6 h-6 text-yellow-500" />,
-      detail: "askl;",
+      detail: <Beginner/>,
     },
     {
       id: "intermediate-level",
@@ -120,7 +123,7 @@ export function Front() {
         "For students with basic knowledge. Focus on complex compositions, Abhinaya (expressions), and performance skills.",
       level: "Intermediate",
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      detail: "askl;",
+      detail: <Intermediate/>,
     },
     {
       id: "advanced-masterclass",
@@ -129,7 +132,7 @@ export function Front() {
         "For experienced dancers. Delve into advanced choreography, Nattuvangam, and preparing for solo performances (Arangetram).",
       level: "Advanced",
       icon: <ChevronsRight className="w-6 h-6 text-red-500" />,
-      detail: "askl;",
+      detail: <Advanced/>,
     },
   ];
 

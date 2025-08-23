@@ -3,10 +3,8 @@
 import dynamic from "next/dynamic";
 
 import { Toaster } from "@/components/ui/toaster";
-import { Poppins, Cinzel } from "next/font/google";
 
-import TopBar from "@/components/layout/TopBar";
-import Header from "@/components/layout/Header";
+import Header from "@/components/layout/Header1";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 const Footer = dynamic(() => import("@/components/layout/Footer"));
 import EventPopup from "@/components/layout/EventPopup";
@@ -18,8 +16,9 @@ const MusicPlayer = dynamic(() => import("@/components/gallery/Musicplayer"), {
 export default function RootLayout({ children }) {
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <Header />
+      <div className="w-full h-[150px]"></div>
       {children}
       <Footer />
       <Toaster />

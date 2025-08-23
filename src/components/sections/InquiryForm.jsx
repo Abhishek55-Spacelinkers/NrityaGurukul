@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 const InquiryForm = () => {
   return (
-    <section id="inquiry-form" className="py-20 px-4 scroll-mt-20">
+    <section id="inquiry-form" className="py-16 px-4 scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <motion.div 
           className="text-center mb-12"

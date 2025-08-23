@@ -33,7 +33,7 @@ export default function MusicPlayer() {
   return (
     <button
       onClick={toggleMusic}
-      className="fixed bottom-26 right-9 p-3 rounded-full bg-white shadow"
+      className="fixed bottom-26 right-9 p-3 z-50 rounded-full bg-white shadow"
     >
       {playing ? "🔊" : "🔇"}
     </button>

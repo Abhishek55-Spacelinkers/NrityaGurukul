@@ -42,11 +42,11 @@ export default function ImageCarousel() {
   return (
     <section className="py-20 px-4">
       {/* <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755863490/1_r_khohba.svg" alt=""  className=""/> */}
-      <div className="max-w-8xl mx-auto grid grid-cols-[20%_60%_20%]">
+      <div className="max-w-[1350px] mx-auto grid lg:grid-cols-[20%_60%_20%]">
         <img
           src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/left_wwmysk.png"
           alt=""
-          className=""
+          className="hidden lg:block"
         />
         {/* Title Animation */}
         <div>
@@ -86,7 +86,7 @@ export default function ImageCarousel() {
         <img
           src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/right_llu4g0.png"
           alt=""
-          className=""
+          className="hidden lg:block"
         />
         <div></div>
       </div>

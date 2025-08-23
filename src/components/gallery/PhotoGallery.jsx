@@ -169,7 +169,7 @@ const PhotoGallery = () => {
             <div className="flex items-center mt-0 min-h-screen px-4 z-20 mx-auto">
               {/* Close Button */}
               <button
-                className="absolute top-4 right-4 md:top-14 md:right-14 text-white"
+                className="absolute top-4 right-4 md:top-14 md:right-14 text-white cursor-pointer"
                 onClick={() => setSelectedIndex(null)}
               >
                 <X className="text-5xl" size={35} />
@@ -177,7 +177,7 @@ const PhotoGallery = () => {
 
               {/* Prev Button */}
               <button
-                className="absolute left-4 md:left-14 top-1/2 -translate-y-1/2 text-white text-4xl"
+                className="absolute left-4 md:left-14 top-1/2 -translate-y-1/2 text-white cursor-pointer"
                 onClick={handlePrev}
               >
                 <ChevronLeft size={50} />
@@ -199,7 +199,7 @@ const PhotoGallery = () => {
 
               {/* Next Button */}
               <button
-                className="absolute right-4 md:right-14 top-1/2 -translate-y-1/2 text-white text-5xl"
+                className="absolute right-4 md:right-14 top-1/2 -translate-y-1/2 text-white cursor-pointer"
                 onClick={handleNext}
               >
                 <ChevronRight size={50} />

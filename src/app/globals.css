@@ -108,6 +108,8 @@ body {
   --container-screens-2xl: 1400px;
 
   --breakpoint-tab: 70rem;
+  --breakpoint-mob: 54rem;
+  
 
   --font-poppins: var(--font-poppins);
   --font-cinzel: var(--font-cinzel);

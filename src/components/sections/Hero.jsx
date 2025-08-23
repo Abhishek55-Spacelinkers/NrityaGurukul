@@ -14,12 +14,12 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Section */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6 -mt-10"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               <motion.div
                 className="inline-block px-4 py-2 bg-gradient-to-r from-orange-100 to-red-100 rounded-full"
                 animate={{ scale: [1, 1.05, 1] }}
@@ -30,13 +30,13 @@ export default function Hero() {
                 </span>
               </motion.div>
 
-              <h1 className="text-5xl lg:text-7xl font-bold font-cinzel">
+              <h1 className="text-5xl lg:text-7xl font-bold font-cinzel leading-17">
                 <span className="dance-ornament">Bharatanatyam</span>
                 <br />
                 <span className="text-gray-800">Dance Classes</span>
               </h1>
 
-              <p className="text-xl text-gray-600 leading-7 max-w-lg">
+              <p className="text-[18px] text-gray-600 leading-6  text-justify">
                 Discover the divine art of Bharatnatyam - where every movement
                 tells a story, every gesture speaks the language of gods, and
                 every step connects you to ancient traditions.

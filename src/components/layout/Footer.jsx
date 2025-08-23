@@ -16,7 +16,7 @@ export default function Footer() {
   const { toast } = useToast();
 
   return (
-    <footer className="relative py-12 px-4 bg-gray-900 text-white overflow-hidden">
+    <footer className="relative py-12 px-4 bg-[#ECD9BA] text-gray-900 overflow-hidden">
       {/* Background pattern */}
       <div
         className="absolute inset-0 bg-repeat opacity-5"
@@ -29,93 +29,85 @@ export default function Footer() {
       <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-[35%_15%_15%_35%] gap-8">
+        <div className="grid grid-cols-1 w-full md:w-[70%] mx-auto lg:w-[100%] lg:grid-cols-[35%_29%_32%] gap-8 relative p-5">
           {/* Logo & description */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">🕉</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold font-['Cinzel']">
-                  Nritya Gurukul
-                </span>
-              </div>
+          <div className="space-y-1">
+            <Link href="/" className="flex w-fit mx-auto lg:ml-0 items-center space-x-3">
+              <img src="/assets/logo.svg" alt="Logo" className="h-28" />
             </Link>
-            <p className="text-gray-400">
+            <p className="text-gray-700 text-center lg:text-justify w-[96%]">
               Preserving the ancient art of Bharatnatyam through dedicated
               teaching and passionate learning.
             </p>
-            <div className="flex gap-5 text-gray-400">
-              <Link className="text-sm underline" href="/terms">Terms</Link>
-              <Link className="text-sm underline" href="/privacy">Privacy</Link>
-              <Link className="text-sm underline" href="/contact">Contact</Link>
-            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <span className="text-lg font-semibold block">Quick Links</span>
-            <div className="space-y-2">
-              <Link
-                href="/"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/gallery"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                Gallery
-              </Link>
-              <Link
-                href="/contact"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                Contact Us
-              </Link>
+          <div className="grid grid-cols-2 gap-7 mx-auto w-fit lg:w-full">
+        
+            <div className="space-y-4 w-fit ">
+              <span className="text-lg font-semibold block">Quick Links</span>
+              <div className="space-y-1 ">
+                <Link
+                  href="/"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/gallery"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  Gallery
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
-          </div>
 
-          <div className="space-y-4">
-            <span className="text-lg font-semibold block">Courses</span>
-            <div className="space-y-2">
-              <Link
-                href="/courses#arangetram"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                Arangetram
-              </Link>
-              <Link
-                href="/courses#levels"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                Course Levels
-              </Link>
-              <Link
-                href="/courses#format"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                Theory Progression
-              </Link>
-              <Link
-                href="/courses#faqs"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                FAQs
-              </Link>
+            <div className="space-y-4 w-fit">
+              <span className="text-lg font-semibold block">Courses</span>
+              <div className="space-y-1 ">
+                <Link
+                  href="/courses#arangetram"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  Arangetram
+                </Link>
+                <Link
+                  href="/courses#levels"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  Course Levels
+                </Link>
+                <Link
+                  href="/courses#faqs"
+                  className="block text-gray-700 hover:text-[#F58634]  transition-colors"
+                >
+                  FAQs
+                </Link>
+                <Link
+                  href="/book-class#payfees"
+                  className="block text-gray-700 hover:text-[#F58634] transition-colors"
+                >
+                  Pay Fees
+                </Link>
+              </div>
             </div>
+              
           </div>
 
           {/* Follow Us */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 lg:ml-7">
             <div className="w-full flex justify-between">
               <span className="text-lg font-semibold">Follow Us</span>
               <div className="flex space-x-4 ">
@@ -151,7 +143,7 @@ export default function Footer() {
               </div>
             </div>
             <motion.div
-              className="relative h-[150px]  rounded-2xl overflow-hidden shadow-lg"
+              className="relative h-[150px]  rounded-2xl overflow-hidden shadow-lg hidden lg:block"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -169,10 +161,13 @@ export default function Footer() {
             </motion.div>
           </div>
         </div>
-
+        <div className="flex gap-10 text-gray-700 mb-0 mt-2 mx-auto w-fit lg:ml-0">
+              <Link className="text-sm hover:text-[#F58634]" href="/terms">Terms & Condition</Link>
+              <Link className="text-sm hover:text-[#F58634]" href="/privacy">Privacy Policy</Link>
+            </div>
         {/* Footer bottom */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-800 pt-8 text-center">
+          <p className="text-gray-700">
             © {new Date().getFullYear()} Nritya Gurukul. All rights reserved. |
             <span className="ml-2">
               Powered by{" "}
@@ -180,7 +175,7 @@ export default function Footer() {
                 href="https://spacelinkers.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-400 hover:text-orange-300 transition-colors"
+                className="text-orange-600 hover:text-orange-500 transition-colors"
               >
                 Spacelinkers Infotech
               </a>
