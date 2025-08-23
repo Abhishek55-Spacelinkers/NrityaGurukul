@@ -7,7 +7,7 @@ export default function MusicPlayer() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && !audioRef.current) {
-      const audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+      const audio = new Audio("https://cdn.pixabay.com/download/audio/2023/02/24/audio_2ddd022e1b.mp3");
       audio.loop = true;
       audio.volume = 0.4;
       audio.muted = true;
