@@ -95,7 +95,7 @@ const PhotoGallery = () => {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 scroll-m-20" id="photos">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div

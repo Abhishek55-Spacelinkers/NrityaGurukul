@@ -12,6 +12,7 @@ import Contact from "@/components/sections/Contact";
 import ImageCarousel from "@/components/sections/ImageCarousel";
 import Testimonials from "@/components/sections/Testimonials";
 import AboutAndWhy from "@/components/sections/AboutAndWhy";
+import ButtonG from "@/components/gallery/ButtonG";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <ImageCarousel />
         <Features />
         <Testimonials />
+        <ButtonG/>
         <InquiryForm />
         <Contact />
     </>

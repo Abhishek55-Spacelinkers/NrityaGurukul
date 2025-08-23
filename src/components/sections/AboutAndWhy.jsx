@@ -4,7 +4,7 @@ export default function AboutAndWhy() {
   return (
     <section className=" text-gray-800">
       {/* Section 2: About the School */}
-      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto px-6 py-10 md:py-16 grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Image */}
         <div className="rounded-2xl overflow-hidden shadow-lg">
           <img

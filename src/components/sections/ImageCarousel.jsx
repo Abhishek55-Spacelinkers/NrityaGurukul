@@ -40,7 +40,7 @@ const images = [
 
 export default function ImageCarousel() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-10 sm:py-20 px-4">
       {/* <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755863490/1_r_khohba.svg" alt=""  className=""/> */}
       <div className="max-w-[1350px] mx-auto grid lg:grid-cols-[20%_60%_20%]">
         <img
