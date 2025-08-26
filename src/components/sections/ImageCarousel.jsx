@@ -43,7 +43,11 @@ export default function ImageCarousel() {
     <section className="py-10 sm:py-20 px-4">
       {/* <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755863490/1_r_khohba.svg" alt=""  className=""/> */}
       <div className="max-w-[1350px] mx-auto grid lg:grid-cols-[20%_60%_20%]">
-        <img
+        <motion.img
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/left_wwmysk.png"
           alt=""
           className="hidden lg:block"
@@ -63,7 +67,11 @@ export default function ImageCarousel() {
           </motion.div>
 
           {/* Carousel with Autoplay */}
-          <Carousel className="w-full" opts={{ loop: true }} plugins={[Autoplay({ delay: 3000 })]}>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 3000 })]}
+          >
             <CarouselContent>
               {images.map((img, index) => (
                 <CarouselItem key={index}>
@@ -83,7 +91,11 @@ export default function ImageCarousel() {
             <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100 right-10" />
           </Carousel>
         </div>
-        <img
+        <motion.img
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/right_llu4g0.png"
           alt=""
           className="hidden lg:block"

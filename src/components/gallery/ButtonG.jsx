@@ -1,7 +1,7 @@
 "use client";
 import { Camera, PlayCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import Link  from "next/link";
+import Link from "next/link";
 
 export default function ButtonG() {
   const scrollToSection = (id) => {
@@ -15,7 +15,12 @@ export default function ButtonG() {
     <section className="py-10 sm:py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-cinzel dance-ornament">
             Your Moment Awaits
           </h2>
@@ -28,10 +33,16 @@ export default function ButtonG() {
             Whether you want to relive the energy of the stage or see the beauty
             behind the scenes, start your journey right here.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right Action Cards */}
-        <div className="grid sm:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="grid sm:grid-cols-2 gap-6"
+        >
           {/* Card 1 */}
           <Link
             href={"/gallery#photos"}
@@ -66,7 +77,7 @@ export default function ButtonG() {
               Experience the magic of live recitals and stage moments.
             </p>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

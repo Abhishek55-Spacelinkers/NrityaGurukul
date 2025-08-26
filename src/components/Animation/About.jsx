@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Quote, Sparkles } from "lucide-react";
+import { Award, BookOpen, Heart } from "lucide-react";
+
 // -----------------------------
 // DATA
 // -----------------------------
@@ -67,7 +69,9 @@ export function Headabout() {
       </h1>
       <p className="text-lg text-gray-600 max-w-3xl mx-auto">
         Nritya Gurukul was founded with a singular vision to create a sanctuary
-        for the timeless art of Bharatanatyam — a space where tradition meets creativity, dancers find their rhythm, and culture thrives for generations to come.
+        for the timeless art of Bharatanatyam — a space where tradition meets
+        creativity, dancers find their rhythm, and culture thrives for
+        generations to come.
       </p>
     </motion.div>
   );
@@ -155,13 +159,21 @@ export function Front() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          >
+        >
           <div></div>
-          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block"/>
+          <img
+            src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
+            alt=""
+            className="hidden md:block"
+          />
           <h2 className="text-3xl font-bold font-['Cinzel']">
             <span className="dance-ornament"> Specializations</span> & Expertise
           </h2>
-          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block transform scale-x-[-1]"/>
+          <img
+            src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
+            alt=""
+            className="hidden md:block transform scale-x-[-1]"
+          />
           <div></div>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -170,7 +182,9 @@ export function Front() {
               key={i}
               className="bg-white p-6 shadow-md transition rounded-2xl border border-orange-200  hover:scale-105 duration-300"
             >
-              <h3 className="font-bold font-['Cinzel'] text-lg mb-2">{item.title}</h3>
+              <h3 className="font-bold font-['Cinzel'] text-lg mb-2">
+                {item.title}
+              </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
                 {item.description}
               </p>
@@ -179,7 +193,6 @@ export function Front() {
         </div>
       </motion.section>
 
-       
       {/* Achievements & Recognitions */}
       <motion.section
         className="mt-20"
@@ -194,13 +207,21 @@ export function Front() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          >
+        >
           <div></div>
-          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block"/>
+          <img
+            src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
+            alt=""
+            className="hidden md:block"
+          />
           <h2 className="text-3xl font-bold font-['Cinzel']">
             <span className="dance-ornament">Achievements</span> & Recognitions
           </h2>
-          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg" alt="" className="hidden md:block transform scale-x-[-1]"/>
+          <img
+            src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
+            alt=""
+            className="hidden md:block transform scale-x-[-1]"
+          />
           <div></div>
         </motion.div>
         <div className="grid md:grid-cols-4 gap-4">
@@ -209,7 +230,9 @@ export function Front() {
               key={i}
               className="bg-white p-5 shadow-md rounded-2xl border border-orange-200  hover:scale-105 duration-300 transition"
             >
-              <h3 className="font-['Cinzel'] font-bold text-lg mb-3">{ach.title}</h3>
+              <h3 className="font-['Cinzel'] font-bold text-lg mb-3">
+                {ach.title}
+              </h3>
               {ach.list ? (
                 <ul className="list-disc ml-5 space-y-1 text-gray-700 text-sm">
                   {ach.list.map((l, idx) => (
@@ -234,9 +257,13 @@ export function Front() {
         viewport={{ once: true }}
       >
         <div className="bg-amber-50 rounded-2xl p-8 text-center max-w-5xl mx-auto shadow-[0_0_10px_0px_rgba(0,0,0,0.2)]">
-            <Quote className="mx-auto mb-6" size={65} strokeWidth={2} color="#8c6239"/>
+          <Quote
+            className="mx-auto mb-6"
+            size={65}
+            strokeWidth={2}
+            color="#8c6239"
+          />
           <p className="text-gray-700 leading-relaxed mb-6">
-
             Apart from her contributions to the field of Bharatanatyam, Akshatha
             holds a <strong>B.Com degree from Mysore University</strong>. She is
             also a homemaker and lives in Noida with her husband and daughter{" "}
@@ -250,6 +277,51 @@ export function Front() {
           </p>
         </div>
       </motion.section>
+    </>
+  );
+}
+
+export function Mission() {
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="grid md:grid-cols-3 gap-8 text-center"
+      >
+        <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-orange-200 hover:scale-105 duration-300">
+          <Award className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+          <h3 className="text-2xl font-semibold font-['Cinzel'] mb-2">
+            Our Mission
+          </h3>
+          <p className="text-gray-600">
+            To preserve and promote the authentic techniques of Bharatnatyam
+            through high-quality instruction and performance.
+          </p>
+        </div>
+        <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-orange-200  hover:scale-105 duration-300">
+          <BookOpen className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+          <h3 className="text-2xl font-semibold font-['Cinzel'] mb-2">
+            Our Vision
+          </h3>
+          <p className="text-gray-600">
+            To be a leading center for classical dance excellence, fostering a
+            community of passionate and skilled artists.
+          </p>
+        </div>
+        <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-orange-200  hover:scale-105 duration-300">
+          <Heart className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+          <h3 className="text-2xl font-semibold font-['Cinzel'] mb-2">
+            Our Values
+          </h3>
+          <p className="text-gray-600">
+            Discipline, Respect, Passion, and a commitment to lifelong learning
+            and artistic integrity.
+          </p>
+        </div>
+      </motion.div>
     </>
   );
 }

@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="py-20 px-4">
+    <div className="px-4">
       <div className="max-w-6xl mx-auto">
         <Front />
         <WhyJoinUs />

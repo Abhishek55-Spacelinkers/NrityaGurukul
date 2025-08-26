@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Sparkles, Target, Users } from "lucide-react";
 import { Details } from "@/lib/data";
+
 export function WhyJoinUs() {
   const whyUsPoints = [
     {
@@ -28,7 +29,7 @@ export function WhyJoinUs() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-orange-50/50">
+    <section className="py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -91,13 +92,13 @@ export function Front() {
   return (
     <>
       <motion.div
-        className="text-center mb-16"
+        className="text-center py-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.4 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-5xl font-bold font-['Cinzel'] mb-4">
+        <h1 className="text-5xl font-bold font-['Cinzel'] mb-5">
           <span className="dance-ornament">Get In Touch</span>
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
