@@ -36,7 +36,7 @@ export default function Footer() {
               <img src="/assets/logo.svg" alt="Logo" className="h-28" />
             </Link>
             <p className="text-gray-700 text-center lg:text-justify w-[96%]">
-              Preserving the ancient art of Bharatnatyam through dedicated
+              Preserving the ancient art of Bharatanatyam through dedicated
               teaching and passionate learning.
             </p>
           </div>
@@ -161,9 +161,9 @@ export default function Footer() {
             </motion.div>
           </div>
         </div>
-        <div className="flex gap-10 text-gray-700 mb-0 mt-2 mx-auto w-fit lg:ml-0">
-              <Link className="text-sm hover:text-[#F58634]" href="/terms">Terms & Condition</Link>
-              <Link className="text-sm hover:text-[#F58634]" href="/privacy">Privacy Policy</Link>
+        <div className="flex gap-5 text-gray-700 mb-1 mt-2 mx-auto w-fit lg:ml-0">
+              <Link className="text-sm hover:text-[#F58634]" href="/terms">Terms & Conditions</Link>
+              <Link className="text-sm hover:text-[#F58634] border-l pl-5" href="/privacy">Privacy Policy</Link>
             </div>
         {/* Footer bottom */}
         <div className="border-t border-gray-800 pt-8 text-center">

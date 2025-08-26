@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ChevronDown } from "lucide-react";
-
+import { Details } from "@/lib/data";
 import {
   Star,
   Zap,
@@ -15,35 +15,42 @@ import {
   FileText,
   QrCode,
   MessageSquare,
+  Info,
+  X,
 } from "lucide-react";
 import Beginner from "../booking/Beginner";
 import Intermediate from "../booking/Intermediate";
 import Advanced from "../booking/Advanced";
+import Link from "next/link";
 
 export function BookingGuide() {
+  const [open, setOpen] = useState(false);
   const steps = [
     {
       icon: <FileText className="w-8 h-8 text-orange-500" />,
       title: "Fill the Form",
       description:
         "Select your desired class and fill out the booking form with your details.",
+      link: "/book-class",
     },
     {
       icon: <QrCode className="w-8 h-8 text-orange-500" />,
       title: "Pay the Fees",
       description:
         "Scan the QR code provided to complete the payment for the class fees.",
+      pay: true,
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-orange-500" />,
       title: "Share & Confirm",
       description:
         "Share the payment screenshot with us on WhatsApp to confirm your admission.",
+      alink: `https://wa.me/${Details.wphone}?text=Hello%20Nritya%20Gurukul%20Team%2C%0AI%20have%20successfully%20made%20the%20payment%20for%20my%20Bharatanatyam%20course.%0APlease%20find%20the%20payment%20screenshot%20attached%20for%20your%20reference.%0AThank%20you!`
     },
   ];
 
   return (
-    <section className="py-20 px-4 scroll-mt-20" id="payfees">
+    <section className="pb-20 px-4 scroll-mt-20" id="payfees">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -74,20 +81,127 @@ export function BookingGuide() {
               <h3 className="text-2xl font-semibold font-cinzel mb-3">
                 {step.title}
               </h3>
-              <p className="text-gray-600">{step.description}</p>
+              <p className="text-gray-600 mb-2">{step.description}</p>
+              <div className=" mt-4">
+                {step.link && (
+                  <Link
+                    href={step.link}
+                    className="bg-gradient-to-r block from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full pulse-glow cursor-pointer p-2"
+                  >
+                    Reserve Your Spot - Now!
+                  </Link>
+                )}
+                {step.alink && (
+                  <a
+                    href={step.alink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r block from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full pulse-glow cursor-pointer p-2"
+                  >
+                    Confirm Payment
+                  </a>
+                )}
+                {step.pay && (
+                  <Button
+                    className=" cursor-pointer block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full pulse-glow"
+                    onClick={() => {
+                      setOpen(true);
+                    }}
+                  >
+                    Pay Now
+                  </Button>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
-        <div className="text-center mt-12">
+        {open && (
+          <motion.div
+            className="fixed inset-0 flex z-50 overflow-y-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div
+              className="fixed inset-0 w-full h-full bg-orange-400 opacity-30"
+              onClick={() => setOpen(false)}
+            ></div>
+              <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn mx-auto h-fit my-auto">
+                {/* Close Button */}
+                <button
+                  onClick={() => setOpen(false)}
+                  className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+
+                {/* Title */}
+                <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+                  Complete Your Payment
+                </h2>
+
+                {/* QR Image */}
+                <div className="flex justify-center mb-4">
+                  <img
+                    src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756105534/scanner_yy74yu.jpg" 
+                    alt="Payment QR Code"
+                    className="rounded-xl shadow-md"
+                  />
+                </div>
+
+                {/* Instructions */}
+                <div className="text-left text-gray-700 mb-4 space-y-2">
+                  <p>
+                    ✅ Scan the QR code using any UPI app (Google Pay, PhonePe,
+                    Paytm).
+                  </p>
+                  <p>
+                    ✅ Confirm the amount with Nritya Gurukul before making the
+                    payment.
+                  </p>
+                  <p>✅ After payment, send a screenshot to us on WhatsApp.</p>
+                </div>
+
+                {/* WhatsApp Button */}
+                <a
+                  href={`https://wa.me/${Details.wphone}?text=Hello%20Nritya%20Gurukul%20Team%2C%0AI%20have%20successfully%20made%20the%20payment%20for%20my%20Bharatanatyam%20course.%0APlease%20find%20the%20payment%20screenshot%20attached%20for%20your%20reference.%0AThank%20you!`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl shadow-md"
+                >
+                  Send Screenshot on WhatsApp
+                </a>
+              </div>
+          </motion.div>
+        )}
+
+        {/* Animations */}
+        <style jsx>{`
+          .animate-fadeIn {
+            animation: fadeIn 0.3s ease-in-out;
+          }
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
+
+        {/* <div className="text-center mt-12">
           <img
             className="mx-auto rounded-xl shadow-md border-4 border-white"
             alt="QR Code for payment"
-            src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf"
+            src=""
           />
           <p className="mt-4 text-gray-600">
             Scan the QR code with any UPI app to pay.
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -114,7 +228,7 @@ export function Front() {
         "Perfect for absolute beginners. Learn the fundamental Adavus (steps), Hastas (hand gestures), and basic theory.",
       level: "Beginner",
       icon: <Star className="w-6 h-6 text-yellow-500" />,
-      detail: <Beginner/>,
+      detail: <Beginner />,
     },
     {
       id: "intermediate-level",
@@ -123,7 +237,7 @@ export function Front() {
         "For students with basic knowledge. Focus on complex compositions, Abhinaya (expressions), and performance skills.",
       level: "Intermediate",
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      detail: <Intermediate/>,
+      detail: <Intermediate />,
     },
     {
       id: "advanced-masterclass",
@@ -132,7 +246,7 @@ export function Front() {
         "For experienced dancers. Delve into advanced choreography, Nattuvangam, and preparing for solo performances (Arangetram).",
       level: "Advanced",
       icon: <ChevronsRight className="w-6 h-6 text-red-500" />,
-      detail: <Advanced/>,
+      detail: <Advanced />,
     },
   ];
 
@@ -201,7 +315,10 @@ export function Front() {
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className={`w-full flex justify-between items-center text-left p-3 font-semibold border-none bg-[#F58634]/30 text-gray-800`}
                     >
-                      <div className="pl-14">Details</div>
+                      <div className="pl-14 flex justify-center items-center gap-1">
+                        <Info size={15} />
+                        Details
+                      </div>
                       <ChevronDown
                         className={`w-5 h-5 transition-transform duration-300 mr-6 ${
                           isOpen ? "rotate-180" : ""

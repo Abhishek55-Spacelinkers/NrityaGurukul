@@ -5,7 +5,7 @@ import { Details } from "@/lib/data";
 
 const WhatsAppButton = () => {
   const message =
-    "Hello! I'm interested in the Bharatnatyam classes at Nritya Gurukul.";
+    "Hello! I'm interested in the Bharatanatyam classes at Nritya Gurukul.";
   const whatsappUrl = `https://wa.me/${Details.wphone}?text=${encodeURIComponent(
     message
   )}`;

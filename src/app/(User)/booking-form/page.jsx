@@ -11,12 +11,12 @@ export default function BookingFormPage() {
         <title>Booking Form | Nritya Gurukul</title>
         <meta
           name="description"
-          content="Complete your booking for a Bharatnatyam class at Nritya Gurukul. Fill in your details to reserve your spot."
+          content="Complete your booking for a Bharatanatyam class at Nritya Gurukul. Fill in your details to reserve your spot."
         />
         <meta property="og:title" content="Booking Form | Nritya Gurukul" />
         <meta
           property="og:description"
-          content="Complete your booking for a Bharatnatyam class at Nritya Gurukul. Fill in your details to reserve your spot."
+          content="Complete your booking for a Bharatanatyam class at Nritya Gurukul. Fill in your details to reserve your spot."
         />
       </Head>
 

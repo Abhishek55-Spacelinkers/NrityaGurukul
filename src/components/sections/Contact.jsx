@@ -19,7 +19,7 @@ const Contact = () => {
             <div>
               <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">Get In Touch</h2>
               <p className="text-xl opacity-90">
-                Ready to begin your Bharatnatyam journey? Contact us for more information about our upcoming classes.
+                Ready to begin your Bharatanatyam journey? Contact us for more information about our upcoming classes.
               </p>
             </div>
             <div className="space-y-6">
@@ -64,7 +64,7 @@ const Contact = () => {
           >
             <img
               className="w-full h-[400px] object-cover rounded-2xl shadow-2xl transform scale-x-[-1]"
-              alt="Bharatnatyam dance academy location"
+              alt="Bharatanatyam dance academy location"
               src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586894/git_zskcze.jpg"
             />
           </motion.div>

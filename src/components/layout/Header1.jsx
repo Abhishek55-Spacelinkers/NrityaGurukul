@@ -75,12 +75,12 @@ const Header = () => {
           </div>
           <div className="hidden sm:block">
             <span className="font-medium text-black">
-              Join the best Bharatnatyam classes in Noida!
+              Join the best Bharatanatyam classes in Noida!
             </span>
           </div>
           <div className="sm:hidden block">
             <span className="font-medium text-black">
-              Bharatnatyam in Noida
+              Bharatanatyam in Noida
             </span>
           </div>
         </div>

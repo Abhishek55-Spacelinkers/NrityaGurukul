@@ -55,7 +55,7 @@ export default function HeroCarousel() {
 
       {/* Floating Cards */}
       <motion.div
-        className="absolute top-10 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-orange-200"
+        className="hidden md:block absolute top-10 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-orange-200"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 3, repeat: Infinity }}
       >
@@ -71,7 +71,7 @@ export default function HeroCarousel() {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-10 -right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-orange-200"
+        className="hidden md:block absolute bottom-10 -right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-orange-200"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
       >

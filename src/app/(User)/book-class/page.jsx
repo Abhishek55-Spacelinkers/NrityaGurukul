@@ -3,7 +3,7 @@ import { BookingGuide, Front } from "@/components/Animation/Book_class";
 export const metadata = {
   title: "Book a Class | Nritya Gurukul",
   description:
-    "Choose your Bharatnatyam class at Nritya Gurukul. We offer courses for beginner, intermediate, and advanced levels.",
+    "Choose your Bharatanatyam class at Nritya Gurukul. We offer courses for beginner, intermediate, and advanced levels.",
 };
 
 const BookClass = () => {

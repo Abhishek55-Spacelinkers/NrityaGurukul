@@ -29,7 +29,7 @@ const VideoGallery = () => {
             <span className="dance-ornament">Our</span> Performances
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Witness the grace, beauty, and passion of Bharatnatyam through our captivating dance performances.
+            Witness the grace, beauty, and passion of Bharatanatyam through our captivating dance performances.
           </p>
         </motion.div>
 

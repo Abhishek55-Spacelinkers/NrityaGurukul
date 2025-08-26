@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -10,13 +10,16 @@ import {
   Sparkles,
   Music,
   BadgeCheck,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Faqs } from "@/lib/data";
+import ArangetramForm from "@/components/Animation/ArangetramForm";
 
 export default function NrityaGurukulCoursesPage() {
+  const [open, setOpen] = useState(false);
   const Specifications = [
     "7-year structured course following ABGMVM certification",
     "Separate batches for each exam level (Prarambhik to Visharad Purna)",
@@ -148,8 +151,12 @@ export default function NrityaGurukulCoursesPage() {
   ];
 
   const arangetramPoints = {
-    eligibility:["Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness."],
-    Prerequisites:["Strong Adavu technique, consistent tālam control, performance experience, disciplined practice, and attendance."],
+    eligibility: [
+      "Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness.",
+    ],
+    Prerequisites: [
+      "Strong Adavu technique, consistent tālam control, performance experience, disciplined practice, and attendance.",
+    ],
     rubric: [
       "Technique: clarity of adavus, araimandi, balance",
       "Rhythm & memory: jatis, korvais, teermanams",
@@ -177,7 +184,7 @@ export default function NrityaGurukulCoursesPage() {
     hidden: { opacity: 0, y: 16 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
-  
+
   const container = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";
 
   return (
@@ -244,7 +251,10 @@ export default function NrityaGurukulCoursesPage() {
               </motion.div>
             </motion.div>
 
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755688099/front_bxhrv5.png"
               alt=""
               className="-mt-12"
@@ -252,41 +262,6 @@ export default function NrityaGurukulCoursesPage() {
           </div>
         </div>
       </section>
-
-      {/* <section className="border-b">
-        <div className={`${container} py-12 md:py-20`}>
-          <motion.div initial="hidden" animate="show" variants={fadeUp}>
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1 text-amber-700 ring-1 ring-amber-200">
-              <Sparkles className="h-4 w-4" />
-              <span className="text-sm">
-                Follow the 7-year certified course structure of Akhil Bharatiya
-                Gandharva Mahavidyalaya Mandal, Mumbai (ABGMVM)
-              </span>
-            </div>
-            <h1 className="mt-6 text-3xl md:text-5xl font-semibold tracking-tight">
-              Courses at <span className="text-amber-600">Nritya Gurukul</span>
-            </h1>
-            <p className="mt-4 max-w-3xl text-slate-600 text-base md:text-lg">
-              A step-by-step journey from foundation to mastery in
-              Bharatanatyam— with nationally recognized certification, annual
-              stage exposure, and guided preparation for Arangetram.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="rounded-2xl">
-                <Link href="/trial">Book a Free Trial</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="rounded-2xl shadow-2xl border"
-              >
-                <Link href="#levels">Explore Course Levels</Link>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
 
       {/* Specification */}
       <section className="py-10 md:py-14">
@@ -298,7 +273,8 @@ export default function NrityaGurukulCoursesPage() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">
-            <span className="dance-ornament">Key Highlights </span>at Nritya Gurukul
+            <span className="dance-ornament">Key Highlights </span>at Nritya
+            Gurukul
           </h2>
         </motion.div>
         <div className={container}>
@@ -345,7 +321,7 @@ export default function NrityaGurukulCoursesPage() {
               className=" rounded-2xl f-fit"
             />
             <div className="">
-              <div className="rounded-2xl bg-white/90">
+              <div className="rounded-2xl">
                 <div className="flex items-center gap-2 text-2xl text-slate-700 font-bold font-['Cinzel'] mt-2 mb-5 mx-3">
                   <ScrollText className="h-6 w-6 " />
                   Theory Progression
@@ -354,7 +330,7 @@ export default function NrityaGurukulCoursesPage() {
                   {theoryProgression.map((t, i) => (
                     <div
                       key={i}
-                      className="rounded-xl border p-4 border-orange-200  hover:bg-orange-400/70 group duration-300 "
+                      className="rounded-xl border p-4 border-orange-200 bg-white/90  hover:bg-orange-400/70 group hover:scale-105 duration-300 "
                     >
                       <div className="text-sm font-semibold text-amber-700 group-hover:text-white">
                         {t.year}
@@ -475,7 +451,9 @@ export default function NrityaGurukulCoursesPage() {
                         variant="outline"
                         className="rounded-xl border border-orange-200 duration-300"
                       >
-                        <Link href={`booking-form?class=trial-${lvl.id}`}>Book Trial</Link>
+                        <Link href={`booking-form?class=trial-${lvl.id}`}>
+                          Book Trial
+                        </Link>
                       </Button>
                     </div>
                   </CardContent>
@@ -487,10 +465,10 @@ export default function NrityaGurukulCoursesPage() {
       </section>
 
       {/* COMPARISON TABLE */}
-      <section className="pb-12 md:pb-16 ">
+      <section className="pb-12 md:pb-16">
         <div className={container}>
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -500,7 +478,7 @@ export default function NrityaGurukulCoursesPage() {
               <span className="dance-ornament"> Quick Comparison</span>
             </h2>
           </motion.div>
-          <div className="mt-6 overflow-x-auto bg-white px-1 rounded-xl">
+          <div className=" overflow-x-auto bg-white px-1 rounded-xl">
             <table className="min-w-full text-sm border-collapse ">
               <thead>
                 <tr className="bg-orange-600/50 text-slate-700">
@@ -556,7 +534,7 @@ export default function NrityaGurukulCoursesPage() {
       <section className="py-12 md:py-16 scroll-mt-20" id="arangetram">
         <div className={container}>
           <div className="grid lg:grid-cols-3 gap-6 text-gray-600">
-            <div className="rounded-2xl lg:col-span-2 px-3 bg-white border border-orange-200 py-5">
+            <div className="rounded-2xl lg:col-span-2 px-3  border border-orange-200 py-5">
               <div className="flex items-center gap-2 text-2xl font-bold font-['Cinzel'] mb-5 mx-1">
                 <Music className="h-6 w-6" />
                 Arangetram at Nritya Gurukul
@@ -569,7 +547,7 @@ export default function NrityaGurukulCoursesPage() {
                   pathway from curation to stage.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="rounded-xl border p-4">
+                  <div className="rounded-xl border p-4 bg-white">
                     <div className="font-medium">Eligibility</div>
                     <p className="text-sm text-slate-600 mt-0.5">
                       {arangetramPoints.eligibility}
@@ -579,7 +557,7 @@ export default function NrityaGurukulCoursesPage() {
                       {arangetramPoints.Prerequisites}
                     </p>
                   </div>
-                  <div className="rounded-xl border p-4">
+                  <div className="rounded-xl border p-4 bg-white">
                     <div className="font-medium">Readiness Rubric</div>
                     <ul className="text-sm text-slate-600 mt-1 list-disc ml-5">
                       {arangetramPoints.rubric.map((r) => (
@@ -587,7 +565,7 @@ export default function NrityaGurukulCoursesPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="rounded-xl border p-4">
+                  <div className="rounded-xl border p-4 bg-white">
                     <div className="font-medium">Typical Repertoire</div>
                     <ul className="text-sm text-slate-600 mt-1 list-disc ml-5">
                       {arangetramPoints.repertoire.map((r) => (
@@ -595,7 +573,7 @@ export default function NrityaGurukulCoursesPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="rounded-xl border p-4">
+                  <div className="rounded-xl border p-4 bg-white">
                     <div className="font-medium">Training Pathway</div>
                     <ul className="text-sm text-slate-600 mt-1 list-disc ml-5">
                       {arangetramPoints.pathway.map((r) => (
@@ -618,15 +596,15 @@ export default function NrityaGurukulCoursesPage() {
                       Apply for Arangetram Training
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" className="rounded-xl">
-                    <Link href="/contact#inquiry-form">
+                  <Button asChild variant="outline" className="rounded-xl cursor-pointer">
+                    <a onClick={() => setOpen(true)}>
                       Request Budget & Inclusions
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-1 h-full rounded-2xl mx-2 px-3 bg-white border border-orange-200 py-5">
+            <div className="lg:col-span-1 h-full rounded-2xl mx-2 px-3 border border-orange-200 py-5">
               <div className="flex items-center font-['Cinzel'] gap-2 text-2xl font-bold mb-5 mx-1">
                 <School className="h-6 w-6" />
                 Academics & Support
@@ -655,8 +633,54 @@ export default function NrityaGurukulCoursesPage() {
         </div>
       </section>
 
+      {open && (
+        <motion.div
+          className="fixed inset-0 flex z-50 overflow-y-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <div
+            className="fixed inset-0 w-full h-full bg-orange-400 opacity-30"
+            onClick={() => setOpen(false)}
+          ></div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className=" py-20 bg-gray-900 mx-auto my-auto rounded-2xl relative backdrop-blur-sm  text-white"
+          >
+            <div className="">
+              <motion.div
+                className="text-center mb-12"
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h1 className="text-4xl font-bold font-['Cinzel'] mb-4">
+                  <span className="dance-ornament">Arangetram</span> Request
+                  Form
+                </h1>
+                <p className="text-lg text-white/70">
+                  Fill in the details step by step to plan your Arangetram
+                  event.
+                </p>
+              </motion.div>
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 cursor-pointer"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            <ArangetramForm />
+          </motion.div>
+        </motion.div>
+      )}
+
       {/* FEES/CTA */}
-      <section className="py-12 md:py-20 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-orange-500 to-orange-500/70 text-white">
         <div className={`${container} grid md:grid-cols-3 gap-6 items-center`}>
           <div className="md:col-span-2">
             <h3 className="text-2xl md:text-3xl font-semibold">
@@ -693,7 +717,10 @@ export default function NrityaGurukulCoursesPage() {
           <h3 className="text-xl md:text-2xl font-semibold">FAQs</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
             {Faqs.map((faq, id) => (
-              <Card className="rounded-2xl hover:scale-105 duration-300 hover:bg-gradient-to-r hover:from-orange-500/70 hover:to-orange-600/60 group hover:text-white" key={id + "faq"}>
+              <Card
+                className="rounded-2xl hover:scale-105 duration-300 hover:bg-gradient-to-r hover:from-orange-500/70 hover:to-orange-600/60 group hover:text-white"
+                key={id + "faq"}
+              >
                 <CardHeader>
                   <CardTitle>{faq.question}</CardTitle>
                 </CardHeader>
@@ -705,8 +732,6 @@ export default function NrityaGurukulCoursesPage() {
           </div>
         </div>
       </section>
-
-      
     </main>
   );
 }

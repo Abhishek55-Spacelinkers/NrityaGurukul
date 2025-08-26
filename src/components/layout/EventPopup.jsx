@@ -35,7 +35,7 @@ const EventPopup = ({ isOpen, onOpenChange }) => {
                   </DialogHeader>
                   <div className="mt-6">
                     <p className="text-gray-700">
-                      Experience an immersive journey into Bharatnatyam this summer. Limited spots available!
+                      Experience an immersive journey into Bharatanatyam this summer. Limited spots available!
                     </p>
                   </div>
                   <div className="mt-8">

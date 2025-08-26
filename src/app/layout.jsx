@@ -27,13 +27,13 @@ const cinzel = Cinzel({
 });
 
 export const metadata = {
-  title: "Nritya Gurukul | Bharatnatyam Dance Classes in Noida",
+  title: "Nritya Gurukul | Bharatanatyam Dance Classes in Noida",
   description:
-    "Welcome to Nritya Gurukul! Join our Bharatnatyam dance classes in Noida to learn the ancient art of classical Indian dance with expert instructors.",
+    "Welcome to Nritya Gurukul! Join our Bharatanatyam dance classes in Noida to learn the ancient art of classical Indian dance with expert instructors.",
   openGraph: {
-    title: "Nritya Gurukul | Bharatnatyam Dance Classes in Noida",
+    title: "Nritya Gurukul | Bharatanatyam Dance Classes in Noida",
     description:
-      "Welcome to Nritya Gurukul! Join our Bharatnatyam dance classes in Noida to learn the ancient art of classical Indian dance with expert instructors.",
+      "Welcome to Nritya Gurukul! Join our Bharatanatyam dance classes in Noida to learn the ancient art of classical Indian dance with expert instructors.",
   },
 };
 
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={` ${cinzel.variable} ${poppins.variable} font-normal min-h-screen flex flex-col bharatnatyam-pattern mandala-bg`}
+        className={` ${cinzel.variable} ${poppins.variable} font-normal min-h-screen flex flex-col !w-full bharatnatyam-pattern mandala-bg`}
       >
         {children}
         <Toaster />

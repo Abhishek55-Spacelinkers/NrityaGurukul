@@ -27,7 +27,7 @@ export default function GalleryIntro() {
           dedication, passion, and artistry. Our gallery is a testament to the
           vibrant community we've built—a place where every student, from
           beginner to advanced, gets a chance to shine. Witness the grace,
-          emotion, and power of Bharatnatyam as our students bring stories to
+          emotion, and power of Bharatanatyam as our students bring stories to
           life on stage.
         </motion.p>
 

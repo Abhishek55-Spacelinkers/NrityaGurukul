@@ -9,7 +9,7 @@ const photoGalleryImages = [
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586892/ab2_gkljyb.jpg",
   },
   {
-    alt: "A young student practicing a basic Bharatnatyam stance",
+    alt: "A young student practicing a basic Bharatanatyam stance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg",
   },
   {

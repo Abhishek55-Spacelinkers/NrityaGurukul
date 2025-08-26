@@ -6,7 +6,7 @@ const featuresData = [
   {
     icon: "🎭",
     title: "Traditional Training",
-    description: "Learn authentic Bharatnatyam techniques passed down through generations of master dancers"
+    description: "Learn authentic Bharatanatyam techniques passed down through generations of master dancers"
   },
   {
     icon: "👥",
@@ -50,7 +50,7 @@ const Features = () => {
             <span className="dance-ornament">Why Choose Our</span> Gurukul?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Experience authentic Bharatnatyam training with traditional techniques and modern teaching methods
+            Experience authentic Bharatanatyam training with traditional techniques and modern teaching methods
           </p>
         </motion.div>
 

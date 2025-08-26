@@ -37,7 +37,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-[18px] text-gray-600 leading-6  text-justify">
-                Discover the divine art of Bharatnatyam - where every movement
+                Discover the divine art of Bharatanatyam - where every movement
                 tells a story, every gesture speaks the language of gods, and
                 every step connects you to ancient traditions.
               </p>
