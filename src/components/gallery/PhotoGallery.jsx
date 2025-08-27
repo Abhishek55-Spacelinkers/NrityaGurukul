@@ -72,7 +72,7 @@ const photoGalleryImages = [
 ];
 
 const nineImages = [
-{
+  {
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270723/img8_z16k5j.jpg",
   },
@@ -88,7 +88,7 @@ const nineImages = [
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img6_aixzdg.jpg",
   },
-    {
+  {
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img5_glzyia.jpg",
   },
@@ -120,7 +120,7 @@ const nineImages = [
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img22_avjoct.jpg",
   },
-  
+
   {
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img23_vi8s9f.jpg",
@@ -137,7 +137,7 @@ const nineImages = [
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img20_zm8kzu.jpg",
   },
-  
+
   {
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img15_wwia8u.jpg",
@@ -182,13 +182,12 @@ const nineImages = [
     alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img18_lbs4nr.jpg",
   },
-
-]
+];
 
 const narayanImages = [
   {
-    alt:"narayanImage",
-    src:"https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756291175/Narayan_Narayan_a5ixaj.png"
+    alt: "narayanImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756291175/Narayan_Narayan_a5ixaj.png",
   },
   {
     alt: "narayanImage",
@@ -410,68 +409,67 @@ const narayanImages = [
     alt: "narayanImage",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285463/DSC_6275_tiwlwf.jpg",
   },
+];
 
-]
-
-const premImages= [
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07576_trhwjh.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07280_endgol.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07275_sffhyv.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285476/VIN07265_fgvcjb.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285476/VIN07257_jz5cle.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285476/VIN07255_x2y6cr.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07247_p5bijm.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07244_owcing.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07218_vaqai2.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07235_biwnpn.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07229_fva056.jpg",
-    },
-    {
-      alt: "premImage",
-      src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285474/VIN07219_gwe1qe.jpg",
-    },
-]
-const arangetramImages = []
+const premImages = [
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07576_trhwjh.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07280_endgol.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07275_sffhyv.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285476/VIN07265_fgvcjb.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285476/VIN07257_jz5cle.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285476/VIN07255_x2y6cr.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07247_p5bijm.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07244_owcing.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07218_vaqai2.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07235_biwnpn.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07229_fva056.jpg",
+  },
+  {
+    alt: "premImage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285474/VIN07219_gwe1qe.jpg",
+  },
+];
+const arangetramImages = [];
 
 const dataSources = {
   photoGalleryImages,
   narayanImages,
   premImages,
   arangetramImages,
-  nineImages
-}
+  nineImages,
+};
 
 const PhotoGallery = () => {
   const showMore = 4;
@@ -486,15 +484,11 @@ const PhotoGallery = () => {
   };
 
   const handlePrev = () => {
-    setSelectedIndex((prev) =>
-      prev > 0 ? prev - 1 : photoGalleryImages.length - 1
-    );
+    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : max - 1));
   };
 
   const handleNext = () => {
-    setSelectedIndex((prev) =>
-      prev < photoGalleryImages.length - 1 ? prev + 1 : 0
-    );
+    setSelectedIndex((prev) => (prev < max - 1 ? prev + 1 : 0));
   };
 
   const handleMethodChange = (method) => {
@@ -575,45 +569,65 @@ const PhotoGallery = () => {
             Arangetram ({arangetramImages.length})
           </button>
         </div>
-        <>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {currentData.slice(0, visible).map((image, index) => {
-              return (
+
+        {max === 0 ? (
+          <p className="text-center text-gray-500 py-10">
+            No images available.
+          </p>
+        ) : (
+          <>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentData} 
+                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+              >
+                {currentData.slice(0, visible).map((image, index) => {
+                  return (
+                    <motion.div
+                      key={index}
+                      className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl border border-orange-200"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 0.6,
+                        delay: (index ) * 0.1,
+                      }}
+                      onClick={() => setSelectedIndex(index)}
+                      viewport={{ once: true }}
+                      whileHover={{ scale: 1.03, zIndex: 10 }}
+                    >
+                      <img
+                        className="w-full h-full object-cover"
+                        alt={image.alt}
+                        src={image.src}
+                        loading="lazy"
+                      />
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+              {visible < max && (
                 <motion.div
-                  key={index}
-                  className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl border border-orange-200"
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  className="w-fit mx-auto"
+                  initial={{ opacity: 0.8, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: (visible - index) * 0.1 }}
-                  onClick={() => setSelectedIndex(index)}
+                  transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ scale: 1.03, zIndex: 10 }}
+                  whileHover={{ scale: 1.03 }}
+                  onClick={handleClick}
                 >
-                  <img
-                    className="w-full h-full object-cover"
-                    alt={image.alt}
-                    src={image.src}
-                  />
+                  <button className="rounded-2xl text-xl mt-6 px-8 py-2 cursor-pointer mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
+                    Show More
+                  </button>
                 </motion.div>
-              );
-            })}
-          </div>
-          {visible < max && (
-            <motion.div
-              className="w-fit mx-auto"
-              initial={{ opacity: 0.8, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
-              onClick={handleClick}
-            >
-              <button className="rounded-2xl text-xl mt-6 px-8 py-2 cursor-pointer mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
-                Show More
-              </button>
-            </motion.div>
-          )}
-        </>
+              )}
+            </AnimatePresence>
+          </>
+        )}
       </div>
       <AnimatePresence>
         {selectedIndex !== null && (
