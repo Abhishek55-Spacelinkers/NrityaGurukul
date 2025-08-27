@@ -36,10 +36,16 @@ const Contact = () => {
               <div className="flex items-center space-x-4">
                 <Phone className="w-6 h-6 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Phone Number</h3>
+                  <h3 className="font-semibold mb-1">Contact Number</h3>
+                  <div className="flex">
                   <a href={`tel:${Details.cphone}`}>
                     <p className="opacity-90">{Details.phone}</p>
                   </a>
+                  ,
+                  <a href={`tel:${Details.cphone2}`}>
+                    <p className="opacity-90 ml-2">{Details.phone2}</p>
+                  </a>
+                </div>
                 </div>
               </div>
 

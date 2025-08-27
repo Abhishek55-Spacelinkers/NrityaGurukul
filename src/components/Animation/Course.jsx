@@ -42,6 +42,7 @@ const Levels = [
   {
     id: "praveshika-pratham",
     order: 2,
+    eligibility: "Minimum 7 years of age",
     title: "Praveshika Pratham",
     subtitle: "Preliminary – Part 1",
     duration: "1 Year",
@@ -53,7 +54,9 @@ const Levels = [
     id: "praveshika-purna",
     order: 3,
     title: "Praveshika Purna",
+    eligibility: "Praveshika-pratham from ABGMVM or Minimum 17 years of age",
     subtitle: "Preliminary – Part 2",
+    
     duration: "1 Year",
     focus: ["Alarippu", "Pushpanjali", "Stage skills & confidence"],
     certificate: "ABGMVM Praveshika Purna Certificate",
@@ -62,6 +65,7 @@ const Levels = [
   {
     id: "madhyama-pratham",
     order: 4,
+    eligibility: "Praveshika poorna from ABGMVM or 18yrs age for certification done from other institutions.",
     title: "Madhyama Pratham",
     subtitle: "Intermediate – Part 1",
     duration: "1 Year",
@@ -73,6 +77,7 @@ const Levels = [
     id: "madhyama-purna",
     order: 5,
     title: "Madhyama Purna",
+    eligibility: "Madhyama pratam from ABGMVM , the student should be minimum age 14yrs Or 18yrs for certification done from other institutions",
     subtitle: "Intermediate – Part 2",
     duration: "1 Year",
     focus: ["Tillana", "Advanced rhythm", "Stage command & grace"],
@@ -84,6 +89,7 @@ const Levels = [
     order: 6,
     title: "Visharad Pratham",
     subtitle: "Graduate – Part 1",
+    eligibility: "Madhyama Purna from ABGVM or minimum age 18 years for direct entry",
     duration: "1 Year",
     focus: [
       "Varnam (central item)",
@@ -96,6 +102,7 @@ const Levels = [
   {
     id: "visharad-purna",
     order: 7,
+    eligibility: "Visharad Pratham from ABGVM or minimum age 20 years for direct entry",
     title: "Visharad Purna",
     subtitle: "Graduate – Part 2",
     duration: "1 Year",
@@ -336,6 +343,9 @@ export function TheoryProgression() {
                 Notes & videos via <strong>Google Classroom</strong>; every step
                 is recorded for practice.
               </div>
+              <p className="text-sm mt-0.5">
+                *Other university certification are also available on demand
+              </p>
             </div>
           </div>
         </div>
@@ -345,7 +355,6 @@ export function TheoryProgression() {
 }
 
 export function LevelsBlock() {
-    
   return (
     <section className="py-12 md:py-20 scroll-mt-20" id="levels">
       <div className={container}>
@@ -505,7 +514,7 @@ export function Comparison() {
 }
 
 export function Arangetram() {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const arangetramPoints = {
     eligibility: [
       "Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness.",
@@ -685,9 +694,9 @@ export function Arangetram() {
               </motion.div>
               <button
                 onClick={() => setOpen(false)}
-                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 cursor-pointer"
+                className="absolute top-4 right-4 text-white/80 hover:text-white duration-200 cursor-pointer"
               >
-                <X className="h-6 w-6" />
+                <X className="h-8 w-8" />
               </button>
             </div>
             <ArangetramForm />
@@ -734,7 +743,6 @@ export function Fees() {
 }
 
 export function FaqBlock() {
-    
   return (
     <section className="py-12 md:py-20 scroll-mt-20" id="faqs">
       <div className={container}>

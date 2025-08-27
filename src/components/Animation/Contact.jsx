@@ -12,7 +12,7 @@ export function WhyJoinUs() {
       icon: <Sparkles className="w-8 h-8 text-orange-500" />,
       title: "Authentic Lineage",
       description:
-        "Learn from instructors trained in pure, traditional styles passed down through generations of gurus.",
+        "Learn from instructor trained in pure, traditional styles passed down through generations of gurus.",
     },
     {
       icon: <Target className="w-8 h-8 text-orange-500" />,
@@ -58,11 +58,15 @@ export function WhyJoinUs() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
-              <div className="flex justify-center mb-4 rounded-full w-fit p-2 group-hover:bg-white mx-auto">{point.icon}</div>
+              <div className="flex justify-center mb-4 rounded-full w-fit p-2 group-hover:bg-white mx-auto">
+                {point.icon}
+              </div>
               <h3 className="text-2xl font-semibold font-['Cinzel'] mb-3">
                 {point.title}
               </h3>
-              <p className="text-gray-600 group-hover:text-white">{point.description}</p>
+              <p className="text-gray-600 group-hover:text-white">
+                {point.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -126,10 +130,16 @@ export function Front() {
             <div className="flex items-center space-x-4">
               <Phone className="w-8 h-8 text-orange-500 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-xl mb-1">Phone Number</h3>
-                <a href={`tel:${Details.cphone}`}>
+                <h3 className="font-semibold text-xl mb-1">Contact Number</h3>
+                <div className="flex">
+                  <a href={`tel:${Details.cphone}`}>
                     <p className="text-gray-700">{Details.phone}</p>
-                </a>
+                  </a>
+                  ,
+                  <a href={`tel:${Details.cphone2}`}>
+                    <p className="text-gray-700 ml-2">{Details.phone2}</p>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -138,7 +148,7 @@ export function Front() {
               <div>
                 <h3 className="font-semibold text-xl mb-1">Email Us</h3>
                 <a href="mailto:info@spacelinkers.com">
-                    <p className="text-gray-700">{Details.email}</p>
+                  <p className="text-gray-700">{Details.email}</p>
                 </a>
               </div>
             </div>

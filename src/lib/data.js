@@ -1,6 +1,8 @@
 export const Details = {
     phone:"+91-78389 89781",
+    phone2 : "+91-96438 00147",
     cphone:"+917838989781",
+    cphone2:"+919643800147",
     wphone:"917838989781",
     address:"Kendriya Vihar II, Sector 82, Noida, Uttar Pradesh, 201304",
     email:"info@nrityagurukul.in"

@@ -35,13 +35,13 @@ export default function AboutAndWhy() {
           <p className="text-lg text-gray-600 mb-6">
             We are dedicated to preserving the timeless art of Bharatanatyam
             while creating a nurturing environment for learners of all levels.
-            With experienced gurus, certified programs, and global
+            With experienced guru, certified programs, and global
             accessibility, we aim to help every student embrace this classical
             dance with grace and confidence.
           </p>
           <div className="grid grid-cols-2 gap-4">
             {[
-              "Experienced Gurus",
+              "Experienced Guru",
               "Certified Courses",
               "Global Online Classes",
               "Cultural Performances",
@@ -78,7 +78,7 @@ export default function AboutAndWhy() {
             {[
               {
                 title: "Personalized Mentorship",
-                desc: "Learn under the guidance of experienced gurus with one-on-one attention.",
+                desc: "Learn under the guidance of experienced guru with one-on-one attention.",
                 icon: "🎯",
               },
               {

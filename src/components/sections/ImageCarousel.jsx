@@ -13,7 +13,7 @@ import {
 
 const images = [
   {
-    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586895/b1_ypxdyo.jpg",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285526/b1_s2n93r.jpg",
     alt: "Students learning basic steps in a bright studio",
   },
   
@@ -30,21 +30,9 @@ const images = [
     alt: "A close-up shot of a dancer's intricate hand gestures (Hastas)",
   },
   {
-    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b3_nwp4fz.jpg",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285658/b3_gzt2ol.jpg",
     alt: "A group of dancers performing in colorful costumes on stage",
   },
-  // {
-  //   src: "/image/b1.",
-  //   alt: "An instructor providing personalized feedback to a student",
-  // },
-  // {
-  //   src: "/image/b1.",
-  //   alt: "Dancers practicing in front of large mirrors",
-  // },
-  // {
-  //   src: "https://images.unsplash.com/photo-1653670469019-242e9a73c4a5",
-  //   alt: "A solo performer in a dramatic pose under stage lights",
-  // },
 ];
 
 export default function ImageCarousel() {
