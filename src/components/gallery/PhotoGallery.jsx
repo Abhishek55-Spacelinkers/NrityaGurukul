@@ -556,7 +556,7 @@ const PhotoGallery = () => {
                 : "text-white/90 hover:font-semibold"
             }`}
           >
-            Prem Vonod ({premImages.length})
+            Prem Vinod ({premImages.length})
           </button>
           <button
             onClick={() => handleMethodChange("arangetramImages")}
