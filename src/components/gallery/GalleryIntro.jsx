@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function GalleryIntro() {
   return (
-    <section className="py-20 px-4 text-center">
+    <section className="pt-20 pb-10 px-4 text-center">
       <div className="max-w-4xl mx-auto">
         <motion.h1
           className="text-5xl font-bold font-['Cinzel'] mb-4"

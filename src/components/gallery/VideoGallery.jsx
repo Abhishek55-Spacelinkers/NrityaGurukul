@@ -1,6 +1,6 @@
-'use client'
-import React from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const videos = [
   "https://www.youtube.com/embed/ktkK6g6JQzM?si=-jbX8_mUjPRvoiy1",
@@ -11,14 +11,21 @@ const videos = [
   "https://www.youtube.com/embed/xGyJjF9cfe0?si=E9LDSLfiZAt5su41",
   "https://www.youtube.com/embed/GCeY0ILzws4?si=y-lJUDRcC6B97IZD",
   "https://www.youtube.com/embed/rdHU5DzPkis?si=uEYQCd-PhtJ06SB_",
-  "https://www.youtube.com/embed/oYYsibfXcKY?si=5IbSsKHnpzjdG_ie"
+  "https://www.youtube.com/embed/oYYsibfXcKY?si=5IbSsKHnpzjdG_ie",
 ];
 
 const VideoGallery = () => {
+  const showMore = 3;
+  const [visible, setvisible] = useState(6);
+  const max = videos.length;
+  const handleClick = () => {
+    setvisible((prev) => Math.min(prev + showMore, max));
+  };
+
   return (
-    <section className="py-20 px-4 scroll-mt-20" id="Our_Performances">
+    <section className="py-10 mb-10 px-4 scroll-mt-20" id="Our_Performances">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,12 +36,13 @@ const VideoGallery = () => {
             <span className="dance-ornament">Our</span> Performances
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Witness the grace, beauty, and passion of Bharatanatyam through our captivating dance performances.
+            Witness the grace, beauty, and passion of Bharatanatyam through our
+            captivating dance performances.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {videos.map((videoSrc, index) => (
+          {videos.slice(0, visible).map((videoSrc, index) => (
             <motion.div
               key={index}
               className="aspect-video w-full rounded-xl overflow-hidden shadow-xl border border-orange-200"
@@ -57,6 +65,21 @@ const VideoGallery = () => {
             </motion.div>
           ))}
         </div>
+        {visible < max && (
+          <motion.div
+            className="w-fit mx-auto"
+            initial={{ opacity: 0.8, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+            onClick={handleClick}
+          >
+            <button className="rounded-2xl text-xl mt-6 px-8 py-2 cursor-pointer mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
+              Show More
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

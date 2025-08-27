@@ -6,6 +6,22 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const photoGalleryImages = [
   {
     alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270723/img8_z16k5j.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270723/img9_qx8blx.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270723/img7_zmgjyp.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img6_aixzdg.jpg",
+  },
+   {
+    alt: "Group of students posing after a successful performance",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586892/ab2_gkljyb.jpg",
   },
   {
@@ -19,6 +35,22 @@ const photoGalleryImages = [
   {
     alt: "Dancers in vibrant silk sarees during a cultural event",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666075/g7_tfxxgk.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img5_glzyia.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img4_cu6jiy.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img3_yauyf3.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img26_hhiith.jpg",
   },
   {
     alt: "An instructor demonstrating a complex footwork pattern",
@@ -37,6 +69,22 @@ const photoGalleryImages = [
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666073/g13_lytwkm.jpg",
   },
   {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img25_intvz8.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img24_htvn8e.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img_o9zjjm.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img22_avjoct.jpg",
+  },
+  {
     alt: "The entire Nritya Gurukul family together for a celebration",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666073/g15_mfvcug.jpg",
   },
@@ -51,6 +99,22 @@ const photoGalleryImages = [
   {
     alt: "The entire Nritya Gurukul family together for a celebration",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g2_cw2bvs.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img23_vi8s9f.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img17_qkrofi.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270721/img16_yjyyky.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img20_zm8kzu.jpg",
   },
   {
     alt: "The entire Nritya Gurukul family together for a celebration",
@@ -68,13 +132,56 @@ const photoGalleryImages = [
     alt: "The entire Nritya Gurukul family together for a celebration",
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666071/g16_odcdet.jpg",
   },
-  // { alt: "The entire Nritya Gurukul family together for a celebration", src: "" },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img15_wwia8u.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img21_dxlr8y.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img13_szgjry.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img2_fj9q6r.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270720/img14_srrrdz.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img12_zqpnpf.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img19_kfzwwi.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img1_nyftik.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img11_mkiuhq.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img10_wodwwv.jpg",
+  },
+  {
+    alt: "Group of students posing after a successful performance",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270719/img18_lbs4nr.jpg",
+  },
 ];
 
 const PhotoGallery = () => {
   const showMore = 4;
   const [visible, setvisible] = useState(8);
-  const max = 16;
+  const max = photoGalleryImages.length;
 
   const handleClick = () => {
     setvisible((prev) => Math.min(prev + showMore, max));
@@ -95,7 +202,7 @@ const PhotoGallery = () => {
   };
 
   return (
-    <section className="py-20 px-4 scroll-m-20" id="photos">
+    <section className="py-10 px-4 scroll-m-20" id="photos">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <motion.div
@@ -136,7 +243,7 @@ const PhotoGallery = () => {
             );
           })}
         </div>
-        {visible < max ? (
+        {visible < max && (
           <motion.div
             className="w-fit mx-auto"
             initial={{ opacity: 0.8, scale: 0.8 }}
@@ -150,8 +257,6 @@ const PhotoGallery = () => {
               Show More
             </button>
           </motion.div>
-        ) : (
-          ""
         )}
       </div>
       <AnimatePresence>

@@ -642,7 +642,7 @@ export function Arangetram() {
               <img
                 src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g2_cw2bvs.jpg"
                 alt=""
-                className=" rounded-2xl p-2  mt-5 scale-x-[-1]"
+                className=" rounded-2xl p-2  mt-5"
               />
             </div>
           </div>

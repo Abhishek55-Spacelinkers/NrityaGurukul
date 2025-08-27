@@ -16,8 +16,17 @@ const images = [
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586895/b1_ypxdyo.jpg",
     alt: "Students learning basic steps in a bright studio",
   },
+  
+  {
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img4_cu6jiy.jpg",
+    alt: "Students learning basic steps in a bright studio",
+  },
   {
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg",
+    alt: "A close-up shot of a dancer's intricate hand gestures (Hastas)",
+  },
+  {
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img3_yauyf3.jpg",
     alt: "A close-up shot of a dancer's intricate hand gestures (Hastas)",
   },
   {
@@ -70,7 +79,7 @@ export default function ImageCarousel() {
           <Carousel
             className="w-full"
             opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 3000 })]}
+            plugins={[Autoplay({ delay: 3000 , stopOnMouseEnter: true })]}
           >
             <CarouselContent>
               {images.map((img, index) => (

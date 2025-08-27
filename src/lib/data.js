@@ -2,7 +2,7 @@ export const Details = {
     phone:"+91-78389 89781",
     cphone:"+917838989781",
     wphone:"917838989781",
-    address:"C-1, Pocket 2, Kendriya Vihar II, Sector 82, Noida, Uttar Pradesh, 201304",
+    address:"Kendriya Vihar II, Sector 82, Noida, Uttar Pradesh, 201304",
     email:"info@nrityagurukul.in"
 }
 
