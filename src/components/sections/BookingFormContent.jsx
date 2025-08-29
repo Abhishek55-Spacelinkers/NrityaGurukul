@@ -33,6 +33,7 @@ const classes = [
 export default function BookingFormContent() {
   const searchParams = useSearchParams();
   const [selectedClass, setSelectedClass] = useState("");
+  const [name, setName] = useState("");
 
   useEffect(() => {
     const classId = searchParams.get("class");
@@ -75,14 +76,37 @@ export default function BookingFormContent() {
               viewport={{ once: true }}
             >
               <form
-                action="https://formspree.io/f/xovlrzvq"
+                action="https://api.web3forms.com/submit"
                 method="POST"
                 className="space-y-6"
               >
+                {/* ✅ Web3Forms Access Key */}
                 <input
                   type="hidden"
-                  name="Selected Class"
-                  value={selectedClass}
+                  name="access_key"
+                  value={ process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY}
+                />
+                {/* ✅ Dynamic Class Selection */}
+                <input
+                  type="hidden"
+                  name="subject"
+                  value={"Inquery - " +selectedClass}
+                />
+                {/* ✅ Hidden Fields */}
+                <input
+                  type="hidden"
+                  name="name"
+                  value={name}
+                />
+                <input type="hidden" name="from_name" value={name} />
+                {/* ✅ Honeypot Spam Protection */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
                 />
 
                 <div className="bg-orange-50 p-4 rounded-xl border border-orange-200">
@@ -103,6 +127,8 @@ export default function BookingFormContent() {
                       id="name"
                       name="name"
                       required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       className="border-orange-200 focus:border-orange-500 focus:ring-orange-500"
                       placeholder="Enter your full name"
                     />
