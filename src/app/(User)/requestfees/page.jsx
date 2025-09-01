@@ -7,6 +7,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
+import { PhoneInput } from "react-international-phone";
+import { PhoneNumberUtil } from "google-libphonenumber";
+
 const classes = [
   { id: "beginner-foundation", title: "Beginner Foundation Course" },
   { id: "intermediate-level", title: "Intermediate Level Program" },
@@ -23,6 +28,54 @@ const classes = [
 
 export default function RequestFeesForm() {
   const [selectedCourse, setSelectedCourse] = useState("");
+  const [name, setName] = useState("");
+
+  const router = useRouter();
+
+  const [loading, setLoading] = useState(false);
+  const [phone, setPhone] = useState("");
+  const [active, changea] = useState(false);
+  const { toast } = useToast();
+  const phoneUtil = PhoneNumberUtil.getInstance();
+  const isPhoneValid = (phone) => {
+    try {
+      return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(phone));
+    } catch (error) {
+      return false;
+    }
+  };
+  const isValidp = isPhoneValid(phone);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!isValidp) return;
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast({ title: "Submitted Successful" });
+        router.push("/");
+        e.target.reset();
+      } else {
+        alert("⚠️ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("❌ Failed to submit. Check your internet connection.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <motion.div
@@ -58,11 +111,25 @@ export default function RequestFeesForm() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <form
-              action="https://formspree.io/f/xovlrzvq"
-              method="POST"
-              className="space-y-6"
-            >
+            <form onSubmit={handleSubmit} method="POST" className="space-y-6">
+              <input
+                type="hidden"
+                name="subject"
+                value={"Fees - " + selectedCourse}
+              />
+              {/* ✅ Hidden Fields */}
+              <input type="hidden" name="name" value={name} />
+              <input type="hidden" name="from_name" value={name} />
+
+              {/* ✅ Honeypot Spam Protection */}
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
               {/* Select Course */}
               <div className="space-y-2">
                 <Label htmlFor="course" className="text-gray-700 font-medium">
@@ -95,6 +162,8 @@ export default function RequestFeesForm() {
                     id="name"
                     name="name"
                     required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="border-orange-200 focus:border-orange-500 focus:ring-orange-500"
                     placeholder="Enter your full name"
                   />
@@ -119,13 +188,23 @@ export default function RequestFeesForm() {
                 <Label htmlFor="phone" className="text-gray-700 font-medium">
                   Phone Number *
                 </Label>
-                <Input
+                <PhoneInput
+                  defaultCountry="in"
+                  value={phone}
                   id="phone"
-                  name="phone"
-                  type="tel"
                   required
-                  className="border-orange-200 focus:border-orange-500 focus:ring-orange-500"
-                  placeholder="Enter your phone number"
+                  onChange={(phone) => setPhone(phone)}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                    className: `!font-medium border-b-2 ml-1 !pl-1 !py-1.5 !w-full !text-sm placeholder-white  border border-gray-300 rounded ${
+                      active
+                        ? isValidp
+                          ? "!border-white !text-white"
+                          : "!border-red-600 !text-red-600"
+                        : null
+                    }`,
+                  }}
                 />
               </div>
 

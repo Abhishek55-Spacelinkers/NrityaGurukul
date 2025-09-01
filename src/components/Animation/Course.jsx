@@ -514,7 +514,6 @@ export function Comparison() {
 }
 
 export function Arangetram() {
-  const [open, setOpen] = useState(false);
   const arangetramPoints = {
     eligibility: [
       "Between Visharad Pratham & Visharad Purna, or when Guru certifies readiness.",
@@ -612,15 +611,8 @@ export function Arangetram() {
                       Apply for Arangetram Training
                     </Link>
                   </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="rounded-xl cursor-pointer"
-                  >
-                    <a onClick={() => setOpen(true)}>
-                      Request Budget & Inclusions
-                    </a>
-                  </Button>
+                  
+                  <ArangetramForm />
                 </div>
               </div>
             </div>
@@ -658,51 +650,6 @@ export function Arangetram() {
         </div>
       </section>
 
-      {open && (
-        <motion.div
-          className="fixed inset-0 flex z-50 overflow-y-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <div
-            className="fixed inset-0 w-full h-full bg-orange-400 opacity-30"
-            onClick={() => setOpen(false)}
-          ></div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className=" py-20 bg-gray-900 mx-auto my-auto rounded-2xl relative backdrop-blur-sm  text-white"
-          >
-            <div className="">
-              <motion.div
-                className="text-center mb-12"
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h1 className="text-4xl font-bold font-['Cinzel'] mb-4">
-                  <span className="dance-ornament">Arangetram</span> Request
-                  Form
-                </h1>
-                <p className="text-lg text-white/70">
-                  Fill in the details step by step to plan your Arangetram
-                  event.
-                </p>
-              </motion.div>
-              <button
-                onClick={() => setOpen(false)}
-                className="absolute top-4 right-4 text-white/80 hover:text-white duration-200 cursor-pointer"
-              >
-                <X className="h-8 w-8" />
-              </button>
-            </div>
-            <ArangetramForm />
-          </motion.div>
-        </motion.div>
-      )}
     </>
   );
 }

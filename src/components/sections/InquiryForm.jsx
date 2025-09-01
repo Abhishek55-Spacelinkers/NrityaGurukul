@@ -7,14 +7,33 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle } from "lucide-react";
 
+import { PhoneInput } from "react-international-phone";
+import { PhoneNumberUtil } from "google-libphonenumber";
+
 const InquiryForm = () => {
+  
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [name, changen] = useState("");
 
+  const [phone, setPhone] = useState("");
+  const [active, changea] = useState(false);
+
+  const phoneUtil = PhoneNumberUtil.getInstance();
+  const isPhoneValid = (phone) => {
+    try {
+      return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(phone));
+    } catch (error) {
+      return false;
+    }
+  };
+  const isValidp = isPhoneValid(phone);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isValidp) return;
     setLoading(true);
+
 
     const formData = new FormData(e.target);
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY);
@@ -165,17 +184,36 @@ const InquiryForm = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
-                    <Input
+                  <div className="space-y-2 ">
+                  <Label htmlFor="phone">Phone Number *</Label>
+                    {/* <Input
                       id="phone"
                       name="phone"
                       type="tel"
                       required
                       placeholder="Enter your phone number"
-                    />
-                  </div>
+                      /> */}
 
+                  <PhoneInput
+                    defaultCountry="in"
+                    value={phone}
+                    id="phone"
+                    required
+                    onChange={(phone) => setPhone(phone)}
+                    inputProps={{
+                      name: "phone",
+                      required: true,
+                      className: `!font-medium border-b-2 ml-1 !pl-1 !py-1.5 !w-full !text-sm placeholder-white  border border-gray-300 rounded ${
+                        active
+                        ? isValidp
+                        ? "!border-gray-300 !text-black"
+                        : "!border-red-600 !text-red-600"
+                        : null
+                      }`,
+                    }}
+                    />
+
+                    </div>
                   <div className="space-y-2">
                     <Label htmlFor="age">Age</Label>
                     <Input
@@ -214,6 +252,7 @@ const InquiryForm = () => {
                     type="submit"
                     size="lg"
                     disabled={loading}
+                     onClick={() => changea(true)}
                     className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-4 rounded-full text-lg font-semibold pulse-glow"
                   >
                     {loading ? "Submitting..." : "Submit Inquiry"}

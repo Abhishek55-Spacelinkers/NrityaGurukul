@@ -7,6 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
+import { PhoneInput } from "react-international-phone";
+import { PhoneNumberUtil } from "google-libphonenumber";
+
 
 const classes = [
   { id: "beginner-foundation", title: "Beginner Foundation Course" },
@@ -34,6 +39,52 @@ export default function BookingFormContent() {
   const searchParams = useSearchParams();
   const [selectedClass, setSelectedClass] = useState("");
   const [name, setName] = useState("");
+  const router = useRouter();
+
+  const [loading, setLoading] = useState(false);
+  const [phone, setPhone] = useState("");
+  const [active, changea] = useState(false);
+  const { toast } = useToast();
+  const phoneUtil = PhoneNumberUtil.getInstance();
+  const isPhoneValid = (phone) => {
+    try {
+      return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(phone));
+    } catch (error) {
+      return false;
+    }
+  };
+  const isValidp = isPhoneValid(phone);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!isValidp) return;
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast({ title: "Submitted Successful" });
+        router.push("/")
+        e.target.reset();
+      } else {
+        alert("⚠️ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("❌ Failed to submit. Check your internet connection.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     const classId = searchParams.get("class");
@@ -76,28 +127,19 @@ export default function BookingFormContent() {
               viewport={{ once: true }}
             >
               <form
-                action="https://api.web3forms.com/submit"
+                onSubmit={handleSubmit}
                 method="POST"
                 className="space-y-6"
               >
-                {/* ✅ Web3Forms Access Key */}
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value={ process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY}
-                />
-                {/* ✅ Dynamic Class Selection */}
+                
+                
                 <input
                   type="hidden"
                   name="subject"
-                  value={"Inquery - " +selectedClass}
+                  value={"Inquery - " + selectedClass}
                 />
                 {/* ✅ Hidden Fields */}
-                <input
-                  type="hidden"
-                  name="name"
-                  value={name}
-                />
+                <input type="hidden" name="name" value={name} />
                 <input type="hidden" name="from_name" value={name} />
                 {/* ✅ Honeypot Spam Protection */}
                 <input
@@ -160,13 +202,23 @@ export default function BookingFormContent() {
                     >
                       Phone Number *
                     </Label>
-                    <Input
+                    <PhoneInput
+                      defaultCountry="in"
+                      value={phone}
                       id="phone"
-                      name="phone"
-                      type="tel"
                       required
-                      className="border-orange-200 focus:border-orange-500 focus:ring-orange-500"
-                      placeholder="Enter your phone number"
+                      onChange={(phone) => setPhone(phone)}
+                      inputProps={{
+                        name: "phone",
+                        required: true,
+                        className: `!font-medium border-b-2 ml-1 !pl-1 !py-1.5 !w-full !text-sm placeholder-white  border border-gray-300 rounded ${
+                          active
+                            ? isValidp
+                              ? "!border-gray-300 !text-black"
+                              : "!border-red-600 !text-red-600"
+                            : null
+                        }`,
+                      }}
                     />
                   </div>
 
@@ -222,9 +274,11 @@ export default function BookingFormContent() {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={loading}
+                    onClick={() => changea(true)}
                     className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-4 rounded-full text-lg font-semibold pulse-glow"
                   >
-                    Submit Booking
+                    {loading ? "Submitting..." : "Submit Booking"} 
                   </Button>
                 </motion.div>
               </form>
