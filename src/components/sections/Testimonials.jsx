@@ -202,10 +202,10 @@ const Testimonials = () => {
   }, [selectedIndex]);
 
   return (
-    <section className="py-16 px-20">
+    <section className="py-10 md:py-16 px-4 md:px-20">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -221,7 +221,7 @@ const Testimonials = () => {
         </motion.div>
 
         <Carousel
-          className="w-full"
+          className="w-full relative px-6 sm:px-10"
           opts={{ loop: true }}
           plugins={[autoplay.current]}
         >
@@ -229,7 +229,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <CarouselItem
                 key={index}
-                className="basic-full  lg:basis-1/2 tab:basis-1/3 "
+                className="basic-full  lg:basis-1/2 tab:basis-1/3"
               >
                 <div className="p-4 h-full">
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col justify-between shadow-lg border border-orange-200">
@@ -274,8 +274,8 @@ const Testimonials = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-orange-500 border-orange-500 hover:bg-orange-100" />
-          <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100" />
+          <CarouselPrevious className="text-orange-500 border-orange-500 hover:bg-orange-100 left-0" />
+          <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100 right-0 " />
         </Carousel>
       </div>
       <AnimatePresence mode="wait">

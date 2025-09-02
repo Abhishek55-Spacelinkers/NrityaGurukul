@@ -37,10 +37,10 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <section className="py-16 px-4 ">
+    <section className="py-10 md:py-16 px-4 ">
       <div className="max-w-7xl mx-auto">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-14"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -54,19 +54,19 @@ const Features = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-8">
           {featuresData.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-orange-200 hover:shadow-xl hover:bg-orange-500/40 transition-all duration-300"
+              className="bg-white/60 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-orange-200 hover:shadow-xl hover:bg-orange-500/40 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">{feature.title}</h3>
+              <div className="text-4xl pb-2 sm:mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold mb-1.5 sm:mb-3 text-gray-800">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}

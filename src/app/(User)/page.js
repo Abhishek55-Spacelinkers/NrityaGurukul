@@ -22,7 +22,7 @@ export default function Home() {
         <ImageCarousel />
         <Features />
         <Testimonials />
-        <ButtonG/>
+        {/* <ButtonG/> */}
         <InquiryForm />
         <Contact />
     </>

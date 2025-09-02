@@ -45,7 +45,7 @@ const images = [
 
 export default function ImageCarousel() {
   return (
-    <section className="py-10 sm:py-20 px-4">
+    <section className="py-10 md:py-20 px-1 sm:px-4">
       {/* <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755863490/1_r_khohba.svg" alt=""  className=""/> */}
       <div className="max-w-[1350px] mx-auto grid lg:grid-cols-[20%_60%_20%]">
         <motion.img
@@ -92,8 +92,8 @@ export default function ImageCarousel() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-orange-500 border-orange-500 hover:bg-orange-100 left-10 " />
-            <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100 right-10" />
+            <CarouselPrevious className="text-orange-500 border-orange-500 hover:bg-orange-100 left-2 sm:left-5 " />
+            <CarouselNext className="text-orange-500 border-orange-500 hover:bg-orange-100 right-2 sm:right-5" />
           </Carousel>
         </div>
         <motion.img

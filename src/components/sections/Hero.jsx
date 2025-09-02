@@ -9,7 +9,7 @@ import HeroCarousel from "./HeroCarousel";
 export default function Hero() {
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative py-10 mt-10 md:mt-0 md:py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Section */}
@@ -30,13 +30,13 @@ export default function Hero() {
                 </span>
               </motion.div>
 
-              <h1 className="text-5xl lg:text-7xl font-bold font-cinzel leading-17">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-cinzel sm:leading-17">
                 <span className="dance-ornament">Bharatanatyam</span>
                 <br />
                 <span className="text-gray-800">Dance Classes</span>
               </h1>
 
-              <p className="text-[18px] text-gray-600 leading-6  text-justify">
+              <p className="text-[16px] sm:text-[18px] text-gray-600 leading-6  text-justify">
                 Discover the divine art of Bharatanatyam - where every movement
                 tells a story, every gesture speaks the language of gods, and
                 every step connects you to ancient traditions.

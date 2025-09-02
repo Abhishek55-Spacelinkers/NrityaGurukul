@@ -62,14 +62,14 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            className="relative"
+            className="relative my-auto h-fit"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <img
-              className="w-full h-[400px] object-cover rounded-2xl shadow-2xl transform scale-x-[-1]"
+              className="w-full  object-cover rounded-2xl shadow-2xl transform scale-x-[-1]"
               alt="Bharatanatyam dance academy location"
               src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586894/git_zskcze.jpg"
             />

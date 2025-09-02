@@ -46,7 +46,7 @@ export default function ButtonG() {
           {/* Card 1 */}
           <Link
             href={"/gallery#photos"}
-            className="cursor-pointer border border-orange-600 rounded-2xl p-6 bg-gray-50 hover:bg-red-50 transition transform hover:scale-105 shadow-sm"
+            className="cursor-pointer border border-orange-600 rounded-2xl p-4 sm:p-6 bg-gray-50 hover:bg-red-50 transition transform hover:scale-105 shadow-sm"
           >
             <motion.div
               className="inline-block "
@@ -63,7 +63,7 @@ export default function ButtonG() {
           {/* Card 2 */}
           <Link
             href={"/gallery#Our_Performances"}
-            className="cursor-pointer border border-orange-600 rounded-2xl p-6 bg-gray-50 hover:bg-red-50 transition transform hover:scale-105 shadow-sm"
+            className="cursor-pointer border border-orange-600 rounded-2xl p-4 sm:p-6 bg-gray-50 hover:bg-red-50 transition transform hover:scale-105 shadow-sm"
           >
             <motion.div
               className="inline-block "
