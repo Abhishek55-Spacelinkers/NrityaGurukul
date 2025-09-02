@@ -81,7 +81,7 @@ export function Front() {
   return (
     <>
       {/* Heart of Gurukul */}
-      <section className="grid md:grid-cols-[35%_62%] gap-5 px-5 items-start">
+      <section className="grid md:grid-cols-[35%_62%] overflow-hidden gap-5 px-5 items-start">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -289,7 +289,7 @@ export function Mission() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-8 text-center"
+        className="grid md:grid-cols-3 gap-6 md:gap-8 text-center"
       >
         <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-orange-200 hover:scale-105 duration-300">
           <Award className="w-12 h-12 text-orange-500 mx-auto mb-4" />
