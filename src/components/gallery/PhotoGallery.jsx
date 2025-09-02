@@ -474,7 +474,7 @@ const dataSources = {
 const PhotoGallery = () => {
   const showMore = 4;
   const [visible, setvisible] = useState(8);
-  const [cimg, setCimg] = useState("photoGalleryImages");
+  const [cimg, setCimg] = useState("narayanImages");
   const currentData = dataSources[cimg];
   const max = currentData.length;
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -519,55 +519,55 @@ const PhotoGallery = () => {
         {/* Photo Grid */}
         <div className="flex space-x-1 bg-gradient-to-r  to-yellow-500 via-orange-600 from-red-500 rounded-lg p-1.5 mb-5 text-[15px]">
           <button
-            onClick={() => handleMethodChange("photoGalleryImages")}
-            className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
-              cimg === "photoGalleryImages"
-                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-                : "text-white/90 hover:font-semibold"
-            }`}
-          >
-            Snapshots ({photoGalleryImages.length})
-          </button>
-          <button
-            onClick={() => handleMethodChange("nineImages")}
-            className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
-              cimg === "nineImages"
-                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-                : "text-white/90 hover:font-semibold"
-            }`}
-          >
-            Nine Nights({nineImages.length})
-          </button>
-          <button
             onClick={() => handleMethodChange("narayanImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "narayanImages"
-                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-                : "text-white/90 hover:font-semibold"
+              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
+              : "text-white/90 hover:font-semibold"
             }`}
-          >
+            >
             Narayan Narayan ({narayanImages.length})
           </button>
           <button
             onClick={() => handleMethodChange("premImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "premImages"
-                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-                : "text-white/90 hover:font-semibold"
+              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
+              : "text-white/90 hover:font-semibold"
+            }`}
+            >
+            Prem Vinod ({premImages.length})
+          </button>
+          <button
+            onClick={() => handleMethodChange("nineImages")}
+            className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
+              cimg === "nineImages"
+              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
+              : "text-white/90 hover:font-semibold"
             }`}
           >
-            Prem Vinod ({premImages.length})
+            Nine Nights({nineImages.length})
           </button>
           <button
             onClick={() => handleMethodChange("arangetramImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "arangetramImages"
-                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-                : "text-white/90 hover:font-semibold"
+              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
+              : "text-white/90 hover:font-semibold"
             }`}
-          >
+            >
             Arangetram ({arangetramImages.length})
           </button>
+            <button
+              onClick={() => handleMethodChange("photoGalleryImages")}
+              className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
+                cimg === "photoGalleryImages"
+                  ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
+                  : "text-white/90 hover:font-semibold"
+              }`}
+            >
+              Moments in Time ({photoGalleryImages.length})
+            </button>
         </div>
 
         {max === 0 ? (

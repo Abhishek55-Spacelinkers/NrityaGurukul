@@ -31,6 +31,7 @@ const Header = () => {
       if (window.scrollY <= 0) {
         setShow(true); // always show at very top
       } else if (window.scrollY > lastScrollY + 10) {
+        setIsOpen(false)
         setShow(false); // scrolling down enough → hide
       } else if (window.scrollY < lastScrollY - 12) {
         setShow(true); // scrolling up enough → show
@@ -89,7 +90,7 @@ const Header = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed left-0 w-full bg-white/80 backdrop-blur-sm z-40 shadow-md transition-all duration-500 ease-in-out ${
+        className={`fixed left-0 w-full bg-white backdrop-blur-sm z-40 shadow-md transition-all duration-500 ease-in-out ${
           show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
         style={{ top: "32px" }}
@@ -148,13 +149,13 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.5 }}
               className="mob:hidden mt-4"
             >
               <nav
@@ -178,6 +179,7 @@ const Header = () => {
                 <Link href="/book-class" className="w-fit mt-2 mb-5">
                   <Button
                     size="lg"
+                    onClick={() => setIsOpen(false)}
                     className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full w-full"
                   >
                     <Calendar className="w-4 h-4 mr-2" />

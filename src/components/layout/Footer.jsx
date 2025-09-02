@@ -32,7 +32,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 w-full md:w-[70%] mx-auto lg:w-[100%] lg:grid-cols-[35%_29%_32%] gap-8 relative p-5">
           {/* Logo & description */}
           <div className="space-y-1">
-            <Link href="/" className="flex w-fit mx-auto lg:ml-0 items-center space-x-3">
+            <Link
+              href="/"
+              className="flex w-fit mx-auto lg:ml-0 items-center space-x-3"
+            >
               <img src="/assets/logo.svg" alt="Logo" className="h-28" />
             </Link>
             <p className="text-gray-700 text-center lg:text-justify w-[96%]">
@@ -43,7 +46,6 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="grid grid-cols-2 gap-7 mx-auto w-fit lg:w-full">
-        
             <div className="space-y-4 w-fit ">
               <span className="text-lg font-semibold block">Quick Links</span>
               <div className="space-y-1 ">
@@ -103,7 +105,6 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-              
           </div>
 
           {/* Follow Us */}
@@ -161,15 +162,32 @@ export default function Footer() {
             </motion.div>
           </div>
         </div>
-        <div className="flex gap-5 text-gray-700 mb-1 mt-2 mx-auto w-fit lg:ml-0">
-              <Link className="text-sm hover:text-[#F58634]" href="/terms">Terms & Conditions</Link>
-              <Link className="text-sm hover:text-[#F58634] border-l pl-5" href="/privacy">Privacy Policy</Link>
-            </div>
+        <div className="flex md:flex-row text-center flex-col-reverse md:gap-5 text-gray-700 mb-1 mt-2 mx-auto w-fit lg:ml-0">
+          <Link
+            className="text-sm hover:text-[#F58634]"
+            href="/RefundAndCancellationPolicy"
+          >
+            Refund & Cancellation Policy
+          </Link>
+          <Link
+            className="text-sm hover:text-[#F58634] md:border-l md:pl-5"
+            href="/TermsAndConditions"
+          >
+            Terms & Conditions
+          </Link>
+          <Link
+            className="text-sm hover:text-[#F58634] md:border-l md:pl-5"
+            href="/PrivacyPolicy"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+
         {/* Footer bottom */}
         <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-700">
-            © {new Date().getFullYear()} Nritya Gurukul. All rights reserved. |
-            <span className="ml-2">
+          <p className="text-gray-700 grid md:grid-cols-2 w-fit mx-auto">
+            <span className="flex flex-row"> © {new Date().getFullYear()} Nritya Gurukul. All rights reserved. <span className="ml-1 hidden md:flex"> | </span></span>
+            <span className="w-fit mx-auto md:ml-1">
               Powered by{" "}
               <a
                 href="https://spacelinkers.com"

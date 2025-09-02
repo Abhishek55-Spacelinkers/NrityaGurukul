@@ -13,25 +13,33 @@ import {
 
 const images = [
   {
-    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285526/b1_s2n93r.jpg",
-    alt: "Students learning basic steps in a bright studio",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285463/DSC_6535_jsokme.jpg",
+    alt: "Students learning basic steps of Narayan Narayan",
   },
   
   {
-    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img4_cu6jiy.jpg",
-    alt: "Students learning basic steps in a bright studio",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285463/DSC_6496_xkm20s.jpg",
+    alt: "Students learning basic steps of Narayan Narayan",
   },
   {
-    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg",
-    alt: "A close-up shot of a dancer's intricate hand gestures (Hastas)",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285466/DSC_6775_ftm4o9.jpg",
+    alt: "Students learning basic steps of Narayan Narayan",
+  },
+  {
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285477/VIN07280_endgol.jpg",
+    alt: "A close-up shot of a dancer's intricate hand gestures (Prem Vinod)",
+  },
+  {
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285475/VIN07247_p5bijm.jpg",
+    alt: "Students learning basic steps of Prem Vinod",
   },
   {
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img3_yauyf3.jpg",
-    alt: "A close-up shot of a dancer's intricate hand gestures (Hastas)",
+    alt: "A close-up shot of a dancer's intricate hand gestures (Nine Night)",
   },
   {
-    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285658/b3_gzt2ol.jpg",
-    alt: "A group of dancers performing in colorful costumes on stage",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img4_cu6jiy.jpg",
+    alt: "Students learning basic steps of Prem Vinod",
   },
 ];
 
