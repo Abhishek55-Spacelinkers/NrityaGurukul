@@ -126,7 +126,7 @@ export function BookingGuide() {
               className="fixed inset-0 w-full h-full bg-orange-400 opacity-30"
               onClick={() => setOpen(false)}
             ></div>
-              <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn mx-auto h-fit my-auto">
+              <div className="bg-white mx-4 rounded-2xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn sm:mx-auto h-fit my-auto">
                 {/* Close Button */}
                 <button
                   onClick={() => setOpen(false)}
@@ -253,7 +253,7 @@ export function Front() {
   return (
     <>
       <motion.div
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -262,7 +262,7 @@ export function Front() {
         <h1 className="text-5xl font-bold font-cinzel mb-4">
           <span className="dance-ornament">Choose Your Class</span>
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
           Select the program that best fits your skill level and begin your
           journey into the world of Bharatnatyam.
         </p>
@@ -292,21 +292,21 @@ export function Front() {
                         : "bg-white/70 border-orange-200 hover:border-orange-400"
                     }`}
                   >
-                    <div className="flex items-center space-x-4 p-6 ">
+                    <div className="flex items-center space-x-4 px-2.5 py-5 sm:p-6 ">
                       <RadioGroupItem value={classItem.id} id={classItem.id} />
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-xl font-semibold font-cinzel flex items-center gap-2">
-                            {classItem.icon}
+                        <div className="flex flex-col sm:flex-row  sm:items-center justify-between">
+                          <h3 className="text-base leading-5 sm:text-xl font-semibold font-cinzel flex items-center gap-2">
+                            <span className="hidden md:flex"> {classItem.icon}</span>
                             {classItem.title}
                           </h3>
-                          <div className="flex gap-5">
-                            <span className="text-sm font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
+                          <div className="flex gap-5 mt-1 sm:mt-0">
+                            <span className="font-semibold text-xs sm:text-sm sm:font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-sm sm:rounded-full">
                               {classItem.level}
                             </span>
                           </div>
                         </div>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 leading-4.5">
                           {classItem.description}
                         </p>
                       </div>
@@ -315,7 +315,7 @@ export function Front() {
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className={`w-full flex justify-between items-center text-left p-3 font-semibold border-none bg-[#F58634]/30 text-gray-800`}
                     >
-                      <div className="pl-14 flex justify-center items-center gap-1">
+                      <div className="pl-5 sm:pl-14 flex justify-center items-center gap-1">
                         <Info size={15} />
                         Details
                       </div>
@@ -325,18 +325,7 @@ export function Front() {
                         }`}
                       />
                     </button>
-                    {/* <div className="">
-                      <button
-                        onClick={() => setOpenIndex(isOpen ? null : index)}
-                        className={`text-sm font-bold px-3 py-1 rounded-full ${
-                          isOpen
-                            ? "bg-orange-600 text-orange-100"
-                            : "text-orange-600 font-semibold bg-orange-100 "
-                        }`}
-                      >
-                        Dropdown
-                      </button>
-                    </div> */}
+                    
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
@@ -352,8 +341,9 @@ export function Front() {
                           transition={{ duration: 0.3 }}
                           className={`overflow-hidden bg-[#F58634]/30 text-black rounded-b-2xl `}
                         >
+                          <hr className="text-gray-400 mb-1.5" />
                           <div
-                            className="px-4 py-2"
+                            className="px-1 sm:px-4 py-2"
                             ref={(el) => (contentRefs.current[index] = el)}
                           >
                             {classItem.detail}

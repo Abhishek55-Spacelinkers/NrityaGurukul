@@ -11,7 +11,7 @@ const BookClass = () => {
 
   return (
     <>
-        <div className="py-20 px-4">
+        <div className="py-10 md:py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <Front />
         </div>
