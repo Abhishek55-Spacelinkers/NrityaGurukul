@@ -36,7 +36,7 @@ const LeftNavbar = () => {
     <ul className="mt-12 space-y-6 mx-auto w-fit font-medium ">
       <li className="flex items-center gap-2 font-semibold text-lg my-8 cursor-context-menu">
         <div className="bg-white text-blue-500 rounded-md">
-          <img src="/image/dashboard/dashboard-icon.png" alt="dashboard-icon" className="h-10 rounded-4xl" />
+          <img src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756790769/dashboard-icon_l0iz7g.png" alt="dashboard-icon" className="h-10 rounded-4xl" />
         </div>
         Dashboard
       </li>
