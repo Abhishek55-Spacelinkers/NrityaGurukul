@@ -1,9 +1,7 @@
 import "./globals.css";
-import dynamic from "next/dynamic";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Poppins, Cinzel } from "next/font/google";
-import { Toast } from "@/components/ui/toast";
 
 import {
   jsonLd,
@@ -41,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
+        {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
@@ -59,7 +57,7 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
+        /> */}
       </head>
       <body
         className={` ${cinzel.variable} ${poppins.variable} font-normal min-h-screen flex flex-col !w-full bharatnatyam-pattern mandala-bg`}
