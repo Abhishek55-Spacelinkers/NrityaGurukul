@@ -56,7 +56,7 @@ const Levels = [
     title: "Praveshika Purna",
     eligibility: "Praveshika-pratham from ABGMVM or Minimum 17 years of age",
     subtitle: "Preliminary – Part 2",
-    
+
     duration: "1 Year",
     focus: ["Alarippu", "Pushpanjali", "Stage skills & confidence"],
     certificate: "ABGMVM Praveshika Purna Certificate",
@@ -65,7 +65,8 @@ const Levels = [
   {
     id: "madhyama-pratham",
     order: 4,
-    eligibility: "Praveshika poorna from ABGMVM or 18yrs age for certification done from other institutions.",
+    eligibility:
+      "Praveshika poorna from ABGMVM or 18yrs age for certification done from other institutions.",
     title: "Madhyama Pratham",
     subtitle: "Intermediate – Part 1",
     duration: "1 Year",
@@ -77,7 +78,8 @@ const Levels = [
     id: "madhyama-purna",
     order: 5,
     title: "Madhyama Purna",
-    eligibility: "Madhyama pratam from ABGMVM , the student should be minimum age 14yrs Or 18yrs for certification done from other institutions",
+    eligibility:
+      "Madhyama pratam from ABGMVM , the student should be minimum age 14yrs Or 18yrs for certification done from other institutions",
     subtitle: "Intermediate – Part 2",
     duration: "1 Year",
     focus: ["Tillana", "Advanced rhythm", "Stage command & grace"],
@@ -89,7 +91,8 @@ const Levels = [
     order: 6,
     title: "Visharad Pratham",
     subtitle: "Graduate – Part 1",
-    eligibility: "Madhyama Purna from ABGVM or minimum age 18 years for direct entry",
+    eligibility:
+      "Madhyama Purna from ABGVM or minimum age 18 years for direct entry",
     duration: "1 Year",
     focus: [
       "Varnam (central item)",
@@ -102,7 +105,8 @@ const Levels = [
   {
     id: "visharad-purna",
     order: 7,
-    eligibility: "Visharad Pratham from ABGVM or minimum age 20 years for direct entry",
+    eligibility:
+      "Visharad Pratham from ABGVM or minimum age 20 years for direct entry",
     title: "Visharad Purna",
     subtitle: "Graduate – Part 2",
     duration: "1 Year",
@@ -121,7 +125,7 @@ const container = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";
 
 export function Headcourse() {
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative py-12 md:py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[65%_35%] items-center">
           <motion.div
@@ -135,7 +139,7 @@ export function Headcourse() {
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-amber-700 ring-amber-200">
+              <div className="inline-flex items-center gap-2 rounded-full px-1 sm:px-3 py-1 text-amber-700 ring-amber-200">
                 <Sparkles className="h-4 w-4" />
                 <span className="text-sm">
                   Preparation Based on Akhil Bharatiya Gandharva Mahavidyalaya
@@ -187,7 +191,7 @@ export function Headcourse() {
             transition={{ duration: 0.8, delay: 0.2 }}
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755688099/front_bxhrv5.png"
             alt=""
-            className="-mt-12"
+            className="-mt-12 hidden lg:flex"
           />
         </div>
       </div>
@@ -221,11 +225,15 @@ export function Specification() {
         </h2>
       </motion.div>
       <div className={container}>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 md:gap-8 gap-4">
           {Specifications.map((h, i) => {
             const pairIndex = Math.floor(i / 2);
-            const colors = ["bg-orange-400/20", "bg-amber-500/30"];
+            const mdColors = ["md:bg-orange-400/20", "md:bg-amber-500/30"];
+            const mdColor = mdColors[pairIndex % mdColors.length];
 
+            const mobileColors = ["bg-orange-400/20", "bg-amber-500/30"];
+            const mobileColor = mobileColors[i % mobileColors.length];
+            
             return (
               <motion.div
                 key={i}
@@ -233,7 +241,7 @@ export function Specification() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="flex w-[90%]"
+                className="flex w-full md:w-[90%]"
               >
                 <div className="flex-shrink-0 my-auto pr-3 ">
                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r to-[#ff6b35]  from-red-500  text-white font-bold text-lg shadow-md relative">
@@ -241,9 +249,7 @@ export function Specification() {
                   </div>
                 </div>
                 <div
-                  className={`rounded-2xl flex items-center px-2.5 py-3.5 w-full  ${
-                    colors[pairIndex % colors.length]
-                  }`}
+                  className={`rounded-2xl flex items-center px-2.5 py-3.5 w-full ${mobileColor} ${mdColor}`}
                 >
                   <p className="text-slate-700 text-sm md:text-base">{h}</p>
                 </div>
@@ -289,7 +295,7 @@ export function TheoryProgression() {
     },
   ];
   return (
-    <section className="py-10 md:py-16 pt-24 scroll-mt-20" id="format">
+    <section className="py-10 md:py-16 scroll-mt-20" id="format">
       <div className={container}>
         <div className="grid md:grid-cols-[28%_70%] gap-10 items-center">
           <img
@@ -356,7 +362,7 @@ export function TheoryProgression() {
 
 export function LevelsBlock() {
   return (
-    <section className="py-12 md:py-20 scroll-mt-20" id="levels">
+    <section className="py-10 md:py-20 scroll-mt-20" id="levels">
       <div className={container}>
         <div className="flex items-center flex-col md:flex-row justify-center md:justify-between mb-6">
           <motion.div
@@ -446,7 +452,7 @@ export function LevelsBlock() {
 
 export function Comparison() {
   return (
-    <section className="pb-12 md:pb-16">
+    <section className="pb-12 md:pb-16 md:flex hidden">
       <div className={container}>
         <motion.div
           className="text-center mb-8"
@@ -546,7 +552,7 @@ export function Arangetram() {
 
   return (
     <>
-      <section className="py-12 md:py-16 scroll-mt-20" id="arangetram">
+      <section className="py-10 md:py-16 scroll-mt-20" id="arangetram">
         <div className={container}>
           <div className="grid lg:grid-cols-3 gap-6 text-gray-600">
             <div className="rounded-2xl lg:col-span-2 px-3  border border-orange-200 py-5">
@@ -607,11 +613,11 @@ export function Arangetram() {
                     asChild
                     className="rounded-xl bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
                   >
-                    <Link href="booking-form?class=arangetram">
+                    <Link href="booking-form?class=arangetram" className="py-10 sm:py-3">
                       Apply for Arangetram Training
                     </Link>
                   </Button>
-                  
+
                   <ArangetramForm />
                 </div>
               </div>
@@ -649,7 +655,6 @@ export function Arangetram() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

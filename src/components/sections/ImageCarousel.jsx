@@ -41,6 +41,14 @@ const images = [
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756270722/img4_cu6jiy.jpg",
     alt: "Students learning basic steps of Prem Vinod",
   },
+  {
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1117_avvwho.jpg",
+    alt: "A close-up shot of a dancer's intricate hand gestures (Arangetram)",
+  },
+  {
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1319_riebdw.jpg",
+    alt: "Students learning basic steps of Arangetram",
+  },
 ];
 
 export default function ImageCarousel() {

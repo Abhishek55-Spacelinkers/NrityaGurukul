@@ -29,10 +29,10 @@ export function WhyJoinUs() {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 md:py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -51,7 +51,7 @@ export function WhyJoinUs() {
           {whyUsPoints.map((point, index) => (
             <motion.div
               key={index}
-              className="bg-white p-8 rounded-2xl text-center shadow-lg border border-orange-100 hover:bg-orange-500/70 group hover:text-white duration-150"
+              className="bg-white p-5 sm:p-8 rounded-2xl text-center shadow-lg border border-orange-100 hover:bg-orange-500/70 group hover:text-white duration-150"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.15 }}
@@ -80,8 +80,7 @@ export function WhyJoinUs() {
         >
           <Link href="/book-class">
             <Button
-              size="lg"
-              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold pulse-glow"
+              className="py-9 sm:py-6 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full text-lg font-semibold pulse-glow"
             >
               Begin Your Dance Journey Today
             </Button>
@@ -96,7 +95,7 @@ export function Front() {
   return (
     <>
       <motion.div
-        className="text-center py-20"
+        className="text-center py-12 md:py-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
@@ -110,7 +109,7 @@ export function Front() {
           we'll respond as soon as we can.
         </p>
       </motion.div>
-      <div className="grid lg:grid-cols-2 gap-12 mb-20">
+      <div className="grid lg:grid-cols-2 gap-12 sm:mb-12 overflow-hidden">
         <motion.div
           className="space-y-8"
           initial={{ opacity: 0, x: -30 }}

@@ -148,7 +148,7 @@ export default function ArangetramForm() {
   return (
     <>
       <Button asChild variant="outline" className="rounded-xl cursor-pointer">
-        <a onClick={() => setOpen(true)}>Request Budget & Inclusions</a>
+        <a onClick={() => setOpen(true)} className="py-10 sm:py-3">Request Budget & Inclusions</a>
       </Button>
       {open && (
         <motion.div
@@ -195,7 +195,7 @@ export default function ArangetramForm() {
                   </button>
                 </div>
                 <motion.div
-                  className="p-8 rounded-2xl shadow-2xl md:w-[800px] bg-white  relative text-gray-600 mx-10"
+                  className="py-8 px-7 sm:p-8 rounded-2xl shadow-2xl md:w-[800px] bg-white  relative text-gray-600 mx-2 sm:mx-10"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
@@ -489,7 +489,7 @@ export default function ArangetramForm() {
             ) : (          
                 <motion.div
                   key="popup-box"
-                  className=" p-10 bg-white mx-auto my-auto rounded-2xl relative backdrop-blur-sm"
+                  className=" p-7 sm:p-10 bg-white mx-5 sm:mx-auto my-auto rounded-2xl relative backdrop-blur-sm"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}

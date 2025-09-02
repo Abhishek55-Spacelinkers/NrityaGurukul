@@ -461,7 +461,225 @@ const premImages = [
     src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756285474/VIN07219_gwe1qe.jpg",
   },
 ];
-const arangetramImages = [];
+
+const arangetramImages = [
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806097/_J3A1091_lt8ael.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806097/ishi_eissf5.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806098/5U6A1382_xs70xe.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806098/_J3A1562_fgixvi.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806097/_J3A1556_oq4vxu.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806097/_J3A0971_skxpy6.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806097/9_go7wwb.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806096/8_paqlkb.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806096/5U6A1453_ulldpw.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806096/5U6A1384_kpo7jj.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806096/6_cbxuv8.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806096/7_nuxfqr.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806096/5U6A1370_mrjgkj.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1366_yr5pc3.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1319_riebdw.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1311_oiqgma.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1124_ggm8gm.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1117_avvwho.jpg",
+  },
+
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806095/5U6A1122_pmqlnu.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806094/5U6A0993_pnbe72.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806094/5U6A0674_nd15mn.jpg",
+  },
+
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806094/5U6A0731_namzcz.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806094/5U6A0914_aoso3t.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806094/5U6A0685_q01d2b.jpg",
+  },
+
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806094/5U6A0630_vfbxva.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806093/5U6A0602_sluqdv.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806093/5U6A0600_kjhsi5.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806093/5U6A0460_rv95ji.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806093/5U6A0549_c9mfzj.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806093/5U6A0579_v5q4is.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806093/5U6A0498_lvkx7p.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806092/5U6A0434_wjwmxy.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806092/5U6A0335_sslkng.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806092/5U6A0354_zzso1q.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806092/22_g4ot3n.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806092/21_if4w6x.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806092/20_xambrj.jpg",
+  },
+
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806091/5U6A0327_rg286a.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806091/19_qzfdim.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806091/2_xrzz8j.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806091/5_lr8okn.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806091/5U6A0326_re2oxk.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806091/18_vd9pxg.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806090/17_uxghxh.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806090/16_qh6eqn.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806090/14_whcc2u.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806089/25_oz2nrn.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806089/10_wod26t.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806089/13_dlzha5.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806089/24_sopalq.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806089/11_ko8zb3.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806088/23_rk1ara.jpg",
+  },
+  {
+    alt: "arangetramImages",
+    src: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756806088/1_arjhtq.jpg",
+  },
+];
 
 const dataSources = {
   photoGalleryImages,
@@ -497,6 +715,21 @@ const PhotoGallery = () => {
     setSelectedIndex(null);
   };
 
+  const galleryKeys = Object.keys(dataSources);
+
+  const handlePrevButton = () => {
+    const currentIndex = galleryKeys.indexOf(cimg);
+    const prevIndex =
+      (currentIndex - 1 + galleryKeys.length) % galleryKeys.length;
+    handleMethodChange(galleryKeys[prevIndex]);
+  };
+
+  const handleNextButton = () => {
+    const currentIndex = galleryKeys.indexOf(cimg);
+    const nextIndex = (currentIndex + 1) % galleryKeys.length;
+    handleMethodChange(galleryKeys[nextIndex]);
+  };
+
   return (
     <section className="py-10 px-4 scroll-m-20" id="photos">
       <div className="max-w-7xl mx-auto">
@@ -517,33 +750,41 @@ const PhotoGallery = () => {
         </motion.div>
 
         {/* Photo Grid */}
-        <div className="flex space-x-1 bg-gradient-to-r  to-yellow-500 via-orange-600 from-red-500 rounded-lg p-1.5 mb-5 text-[15px]">
+        <div className=" flex space-x-1 bg-gradient-to-r  to-yellow-500 via-orange-600 from-red-500 rounded-lg p-1.5 mb-5 text-[15px]">
+          {
+            <button
+              className="text-white cursor-pointer sm:hidden"
+              onClick={handlePrevButton}
+            >
+              <ChevronLeft size={50} />
+            </button>
+          }
           <button
             onClick={() => handleMethodChange("narayanImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "narayanImages"
-              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-              : "text-white/90 hover:font-semibold"
+                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px] flex"
+                : "text-white/90 hover:font-semibold hidden sm:flex"
             }`}
-            >
+          >
             Narayan Narayan ({narayanImages.length})
           </button>
           <button
             onClick={() => handleMethodChange("premImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "premImages"
-              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-              : "text-white/90 hover:font-semibold"
+                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px] flex"
+                : "text-white/90 hover:font-semibold hidden sm:flex"
             }`}
-            >
+          >
             Prem Vinod ({premImages.length})
           </button>
           <button
             onClick={() => handleMethodChange("nineImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "nineImages"
-              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-              : "text-white/90 hover:font-semibold"
+                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px] flex"
+                : "text-white/90 hover:font-semibold hidden sm:flex"
             }`}
           >
             Nine Nights({nineImages.length})
@@ -552,22 +793,30 @@ const PhotoGallery = () => {
             onClick={() => handleMethodChange("arangetramImages")}
             className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
               cimg === "arangetramImages"
-              ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-              : "text-white/90 hover:font-semibold"
+                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px] flex"
+                : "text-white/90 hover:font-semibold hidden sm:flex"
             }`}
-            >
+          >
             Arangetram ({arangetramImages.length})
           </button>
+          <button
+            onClick={() => handleMethodChange("photoGalleryImages")}
+            className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
+              cimg === "photoGalleryImages"
+                ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px] flex"
+                : "text-white/90 hover:font-semibold hidden sm:flex"
+            }`}
+          >
+            Moments in Time ({photoGalleryImages.length})
+          </button>
+          {
             <button
-              onClick={() => handleMethodChange("photoGalleryImages")}
-              className={`w-full px-4 py-2 rounded-md transition-colors flex items-center justify-center gap-2 duration-300 ${
-                cimg === "photoGalleryImages"
-                  ? "bg-white text-orange-600 font-semibold shadow-sm  text-[16px]"
-                  : "text-white/90 hover:font-semibold"
-              }`}
+              className="text-white cursor-pointer sm:hidden"
+              onClick={handlePrevButton}
             >
-              Moments in Time ({photoGalleryImages.length})
+              <ChevronRight size={50} />
             </button>
+          }
         </div>
 
         {max === 0 ? (
@@ -578,7 +827,7 @@ const PhotoGallery = () => {
           <>
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentData} 
+                key={currentData}
                 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -594,7 +843,7 @@ const PhotoGallery = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{
                         duration: 0.6,
-                        delay: (index ) * 0.1,
+                        delay: index * 0.1,
                       }}
                       onClick={() => setSelectedIndex(index)}
                       viewport={{ once: true }}

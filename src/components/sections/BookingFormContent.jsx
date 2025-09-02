@@ -101,7 +101,7 @@ export default function BookingFormContent() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <section id="booking-form" className="py-20 px-4">
+        <section id="booking-form" className="py-10 md:py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
               className="text-center mb-12"
