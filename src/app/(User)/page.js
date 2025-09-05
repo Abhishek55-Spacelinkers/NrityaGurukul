@@ -13,6 +13,7 @@ import ImageCarousel from "@/components/sections/ImageCarousel";
 import Testimonials from "@/components/sections/Testimonials";
 import AboutAndWhy from "@/components/sections/AboutAndWhy";
 import ButtonG from "@/components/gallery/ButtonG";
+import FeaturedStudents from "@/components/sections/FeaturedStudents";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Features />
         <Testimonials />
         <ButtonG/>
+        <FeaturedStudents/>
         <InquiryForm />
         <Contact />
     </>

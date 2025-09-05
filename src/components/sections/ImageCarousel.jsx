@@ -94,6 +94,7 @@ export default function ImageCarousel() {
                         src={img.src}
                         alt={img.alt}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -111,6 +112,7 @@ export default function ImageCarousel() {
           viewport={{ once: true }}
           src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755865033/right_llu4g0.png"
           alt=""
+          loading="lazy"
           className="hidden lg:block"
         />
         <div></div>

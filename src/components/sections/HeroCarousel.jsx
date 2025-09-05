@@ -42,6 +42,7 @@ export default function HeroCarousel() {
                   alt={`Dancer pose ${i + 1}`}
                   width={800}
                   height={600}
+                  loading="lazy"
                   className="w-full h-[600px] rounded-3xl object-cover"
                 />
               </CarouselItem>

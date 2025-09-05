@@ -104,6 +104,7 @@ const Header = () => {
               src="/assets/logo.svg"
               alt="Nritya Gurukul Logo"
               className="h-28"
+              loading="lazy"
             />
           </Link>
 

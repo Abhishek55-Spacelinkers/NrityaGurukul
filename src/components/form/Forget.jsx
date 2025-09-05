@@ -49,6 +49,7 @@ const Forget = () => {
             <motion.img
               src="/assets/logo.png"
               alt=""
+              loading="lazy"
               className="w-[150px] h-auto mx-auto"
               initial={{ rotate: -10, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}

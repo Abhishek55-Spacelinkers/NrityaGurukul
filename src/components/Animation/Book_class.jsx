@@ -146,6 +146,7 @@ export function BookingGuide() {
                     src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1756105534/scanner_yy74yu.jpg" 
                     alt="Payment QR Code"
                     className="rounded-xl shadow-md"
+                    loading="lazy"
                   />
                 </div>
 

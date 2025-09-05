@@ -30,7 +30,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-3">
-          <img src="/assets/NG-Logo.svg" alt="" className="h-28" />
+          <img src="/assets/NG-Logo.svg" loading="lazy" alt="" className="h-28" />
         </Link>
 
         {/* Desktop Nav */}

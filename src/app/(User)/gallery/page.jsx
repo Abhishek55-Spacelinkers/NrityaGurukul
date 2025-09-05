@@ -1,5 +1,6 @@
 import GalleryIntro from '@/components/gallery/GalleryIntro';
 import PhotoGallery from '@/components/gallery/PhotoGallery';
+import StudentShowcase from '@/components/gallery/StudentShowcase';
 import VideoGallery from '@/components/gallery/VideoGallery';
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function GalleryPage() {
       <GalleryIntro /> 
       <PhotoGallery />
       <VideoGallery />
+      <StudentShowcase/>
     </div>
   );
 }

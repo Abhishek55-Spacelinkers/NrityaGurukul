@@ -93,6 +93,7 @@ export function Front() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755688099/Aboutimg_d3z76e.png"
             alt="Founder of Nritya Gurukul in a graceful pose"
             className=" object-cover rounded-2xl"
+            loading="lazy"
           />
         </motion.div>
 
@@ -165,6 +166,7 @@ export function Front() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
             alt=""
             className="hidden md:block"
+            loading="lazy"
           />
           <h2 className="text-3xl font-bold font-['Cinzel']">
             <span className="dance-ornament"> Specializations</span> & Expertise
@@ -173,6 +175,7 @@ export function Front() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
             alt=""
             className="hidden md:block transform scale-x-[-1]"
+            loading="lazy"
           />
           <div></div>
         </motion.div>
@@ -213,6 +216,7 @@ export function Front() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
             alt=""
             className="hidden md:block"
+            loading="lazy"
           />
           <h2 className="text-3xl font-bold font-['Cinzel']">
             <span className="dance-ornament">Achievements</span> & Recognitions
@@ -221,6 +225,7 @@ export function Front() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755855389/Untitled_768_x_198_px_yebz35.svg"
             alt=""
             className="hidden md:block transform scale-x-[-1]"
+            loading="lazy"
           />
           <div></div>
         </motion.div>

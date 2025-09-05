@@ -72,6 +72,7 @@ const Contact = () => {
               className="w-full  object-cover rounded-2xl shadow-2xl transform scale-x-[-1]"
               alt="Bharatanatyam dance academy location"
               src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586894/git_zskcze.jpg"
+              loading="lazy"
             />
           </motion.div>
         </div>

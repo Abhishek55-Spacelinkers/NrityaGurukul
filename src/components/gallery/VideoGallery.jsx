@@ -32,7 +32,7 @@ const VideoGallery = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold font-['Cinzel'] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold font-['Cinzel'] mb-4">
             <span className="dance-ornament">Our</span> Performances
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">

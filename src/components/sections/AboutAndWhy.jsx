@@ -19,6 +19,7 @@ export default function AboutAndWhy() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg"
             alt="Bharatanatyam Dance"
             className="object-cover"
+            loading="lazy"
           />
         </motion.div>
 
@@ -43,6 +44,7 @@ export default function AboutAndWhy() {
               src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586893/b2_uqumpb.jpg"
               alt="Bharatanatyam Dance"
               className="object-cover"
+              loading="lazy"
             />
           </motion.div>
           <p className="text-lg text-gray-600 mb-6 mt-1.5">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -697,10 +697,20 @@ const PhotoGallery = () => {
   const max = currentData.length;
   const [selectedIndex, setSelectedIndex] = useState(null);
 
+  const prevVisibleRef = useRef(0);
+  const ENTER_STAGGER = 0.04;
+
   const handleClick = () => {
-    setvisible((prev) => Math.min(prev + showMore, max));
+    const prev = visible;
+    const next = Math.min(prev + showMore, max);
+    prevVisibleRef.current = prev;
+    setvisible((prev) => next);
+  //   setTimeout(() => {
+  //   buttonRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  // }, 50);
   };
 
+  const buttonRef = React.useRef(null);
   const handlePrev = () => {
     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : max - 1));
   };
@@ -710,6 +720,7 @@ const PhotoGallery = () => {
   };
 
   const handleMethodChange = (method) => {
+    prevVisibleRef.current = 0;
     setCimg(method);
     setvisible(8);
     setSelectedIndex(null);
@@ -812,7 +823,7 @@ const PhotoGallery = () => {
           {
             <button
               className="text-white cursor-pointer sm:hidden"
-              onClick={handlePrevButton}
+              onClick={handleNextButton}
             >
               <ChevronRight size={50} />
             </button>
@@ -835,6 +846,10 @@ const PhotoGallery = () => {
                 transition={{ duration: 0.5 }}
               >
                 {currentData.slice(0, visible).map((image, index) => {
+                  const batchStart = prevVisibleRef.current ?? 0;
+                  const isNew = index >= batchStart; // newly added this render?
+                  const localIndex = isNew ? index - batchStart : 0; // stagger index only for new items
+                  const delay = isNew ? localIndex * ENTER_STAGGER : 0;
                   return (
                     <motion.div
                       key={index}
@@ -843,7 +858,7 @@ const PhotoGallery = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{
                         duration: 0.6,
-                        delay: index * 0.1,
+                        delay
                       }}
                       onClick={() => setSelectedIndex(index)}
                       viewport={{ once: true }}
@@ -869,7 +884,7 @@ const PhotoGallery = () => {
                   whileHover={{ scale: 1.03 }}
                   onClick={handleClick}
                 >
-                  <button className="rounded-2xl text-xl mt-6 px-8 py-2 cursor-pointer mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
+                  <button ref={buttonRef} className="rounded-2xl text-xl mt-6 px-8 py-2 cursor-pointer mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
                     Show More
                   </button>
                 </motion.div>
@@ -903,6 +918,7 @@ const PhotoGallery = () => {
               {selectedIndex != 0 && (
                 <button
                   className="absolute left-4 md:left-14 top-1/2 -translate-y-1/2 text-white cursor-pointer"
+                  aria-label="Previous Photo"
                   onClick={handlePrev}
                 >
                   <ChevronLeft size={50} />
@@ -915,6 +931,7 @@ const PhotoGallery = () => {
                   key={selectedIndex}
                   src={currentData[selectedIndex].src}
                   alt={currentData[selectedIndex].alt}
+                  loading="lazy"
                   className="mx-auto max-h-[80vh] rounded-lg shadow-lg"
                   initial={{ opacity: 0, scale: 0.95, x: 200 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -928,6 +945,7 @@ const PhotoGallery = () => {
                 <button
                   className="absolute right-4 md:right-14 top-1/2 -translate-y-1/2 text-white cursor-pointer"
                   onClick={handleNext}
+                  aria-label="Next Photo"
                 >
                   <ChevronRight size={50} />
                 </button>

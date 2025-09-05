@@ -192,6 +192,7 @@ export function Headcourse() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755688099/front_bxhrv5.png"
             alt=""
             className="-mt-12 hidden lg:flex"
+            loading="lazy"
           />
         </div>
       </div>
@@ -302,6 +303,7 @@ export function TheoryProgression() {
             src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755586892/ab2_gkljyb.jpg"
             alt=""
             className=" rounded-2xl f-fit"
+            loading="lazy"
           />
           <div className="">
             <div className="rounded-2xl">
@@ -650,6 +652,7 @@ export function Arangetram() {
                 src="https://res.cloudinary.com/dg8mtv2kz/image/upload/v1755666072/g2_cw2bvs.jpg"
                 alt=""
                 className=" rounded-2xl p-2  mt-5"
+                loading="lazy"
               />
             </div>
           </div>

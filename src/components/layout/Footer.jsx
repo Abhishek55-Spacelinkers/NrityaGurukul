@@ -36,7 +36,7 @@ export default function Footer() {
               href="/"
               className="flex w-fit mx-auto lg:ml-0 items-center space-x-3"
             >
-              <img src="/assets/logo.svg" alt="Logo" className="h-28" />
+              <img src="/assets/logo.svg" alt="Logo" className="h-28" loading="lazy"/>
             </Link>
             <p className="text-gray-700 text-center lg:text-justify w-[96%]">
               Preserving the ancient art of Bharatanatyam through dedicated
