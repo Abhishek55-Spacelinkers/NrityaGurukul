@@ -10,7 +10,9 @@ import {
   Twitter,
   Pinterest,
   MessageCircle,
+  Youtube 
 } from "lucide-react";
+import { Details } from "@/lib/data";
 
 export default function Footer() {
   const { toast } = useToast();
@@ -113,33 +115,33 @@ export default function Footer() {
               <span className="text-lg font-semibold">Follow Us</span>
               <div className="flex space-x-4 ">
                 <a
-                  href="https://www.facebook.com/spacelinkers"
+                  href="https://www.facebook.com/akshatha.pai.79/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                 >
                   <Facebook className="hover:scale-125 duration-200 cursor-pointer hover:text-[#F58634]" />
                 </a>
                 <a
-                  href="https://www.instagram.com/_spacelinkers"
+                  href="https://www.instagram.com/akshatha.pai23/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                 >
                   <Instagram className="hover:scale-125 duration-200 cursor-pointer hover:text-[#F58634]" />
                 </a>
 
                 <a
-                  href="https://wa.me/919266579793"
+                  href={`https://wa.me/${Details.wphone}`}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                 >
                   <MessageCircle className="hover:scale-125 duration-200 cursor-pointer hover:text-[#F58634]" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/spacelinkers"
+                  href="https://www.youtube.com/@nrityagurukul14"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                 >
-                  <Linkedin className="hover:scale-125 duration-200 cursor-pointer hover:text-[#F58634]" />
+                  <Youtube className="hover:scale-125 duration-200 cursor-pointer hover:text-[#F58634]" />
                 </a>
               </div>
             </div>
@@ -192,7 +194,7 @@ export default function Footer() {
               <a
                 href="https://spacelinkers.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-orange-600 hover:text-orange-500 transition-colors"
               >
                 Spacelinkers Infotech

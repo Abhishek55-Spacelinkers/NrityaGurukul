@@ -15,7 +15,26 @@ export default function MusicPlayer() {
       audio.play().catch(() => {});
       audioRef.current = audio;
     }
-  }, []);
+    const handleVisibilityChange = () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      if (document.hidden) {
+        // Tab is inactive → pause or mute
+        audio.pause();
+      } else if (playing) {
+        // Tab is active again → resume only if it was playing
+        audio.play().catch(() => {});
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+
+  }, [playing]);
 
   const toggleMusic = () => {
     const audio = audioRef.current;
