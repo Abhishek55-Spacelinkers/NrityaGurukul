@@ -14,10 +14,12 @@ import Testimonials from "@/components/sections/Testimonials";
 import AboutAndWhy from "@/components/sections/AboutAndWhy";
 import ButtonG from "@/components/gallery/ButtonG";
 import FeaturedStudents from "@/components/sections/FeaturedStudents";
+import ScrollToTopOnMount from "@/components/layout/ScrollToTopOnMount";
 
 export default function Home() {
   return (
     <> 
+    <ScrollToTopOnMount/>
         <Hero />
         <AboutAndWhy/>
         <ImageCarousel />

@@ -1,3 +1,4 @@
+import ScrollToTopOnMount from "@/components/layout/ScrollToTopOnMount";
 import BookingFormContent from "@/components/sections/BookingFormContent";
 
 export const metadata = {
@@ -7,8 +8,10 @@ export const metadata = {
 };
 
 export default function BookingFormPage() {
-  return (
+  return (<>
+      <ScrollToTopOnMount/>
         <BookingFormContent />
+  </>
   );
 }
 

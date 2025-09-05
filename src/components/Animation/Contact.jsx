@@ -80,7 +80,7 @@ export function WhyJoinUs() {
         >
           <Link href="/book-class">
             <Button
-              className="py-9 sm:py-6 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full text-lg font-semibold pulse-glow"
+              className="py-6 sm:py-6 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full text-md  font-semibold pulse-glow"
             >
               Begin Your Dance Journey Today
             </Button>

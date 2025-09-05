@@ -3,13 +3,6 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Poppins, Cinzel } from "next/font/google";
 
-import {
-  jsonLd,
-  faqSchema,
-  breadcrumbSchema,
-  serviceSchema,
-} from "@/lib/schema";
-
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
@@ -38,27 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(breadcrumbSchema),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        /> */}
-      </head>
+    
       <body
         className={` ${cinzel.variable} ${poppins.variable} font-normal min-h-screen flex flex-col !w-full bharatnatyam-pattern mandala-bg`}
       >

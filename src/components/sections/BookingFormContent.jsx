@@ -55,10 +55,6 @@ export default function BookingFormContent() {
   };
   const isValidp = isPhoneValid(phone);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isValidp) return;
