@@ -98,7 +98,7 @@ export default function ArangetramForm() {
     formDataToSend.append("phone", phone);
     formDataToSend.append(
       "access_key",
-      process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY || ""
+      "cc6ab5ed-7367-495f-9053-3f2b1cc62c7b" || ""
     );
     formDataToSend.append("from_name", formData.name);
 

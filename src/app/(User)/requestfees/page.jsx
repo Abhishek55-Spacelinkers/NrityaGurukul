@@ -52,7 +52,7 @@ export default function RequestFeesForm() {
     setLoading(true);
 
     const formData = new FormData(e.target);
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY);
+    formData.append("access_key", "cc6ab5ed-7367-495f-9053-3f2b1cc62c7b");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
