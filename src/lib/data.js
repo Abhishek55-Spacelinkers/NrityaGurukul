@@ -10,7 +10,7 @@ export const Details = {
 
 export const Faqs = [
   {
-    question: "Online or Offline—what should I choose.s",
+    question: "Online or Offline—what should I choose?",
     answer:
       "Both modes follow the same syllabus and assessments. Choose based on commute, schedule, and comfort. Stage opportunities are provided to all students.",
   },
