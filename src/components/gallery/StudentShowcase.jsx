@@ -217,7 +217,7 @@ const STUDENTS = [
   },
   {
     id: 36,
-    name: "Sia Sabarwal",
+    name: "Sia Sabharwal",
     level: "Beginner",
     img: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1757062660/Sia_Sabarwal-_Beginner_Level_kz1zoo.jpg",
   },
@@ -272,7 +272,7 @@ const STUDENTS = [
   },
   {
     id: 46,
-    name: "Adhya Shukla, Sia Sabarwal",
+    name: "Aadya Shukla, Sia Sabharwal",
     level: "Beginner",
     img: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1757062658/Adhya_Shukla_Sia_Sabarwal_-_Beginners_z2skjc.jpg",
   },
@@ -290,7 +290,7 @@ const STUDENTS = [
   },
   {
     id: 49,
-    name: "Anbi Agarwal",
+    name: "Avni Agarwal",
     level: "Intermediate",
     img: "https://res.cloudinary.com/dg8mtv2kz/image/upload/v1757062658/Anbi_Agarwal_-_Intermediate_Level_tqvtzf.jpg",
   },
